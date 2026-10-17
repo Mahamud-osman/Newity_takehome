@@ -137,10 +137,10 @@ export function App() {
           onSave={values => {
             if (dialog.kind === 'new') {
               const id = nextApplicationId(state.data, todayIso())
-              dispatch({ type: 'addApplication', id, values, asOf })
+              dispatch({ type: 'addApplication', id, values, today: todayIso() })
               setSelectedAppId(id)
             } else if (selected) {
-              dispatch({ type: 'editApplication', appId: selected.id, values, asOf })
+              dispatch({ type: 'editApplication', appId: selected.id, values, today: todayIso() })
             }
             close()
           }}

@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import { daysBetween, isIsoDate } from '../domain/dates'
+import { daysBetween, isIsoDate, todayIso } from '../domain/dates'
 import { expiryBadge } from '../domain/rules'
 import { NOT_REQUIRED_REASONS } from '../domain/settings'
 import { STATUSES } from '../domain/types'
@@ -66,7 +66,8 @@ function NotesCell({ value, onCommit }: { value: string; onCommit(v: string): vo
 }
 
 export function DocumentRow({ doc, asOf, dispatch }: Props) {
-  const target = { appId: doc.applicationId, docType: doc.type, asOf }
+  // Recorded dates use the real date of the change; `asOf` only affects how badges are shown.
+  const target = { appId: doc.applicationId, docType: doc.type, today: todayIso() }
   const badge = expiryBadge(doc, asOf)
   const expiresBeforeReceived = !!doc.dateReceived && !!doc.expirationDate && daysBetween(doc.dateReceived, doc.expirationDate) < 0
 

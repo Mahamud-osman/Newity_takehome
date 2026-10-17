@@ -15,13 +15,17 @@ export function initialState(data: ChecklistData): PersistedState {
   return { version: 1, data, asOfOverride: null, lastExportedAt: null }
 }
 
+/**
+ * Actions that change data carry `today`: the real date the change was made. It is recorded as the
+ * received date and last activity. Never pass the "as of" viewing date here.
+ */
 export type Action =
-  | { type: 'setStatus'; appId: string; docType: DocType; status: Status; asOf: IsoDate }
-  | { type: 'updateDocument'; appId: string; docType: DocType; asOf: IsoDate
+  | { type: 'setStatus'; appId: string; docType: DocType; status: Status; today: IsoDate }
+  | { type: 'updateDocument'; appId: string; docType: DocType; today: IsoDate
       patch: { dateReceived?: IsoDate | null; expirationDate?: IsoDate | null; notes?: string } }
-  | { type: 'markNotRequired'; appId: string; docType: DocType; reason: string; asOf: IsoDate }
-  | { type: 'addApplication'; id: string; values: ApplicationValues; asOf: IsoDate }
-  | { type: 'editApplication'; appId: string; values: ApplicationValues; asOf: IsoDate }
+  | { type: 'markNotRequired'; appId: string; docType: DocType; reason: string; today: IsoDate }
+  | { type: 'addApplication'; id: string; values: ApplicationValues; today: IsoDate }
+  | { type: 'editApplication'; appId: string; values: ApplicationValues; today: IsoDate }
   | { type: 'deleteApplication'; appId: string }
   | { type: 'replaceData'; data: ChecklistData }
   | { type: 'setAsOf'; date: IsoDate | null }
@@ -47,8 +51,8 @@ function withAutoExpiration(before: ChecklistDocument, doc: ChecklistDocument): 
   return doc
 }
 
-/** Applies `change` to one document and marks the application active as of `asOf`. */
-function changeDocument(state: PersistedState, appId: string, docType: DocType, asOf: IsoDate,
+/** Applies `change` to one document and marks the application active on `today`. */
+function changeDocument(state: PersistedState, appId: string, docType: DocType, today: IsoDate,
   change: (d: ChecklistDocument) => ChecklistDocument): PersistedState {
   return touch({
     ...state,
@@ -57,17 +61,17 @@ function changeDocument(state: PersistedState, appId: string, docType: DocType, 
       documents: state.data.documents.map(d =>
         d.applicationId === appId && d.type === docType ? withAutoExpiration(d, change(d)) : d),
     },
-  }, appId, asOf)
+  }, appId, today)
 }
 
-/** Marks the application active as of `asOf`, never moving last activity backwards (e.g. edits made while viewing a past date). */
-function touch(state: PersistedState, appId: string, asOf: IsoDate): PersistedState {
+/** Marks the application active on `today`, never moving last activity backwards. */
+function touch(state: PersistedState, appId: string, today: IsoDate): PersistedState {
   return {
     ...state,
     data: {
       ...state.data,
       applications: state.data.applications.map(a =>
-        a.id === appId && asOf > a.lastActivity ? { ...a, lastActivity: asOf } : a),
+        a.id === appId && today > a.lastActivity ? { ...a, lastActivity: today } : a),
     },
   }
 }
@@ -75,28 +79,28 @@ function touch(state: PersistedState, appId: string, asOf: IsoDate): PersistedSt
 export function reducer(state: PersistedState, action: Action): PersistedState {
   switch (action.type) {
     case 'setStatus':
-      return changeDocument(state, action.appId, action.docType, action.asOf, d => ({
+      return changeDocument(state, action.appId, action.docType, action.today, d => ({
         ...d,
         status: action.status,
-        dateReceived: d.dateReceived ?? (RECEIVED_STATUSES.includes(action.status) ? action.asOf : null),
+        dateReceived: d.dateReceived ?? (RECEIVED_STATUSES.includes(action.status) ? action.today : null),
       }))
     case 'updateDocument':
-      return changeDocument(state, action.appId, action.docType, action.asOf, d => ({ ...d, ...action.patch }))
+      return changeDocument(state, action.appId, action.docType, action.today, d => ({ ...d, ...action.patch }))
     case 'markNotRequired':
-      return changeDocument(state, action.appId, action.docType, action.asOf, d => ({
+      return changeDocument(state, action.appId, action.docType, action.today, d => ({
         ...d,
         status: 'Not Required',
         notes: d.notes ? `${action.reason} — ${d.notes}` : action.reason,
       }))
     case 'addApplication': {
-      const { id, values, asOf } = action
+      const { id, values, today } = action
       const documents = DOC_TYPES.map((type): ChecklistDocument => ({
         applicationId: id, type, status: 'Needs Decision', dateReceived: null, expirationDate: null, notes: '',
       }))
       return {
         ...state,
         data: {
-          applications: [...state.data.applications, { ...values, id, lastActivity: asOf }],
+          applications: [...state.data.applications, { ...values, id, lastActivity: today }],
           documents: [...state.data.documents, ...documents],
         },
       }
@@ -108,7 +112,7 @@ export function reducer(state: PersistedState, action: Action): PersistedState {
           ...state.data,
           applications: state.data.applications.map(a => (a.id === action.appId ? { ...a, ...action.values } : a)),
         },
-      }, action.appId, action.asOf)
+      }, action.appId, action.today)
     case 'deleteApplication':
       return {
         ...state,

@@ -194,7 +194,7 @@ Priya White · $90,000 · Janet Morrison · Opened 76 days ago · Last activity 
 **Editing:**
 - **Status** is a dropdown; changes save instantly with a brief "Saved ✓" confirmation.
 - **Needs decision** shows two buttons: **Request** (→ Pending) and **Not required** (→ Not Required, with a reason picked from the team's existing list: *Waived per SBA guidelines*, *Exempt – sole proprietorship*, *Not applicable for this loan type*, *Other*). The reason is placed at the start of the document's notes, keeping any existing note text after it.
-- **Setting a status of Received, Under Review, or Approved** on a document with no received date fills the received date with the "as of" date, and the expiration date via the auto-expiry rule.
+- **Setting a status of Received, Under Review, or Approved** on a document with no received date fills the received date with **today's date** (the day the change is made), and the expiration date via the auto-expiry rule.
 - **Received date, expiration date, and notes** are edited inline by clicking, and saved when the user leaves the field or presses Enter (never mid-typing).
 - **Dropdowns** save immediately on a mouse choice; with the keyboard, the choice is saved on Enter or on leaving the field, so arrowing through options never saves by accident.
 - **Every change** updates the application's last activity.
@@ -277,6 +277,7 @@ Convert dates; add Needs decision documents for unlisted types; set each applica
 
 ### "As of" date
 - Stored as an override; empty means "use today".
+- It only changes how data is **viewed** (badges, stalled, counts, weekly summary). Dates the app records — received date, auto expiration, last activity — always use the real date of the change.
 - The override survives refresh (for demos) and is always shown in a banner with **Back to today**.
 
 ### Import CSV (replaces all data)
