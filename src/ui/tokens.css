@@ -1,0 +1,62 @@
+/*
+ * Design tokens. Direction: an SBA loan desk — each application is a loan file
+ * of federal forms. Public Sans (the US federal design system typeface) on cool
+ * ledger paper, navy ink, one ledger-green accent. The filter cards are drawn as
+ * file-folder tabs; everything else stays quiet.
+ *
+ * Status colors are text-on-tint pairs, all ≥ 6:1 contrast, and always appear
+ * with an icon and a text label (never color alone).
+ */
+:root {
+  /* Surfaces & ink */
+  --paper: #f6f7f5;
+  --sheet: #ffffff;
+  --rule: #d9ddd8;
+  --rule-strong: #b9c0ba;
+  --ink: #1b2a3a;
+  --ink-muted: #4f5d6b;
+  --row-hover: #f0f4f1;
+
+  /* Accent: ledger green */
+  --accent: #1d6b57;
+  --accent-strong: #155343;
+  --accent-tint: #e6f2ee;
+  --focus: #1d6b57;
+
+  /* Status: text / tint pairs */
+  --expired-ink: #9b1c14;
+  --expired-tint: #fdecea;
+  --soon-ink: #7a4a00;
+  --soon-tint: #fdf3dc;
+  --decision-ink: #4a3a9e;
+  --decision-tint: #efecfb;
+  --progress-ink: #24507a;
+  --progress-tint: #e8f0f8;
+  --done-ink: #17594a;
+  --done-tint: #e6f2ee;
+  --stalled-ink: #7a4a00;
+  --stalled-tint: #fdf3dc;
+
+  /* Type */
+  --font: 'Public Sans Variable', 'Public Sans', system-ui, sans-serif;
+  --text-xs: 0.8125rem;  /* 13px: secondary table text */
+  --text-sm: 0.875rem;   /* 14px: table body */
+  --text-md: 1rem;       /* 16px: body, controls */
+  --text-lg: 1.25rem;    /* 20px: page titles */
+  --text-xl: 1.75rem;    /* 28px: tab counts */
+  --leading: 1.45;
+
+  /* Space (4px grid) */
+  --s1: 4px;
+  --s2: 8px;
+  --s3: 12px;
+  --s4: 16px;
+  --s5: 24px;
+  --s6: 32px;
+
+  /* Shape */
+  --radius-sm: 4px;
+  --radius-tab: 8px;
+  --control-h: 36px;
+  --page-max: 1280px;
+}
