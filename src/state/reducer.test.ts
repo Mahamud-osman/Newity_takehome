@@ -35,6 +35,30 @@ describe('reducer', () => {
     expect(doc(s, 'Bank Statements (90 day)')).toMatchObject({ status: 'Pending', dateReceived: '2026-01-01', expirationDate: '2026-04-01' })
   })
 
+  it('marking an expired document received treats it as a new document', () => {
+    const s = reducer(stateWith({ type: 'Bank Statements (90 day)', status: 'Expired', dateReceived: '2025-09-29', expirationDate: '2025-12-28' }),
+      { type: 'setStatus', appId: APP, docType: 'Bank Statements (90 day)', status: 'Received', today })
+    expect(doc(s, 'Bank Statements (90 day)')).toMatchObject({ status: 'Received', dateReceived: '2026-02-15', expirationDate: '2026-05-16' })
+  })
+
+  it('marking a re-requested (Pending) document approved records a new receipt', () => {
+    const s = reducer(stateWith({ type: 'Insurance Verification', status: 'Pending', dateReceived: '2025-01-10', expirationDate: '2026-01-10' }),
+      { type: 'setStatus', appId: APP, docType: 'Insurance Verification', status: 'Approved', today })
+    expect(doc(s, 'Insurance Verification')).toMatchObject({ dateReceived: '2026-02-15', expirationDate: '2027-02-15' })
+  })
+
+  it('moving between Received, Under Review, and Approved keeps the dates', () => {
+    const s = reducer(stateWith({ type: 'Bank Statements (90 day)', status: 'Received', dateReceived: '2026-01-01', expirationDate: '2026-04-01' }),
+      { type: 'setStatus', appId: APP, docType: 'Bank Statements (90 day)', status: 'Approved', today })
+    expect(doc(s, 'Bank Statements (90 day)')).toMatchObject({ dateReceived: '2026-01-01', expirationDate: '2026-04-01' })
+  })
+
+  it('a new receipt of a non-expiring document clears the old expiration date', () => {
+    const s = reducer(stateWith({ type: 'Business Licenses & Permits', status: 'Expired', dateReceived: '2025-01-01', expirationDate: '2025-12-31' }),
+      { type: 'setStatus', appId: APP, docType: 'Business Licenses & Permits', status: 'Received', today })
+    expect(doc(s, 'Business Licenses & Permits')).toMatchObject({ dateReceived: '2026-02-15', expirationDate: null })
+  })
+
   it('setStatus Approved on a non-expiring type fills only the received date', () => {
     const s = reducer(stateWith({ type: 'Lease Agreement' }), { type: 'setStatus', appId: APP, docType: 'Lease Agreement', status: 'Approved', today })
     expect(doc(s, 'Lease Agreement')).toMatchObject({ dateReceived: '2026-02-15', expirationDate: null })

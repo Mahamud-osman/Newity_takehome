@@ -82,11 +82,23 @@ function touch(state: PersistedState, appId: string, today: IsoDate): PersistedS
 export function reducer(state: PersistedState, action: Action): PersistedState {
   switch (action.type) {
     case 'setStatus':
-      return changeDocument(state, action.appId, action.docType, action.today, d => ({
-        ...d,
-        status: action.status,
-        dateReceived: d.dateReceived ?? (RECEIVED_STATUSES.includes(action.status) ? action.today : null),
-      }))
+      return changeDocument(state, action.appId, action.docType, action.today, d => {
+        const receiving = RECEIVED_STATUSES.includes(action.status)
+        // Expired (replacement requested) or Pending (re-requested) → received means a new document arrived.
+        if (receiving && d.dateReceived && (d.status === 'Expired' || d.status === 'Pending')) {
+          return {
+            ...d,
+            status: action.status,
+            dateReceived: action.today,
+            expirationDate: autoExpirationDate(d.type, action.today),
+          }
+        }
+        return {
+          ...d,
+          status: action.status,
+          dateReceived: d.dateReceived ?? (receiving ? action.today : null),
+        }
+      })
     case 'updateDocument':
       return changeDocument(state, action.appId, action.docType, action.today, d => ({ ...d, ...action.patch }))
     case 'setNeeded':

@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import { daysBetween, isIsoDate, todayIso } from '../domain/dates'
 import { expiryBadge, splitNotNeededReason } from '../domain/rules'
-import { NOT_ON_IMPORT_NOTE, NOT_REQUIRED_REASONS } from '../domain/settings'
+import { EXPIRY_DAYS, NOT_ON_IMPORT_NOTE, NOT_REQUIRED_REASONS } from '../domain/settings'
 import { STATUSES } from '../domain/types'
 import type { ChecklistDocument, IsoDate } from '../domain/types'
 import type { Action } from '../state/reducer'
@@ -17,8 +17,13 @@ interface Props {
 /** Not Required is set with the Needed checkbox, so it isn't offered in the status dropdown. */
 const TEAM_STATUSES = STATUSES.filter(s => s !== 'Not Required')
 
-/** Saves on blur or Enter only: while a year is typed the field briefly reports dates like 0002-02-10. */
-function DateCell({ label, value, onCommit }: { label: string; value: IsoDate | null; onCommit(v: IsoDate | null): void }) {
+/**
+ * Saves as soon as the field holds a complete, plausible date (picked or typed). While a year is being typed the
+ * field briefly reports dates like 0002-02-10; isIsoDate rejects those, so they wait. Clearing saves on blur/Enter.
+ */
+function DateCell({ label, value, onCommit, autoFocus }: {
+  label: string; value: IsoDate | null; onCommit(v: IsoDate | null): void; autoFocus?: boolean
+}) {
   const [draft, setDraft] = useState<string | null>(null)
   const [invalid, setInvalid] = useState(false)
   const commit = (input: HTMLInputElement) => {
@@ -36,7 +41,17 @@ function DateCell({ label, value, onCommit }: { label: string; value: IsoDate | 
         type="date"
         aria-label={label}
         value={draft ?? value ?? ''}
-        onChange={e => setDraft(e.target.value)}
+        autoFocus={autoFocus}
+        onChange={e => {
+          const v = e.target.value
+          if (isIsoDate(v)) {
+            setDraft(null)
+            setInvalid(false)
+            if (v !== value) onCommit(v)
+          } else {
+            setDraft(v)
+          }
+        }}
         onBlur={e => commit(e.currentTarget)}
         onKeyDown={e => e.key === 'Enter' && commit(e.currentTarget)}
       />
@@ -71,6 +86,9 @@ export function DocumentRow({ doc, asOf, dispatch }: Props) {
   const target = { appId: doc.applicationId, docType: doc.type, today: todayIso() }
   const badge = expiryBadge(doc, asOf)
   const expiresBeforeReceived = !!doc.dateReceived && !!doc.expirationDate && daysBetween(doc.dateReceived, doc.expirationDate) < 0
+  // Only bank statements, tax returns, and insurance expire automatically; the rest show "Add date" unless one was entered.
+  const [addingExpiration, setAddingExpiration] = useState(false)
+  const showExpiration = EXPIRY_DAYS[doc.type] !== undefined || !!doc.expirationDate || addingExpiration
 
   return (
     <tr>
@@ -100,8 +118,15 @@ export function DocumentRow({ doc, asOf, dispatch }: Props) {
           onCommit={v => dispatch({ type: 'updateDocument', ...target, patch: { dateReceived: v } })} />
       </td>
       <td>
-        <DateCell label={`${doc.type} expiration date`} value={doc.expirationDate}
-          onCommit={v => dispatch({ type: 'updateDocument', ...target, patch: { expirationDate: v } })} />
+        {showExpiration ? (
+          <DateCell label={`${doc.type} expiration date`} value={doc.expirationDate} autoFocus={addingExpiration}
+            onCommit={v => dispatch({ type: 'updateDocument', ...target, patch: { expirationDate: v } })} />
+        ) : (
+          <button type="button" className="add-date" onClick={() => setAddingExpiration(true)}
+            aria-label={`Add an expiration date for ${doc.type}`} title="This document doesn't expire automatically">
+            <span aria-hidden="true">—</span> Add date
+          </button>
+        )}
         {badge?.kind === 'expired' && (
           <span className="badge tone-expired"><Icon name="expired" size={12} />
             Expired {badge.daysAgo} day{badge.daysAgo === 1 ? '' : 's'} ago

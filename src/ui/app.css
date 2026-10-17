@@ -309,3 +309,8 @@ h1, h2, h3 { margin: 0; font-weight: 650; letter-spacing: -0.01em; }
 .not-needed summary::-webkit-details-marker { display: none; }
 .not-needed summary::before { content: '▸'; font-size: 12px; }
 .not-needed[open] summary::before { content: '▾'; }
+.add-date {
+  min-height: var(--control-h); padding: 0 var(--s2); border: 1px dashed transparent; border-radius: var(--radius-sm);
+  background: none; color: var(--ink-muted); font: inherit; font-size: var(--text-sm); cursor: pointer;
+}
+.add-date:hover { border-color: var(--rule-strong); color: var(--ink); }

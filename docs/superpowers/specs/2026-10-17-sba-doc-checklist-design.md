@@ -201,8 +201,9 @@ Not needed for this loan (1) ▾
 - **Status** is a dropdown; changes save instantly with a brief "Saved ✓" confirmation.
 - **Unticking Needed** marks the document Not Required and moves it to the hidden section. **Re-ticking** puts it back on the checklist as Pending. The status dropdown does not offer Not Required (the checkbox is the one way to set it).
 - **Reason (optional):** each hidden document has a reason dropdown with the team's existing list (*Waived per SBA guidelines*, *Exempt – sole proprietorship*, *Not applicable for this loan type*, *Other*). The reason sits at the start of the notes and replaces an earlier reason rather than stacking.
-- **Setting a status of Received, Under Review, or Approved** on a document with no received date fills the received date with **today's date** (the day the change is made), and the expiration date via the auto-expiry rule.
-- **Received date, expiration date, and notes** are edited inline by clicking, and saved when the user leaves the field or presses Enter (never mid-typing).
+- **Setting a status of Received, Under Review, or Approved** on a document with no received date fills the received date with **today's date** (the day the change is made), and the expiration date via the auto-expiry rule. **Re-receipt:** if the document was **Expired** (replacement requested) or **Pending** (re-requested) and already had a received date, the new receipt replaces it — received date = today, expiration recalculated (cleared for types with no expiry rule). Moving between Received, Under Review, and Approved keeps the dates.
+- **Received date, expiration date, and notes** are edited inline. A date saves as soon as the field holds a complete, plausible date (picked from the calendar or typed); half-typed values such as `0002-10-10` are ignored; clearing a date saves when the user leaves the field or presses Enter.
+- **Expires field:** shown for the four time-sensitive types. The other eight types show **"— Add date"** (a processor can still enter a fixed end date, e.g. a license renewal or lease end); once a date is entered it stays visible.
 - **Dropdowns** save immediately on a mouse choice; with the keyboard, the choice is saved on Enter or on leaving the field, so arrowing through options never saves by accident.
 - **Every change** updates the application's last activity.
 
