@@ -29,6 +29,8 @@ The tests cover the business rules, CSV import and export, saving, and the weekl
 
 Click **Import CSV** and choose `NEWITY_Sample_Data_A_Document_Checklist.csv` (a copy is in `src/test/fixtures/sample.csv`). The sample data runs from July 2025 to February 2026, so measured against today almost everything has expired. Set **As of** in the header to **Feb 15, 2026** to see the data as the team would have seen it. A banner reminds you that you aren't viewing today's date, and **Back to today** switches back.
 
+For a larger, current dataset, import `demo-data/sba_checklist_demo_75.csv`: 75 applications with expiration dates from June 2026 to June 2029. Viewed as of Oct 17, 2026, about 23 are stalled and two dozen have an expired document. Leave **As of** on today for this file.
+
 ## Manual smoke test
 
 - [ ] A fresh open (or **Clear all data**) shows the empty state. **Import CSV** with the sample file loads 60 applications.

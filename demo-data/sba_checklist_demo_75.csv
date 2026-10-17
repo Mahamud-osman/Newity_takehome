@@ -1,0 +1,866 @@
+application_id,business_name,borrower_name,loan_amount,application_date,assigned_processor,document_type,document_status,date_received,expiration_date,notes
+APP-2026-2001,Lighthouse Coffee Roasters,Carmen Whitfield,365000,6/4/2025,Janet Morrison,Bank Statements (90 day),Received,5/29/2026,8/27/2026,
+APP-2026-2001,Lighthouse Coffee Roasters,Carmen Whitfield,365000,6/4/2025,Janet Morrison,Business Tax Returns (3yr),Pending,,,Waiting on borrower
+APP-2026-2001,Lighthouse Coffee Roasters,Carmen Whitfield,365000,6/4/2025,Janet Morrison,Personal Tax Returns (3yr),Under Review,8/20/2025,8/19/2028,Reviewing for completeness
+APP-2026-2001,Lighthouse Coffee Roasters,Carmen Whitfield,365000,6/4/2025,Janet Morrison,Insurance Verification,Pending,,,
+APP-2026-2001,Lighthouse Coffee Roasters,Carmen Whitfield,365000,6/4/2025,Janet Morrison,Business Financial Statements,Approved,10/8/2026,,
+APP-2026-2001,Lighthouse Coffee Roasters,Carmen Whitfield,365000,6/4/2025,Janet Morrison,Business Licenses & Permits,Not Required,,,Waived per SBA guidelines
+APP-2026-2001,Lighthouse Coffee Roasters,Carmen Whitfield,365000,6/4/2025,Janet Morrison,Articles of Incorporation,Pending,,,
+APP-2026-2001,Lighthouse Coffee Roasters,Carmen Whitfield,365000,6/4/2025,Janet Morrison,Lease Agreement,Received,8/19/2026,,
+APP-2026-2001,Lighthouse Coffee Roasters,Carmen Whitfield,365000,6/4/2025,Janet Morrison,Debt Schedule,Under Review,7/12/2025,,Reviewing for completeness
+APP-2026-2001,Lighthouse Coffee Roasters,Carmen Whitfield,365000,6/4/2025,Janet Morrison,Ownership Verification,Approved,1/21/2026,,Verified
+APP-2026-2001,Lighthouse Coffee Roasters,Carmen Whitfield,365000,6/4/2025,Janet Morrison,SBA Form 1919,Approved,2/20/2026,,Verified
+APP-2026-2001,Lighthouse Coffee Roasters,Carmen Whitfield,365000,6/4/2025,Janet Morrison,SBA Form 912,Pending,,,Waiting on borrower
+APP-2026-2002,Pinecrest Family Dentistry,Omar Usman,1260000,9/28/2025,Janet Morrison,Bank Statements (90 day),Received,8/1/2026,10/30/2026,Received via email
+APP-2026-2002,Pinecrest Family Dentistry,Omar Usman,1260000,9/28/2025,Janet Morrison,Business Tax Returns (3yr),Received,11/26/2025,11/25/2028,Received via email
+APP-2026-2002,Pinecrest Family Dentistry,Omar Usman,1260000,9/28/2025,Janet Morrison,Personal Tax Returns (3yr),Pending,,,
+APP-2026-2002,Pinecrest Family Dentistry,Omar Usman,1260000,9/28/2025,Janet Morrison,Insurance Verification,Under Review,1/21/2026,1/21/2027,Verifying with third party
+APP-2026-2002,Pinecrest Family Dentistry,Omar Usman,1260000,9/28/2025,Janet Morrison,Business Financial Statements,Pending,,,
+APP-2026-2002,Pinecrest Family Dentistry,Omar Usman,1260000,9/28/2025,Janet Morrison,Business Licenses & Permits,Under Review,1/9/2026,,
+APP-2026-2002,Pinecrest Family Dentistry,Omar Usman,1260000,9/28/2025,Janet Morrison,Articles of Incorporation,Received,2/21/2026,,Uploaded to portal
+APP-2026-2002,Pinecrest Family Dentistry,Omar Usman,1260000,9/28/2025,Janet Morrison,Lease Agreement,Pending,,,Second request sent
+APP-2026-2002,Pinecrest Family Dentistry,Omar Usman,1260000,9/28/2025,Janet Morrison,Debt Schedule,Under Review,10/18/2025,,Verifying with third party
+APP-2026-2002,Pinecrest Family Dentistry,Omar Usman,1260000,9/28/2025,Janet Morrison,Ownership Verification,Approved,8/25/2026,,
+APP-2026-2002,Pinecrest Family Dentistry,Omar Usman,1260000,9/28/2025,Janet Morrison,SBA Form 1919,Under Review,5/10/2026,,
+APP-2026-2002,Pinecrest Family Dentistry,Omar Usman,1260000,9/28/2025,Janet Morrison,SBA Form 912,Pending,,,
+APP-2026-2003,Northgate Plumbing,Luis Osei,1440000,6/30/2026,Ricardo Fuentes,Articles of Incorporation,Received,7/1/2026,,
+APP-2026-2003,Northgate Plumbing,Luis Osei,1440000,6/30/2026,Ricardo Fuentes,Lease Agreement,Received,8/5/2026,,
+APP-2026-2003,Northgate Plumbing,Luis Osei,1440000,6/30/2026,Ricardo Fuentes,Ownership Verification,Approved,7/2/2026,,
+APP-2026-2003,Northgate Plumbing,Luis Osei,1440000,6/30/2026,Ricardo Fuentes,SBA Form 912,Under Review,9/4/2026,,Reviewing for completeness
+APP-2026-2003,Northgate Plumbing,Luis Osei,1440000,6/30/2026,Ricardo Fuentes,Business Licenses & Permits,Under Review,8/5/2026,,Reviewing for completeness
+APP-2026-2003,Northgate Plumbing,Luis Osei,1440000,6/30/2026,Ricardo Fuentes,Insurance Verification,Received,8/15/2026,8/15/2027,Received via email
+APP-2026-2003,Northgate Plumbing,Luis Osei,1440000,6/30/2026,Ricardo Fuentes,Debt Schedule,Approved,10/6/2026,,Verified
+APP-2026-2003,Northgate Plumbing,Luis Osei,1440000,6/30/2026,Ricardo Fuentes,Business Financial Statements,Received,8/17/2026,,Uploaded to portal
+APP-2026-2003,Northgate Plumbing,Luis Osei,1440000,6/30/2026,Ricardo Fuentes,SBA Form 1919,Approved,8/16/2026,,
+APP-2026-2003,Northgate Plumbing,Luis Osei,1440000,6/30/2026,Ricardo Fuentes,Business Tax Returns (3yr),Approved,6/30/2026,6/29/2029,Verified
+APP-2026-2004,Crescent Hardware,Rosa Moreno,1135000,10/14/2025,Ricardo Fuentes,Bank Statements (90 day),Not Required,,,Exempt - sole proprietorship
+APP-2026-2004,Crescent Hardware,Rosa Moreno,1135000,10/14/2025,Ricardo Fuentes,Business Tax Returns (3yr),Received,5/6/2026,5/5/2029,Uploaded to portal
+APP-2026-2004,Crescent Hardware,Rosa Moreno,1135000,10/14/2025,Ricardo Fuentes,Personal Tax Returns (3yr),Under Review,3/1/2026,2/28/2029,Verifying with third party
+APP-2026-2004,Crescent Hardware,Rosa Moreno,1135000,10/14/2025,Ricardo Fuentes,Insurance Verification,Approved,5/25/2026,5/25/2027,Verified
+APP-2026-2004,Crescent Hardware,Rosa Moreno,1135000,10/14/2025,Ricardo Fuentes,Business Financial Statements,Pending,,,Follow-up call scheduled
+APP-2026-2004,Crescent Hardware,Rosa Moreno,1135000,10/14/2025,Ricardo Fuentes,Business Licenses & Permits,Pending,,,Follow-up call scheduled
+APP-2026-2004,Crescent Hardware,Rosa Moreno,1135000,10/14/2025,Ricardo Fuentes,Articles of Incorporation,Approved,2/18/2026,,
+APP-2026-2004,Crescent Hardware,Rosa Moreno,1135000,10/14/2025,Ricardo Fuentes,Lease Agreement,Approved,7/21/2026,,Verified
+APP-2026-2004,Crescent Hardware,Rosa Moreno,1135000,10/14/2025,Ricardo Fuentes,Debt Schedule,Not Required,,,Exempt - sole proprietorship
+APP-2026-2004,Crescent Hardware,Rosa Moreno,1135000,10/14/2025,Ricardo Fuentes,Ownership Verification,Approved,9/22/2026,,
+APP-2026-2004,Crescent Hardware,Rosa Moreno,1135000,10/14/2025,Ricardo Fuentes,SBA Form 1919,Pending,,,Follow-up call scheduled
+APP-2026-2004,Crescent Hardware,Rosa Moreno,1135000,10/14/2025,Ricardo Fuentes,SBA Form 912,Pending,,,Borrower contacted via email
+APP-2026-2005,Oakmont Daycare,Omar Alvarez,635000,4/14/2026,Ricardo Fuentes,Bank Statements (90 day),Under Review,10/15/2026,1/13/2027,
+APP-2026-2005,Oakmont Daycare,Omar Alvarez,635000,4/14/2026,Ricardo Fuentes,Business Tax Returns (3yr),Under Review,6/11/2026,6/10/2029,Minor discrepancy noted
+APP-2026-2005,Oakmont Daycare,Omar Alvarez,635000,4/14/2026,Ricardo Fuentes,Personal Tax Returns (3yr),Pending,,,Second request sent
+APP-2026-2005,Oakmont Daycare,Omar Alvarez,635000,4/14/2026,Ricardo Fuentes,Insurance Verification,Received,8/3/2026,8/3/2027,
+APP-2026-2005,Oakmont Daycare,Omar Alvarez,635000,4/14/2026,Ricardo Fuentes,Business Financial Statements,Under Review,7/11/2026,,Verifying with third party
+APP-2026-2005,Oakmont Daycare,Omar Alvarez,635000,4/14/2026,Ricardo Fuentes,Business Licenses & Permits,Under Review,10/2/2026,,
+APP-2026-2005,Oakmont Daycare,Omar Alvarez,635000,4/14/2026,Ricardo Fuentes,Articles of Incorporation,Approved,4/20/2026,,
+APP-2026-2005,Oakmont Daycare,Omar Alvarez,635000,4/14/2026,Ricardo Fuentes,Lease Agreement,Pending,,,Second request sent
+APP-2026-2005,Oakmont Daycare,Omar Alvarez,635000,4/14/2026,Ricardo Fuentes,Debt Schedule,Received,9/21/2026,,
+APP-2026-2005,Oakmont Daycare,Omar Alvarez,635000,4/14/2026,Ricardo Fuentes,Ownership Verification,Approved,5/8/2026,,
+APP-2026-2005,Oakmont Daycare,Omar Alvarez,635000,4/14/2026,Ricardo Fuentes,SBA Form 1919,Received,5/8/2026,,Received via email
+APP-2026-2005,Oakmont Daycare,Omar Alvarez,635000,4/14/2026,Ricardo Fuentes,SBA Form 912,Pending,,,Requested from borrower
+APP-2026-2006,Crescent Machine Shop,Uma Nguyen,1380000,2/8/2026,Janet Morrison,Bank Statements (90 day),Pending,,,Requested from borrower
+APP-2026-2006,Crescent Machine Shop,Uma Nguyen,1380000,2/8/2026,Janet Morrison,Business Tax Returns (3yr),Approved,6/8/2026,6/7/2029,
+APP-2026-2006,Crescent Machine Shop,Uma Nguyen,1380000,2/8/2026,Janet Morrison,Personal Tax Returns (3yr),Received,4/5/2026,4/4/2029,Uploaded to portal
+APP-2026-2006,Crescent Machine Shop,Uma Nguyen,1380000,2/8/2026,Janet Morrison,Insurance Verification,Under Review,8/1/2026,8/1/2027,Verifying with third party
+APP-2026-2006,Crescent Machine Shop,Uma Nguyen,1380000,2/8/2026,Janet Morrison,Business Financial Statements,Approved,2/23/2026,,
+APP-2026-2006,Crescent Machine Shop,Uma Nguyen,1380000,2/8/2026,Janet Morrison,Business Licenses & Permits,Approved,4/1/2026,,
+APP-2026-2006,Crescent Machine Shop,Uma Nguyen,1380000,2/8/2026,Janet Morrison,Articles of Incorporation,Expired,8/24/2026,,Document expired - replacement requested
+APP-2026-2006,Crescent Machine Shop,Uma Nguyen,1380000,2/8/2026,Janet Morrison,Lease Agreement,Approved,5/21/2026,,
+APP-2026-2006,Crescent Machine Shop,Uma Nguyen,1380000,2/8/2026,Janet Morrison,Debt Schedule,Pending,,,Follow-up call scheduled
+APP-2026-2006,Crescent Machine Shop,Uma Nguyen,1380000,2/8/2026,Janet Morrison,Ownership Verification,Not Required,,,Waived per SBA guidelines
+APP-2026-2006,Crescent Machine Shop,Uma Nguyen,1380000,2/8/2026,Janet Morrison,SBA Form 1919,Received,4/30/2026,,
+APP-2026-2006,Crescent Machine Shop,Uma Nguyen,1380000,2/8/2026,Janet Morrison,SBA Form 912,Received,8/12/2026,,
+APP-2026-2007,Redwood Construction,Amara Quintero,1280000,9/17/2025,Aisha Patel,SBA Form 1919,Approved,1/28/2026,,
+APP-2026-2007,Redwood Construction,Amara Quintero,1280000,9/17/2025,Aisha Patel,Business Licenses & Permits,Received,11/20/2025,,
+APP-2026-2007,Redwood Construction,Amara Quintero,1280000,9/17/2025,Aisha Patel,Debt Schedule,Under Review,8/30/2026,,Reviewing for completeness
+APP-2026-2007,Redwood Construction,Amara Quintero,1280000,9/17/2025,Aisha Patel,Personal Tax Returns (3yr),Under Review,3/6/2026,3/5/2029,
+APP-2026-2007,Redwood Construction,Amara Quintero,1280000,9/17/2025,Aisha Patel,Articles of Incorporation,Received,3/9/2026,,Received via email
+APP-2026-2007,Redwood Construction,Amara Quintero,1280000,9/17/2025,Aisha Patel,SBA Form 912,Received,11/27/2025,,
+APP-2026-2007,Redwood Construction,Amara Quintero,1280000,9/17/2025,Aisha Patel,Lease Agreement,Received,11/5/2025,,
+APP-2026-2007,Redwood Construction,Amara Quintero,1280000,9/17/2025,Aisha Patel,Bank Statements (90 day),Not Required,,,Waived per SBA guidelines
+APP-2026-2007,Redwood Construction,Amara Quintero,1280000,9/17/2025,Aisha Patel,Business Financial Statements,Received,11/10/2025,,Uploaded to portal
+APP-2026-2007,Redwood Construction,Amara Quintero,1280000,9/17/2025,Aisha Patel,Insurance Verification,Expired,12/3/2025,12/3/2026,Document expired - replacement requested
+APP-2026-2008,Keystone Salon & Spa,Carmen Thompson,370000,6/11/2026,Ricardo Fuentes,Bank Statements (90 day),Pending,,,Requested from borrower
+APP-2026-2008,Keystone Salon & Spa,Carmen Thompson,370000,6/11/2026,Ricardo Fuentes,Business Tax Returns (3yr),Approved,6/28/2026,6/27/2029,
+APP-2026-2008,Keystone Salon & Spa,Carmen Thompson,370000,6/11/2026,Ricardo Fuentes,Personal Tax Returns (3yr),Received,6/30/2026,6/29/2029,
+APP-2026-2008,Keystone Salon & Spa,Carmen Thompson,370000,6/11/2026,Ricardo Fuentes,Insurance Verification,Pending,,,Borrower contacted via email
+APP-2026-2008,Keystone Salon & Spa,Carmen Thompson,370000,6/11/2026,Ricardo Fuentes,Business Financial Statements,Received,7/4/2026,,
+APP-2026-2008,Keystone Salon & Spa,Carmen Thompson,370000,6/11/2026,Ricardo Fuentes,Business Licenses & Permits,Pending,,,
+APP-2026-2008,Keystone Salon & Spa,Carmen Thompson,370000,6/11/2026,Ricardo Fuentes,Articles of Incorporation,Received,7/28/2026,,
+APP-2026-2008,Keystone Salon & Spa,Carmen Thompson,370000,6/11/2026,Ricardo Fuentes,Lease Agreement,Approved,7/7/2026,,
+APP-2026-2008,Keystone Salon & Spa,Carmen Thompson,370000,6/11/2026,Ricardo Fuentes,Debt Schedule,Under Review,8/6/2026,,Verifying with third party
+APP-2026-2008,Keystone Salon & Spa,Carmen Thompson,370000,6/11/2026,Ricardo Fuentes,Ownership Verification,Under Review,7/13/2026,,Reviewing for completeness
+APP-2026-2008,Keystone Salon & Spa,Carmen Thompson,370000,6/11/2026,Ricardo Fuentes,SBA Form 1919,Pending,,,Requested from borrower
+APP-2026-2008,Keystone Salon & Spa,Carmen Thompson,370000,6/11/2026,Ricardo Fuentes,SBA Form 912,Approved,6/13/2026,,
+APP-2026-2009,Bayview Taqueria,Samuel Abbott,655000,6/29/2026,Aisha Patel,Bank Statements (90 day),Received,8/27/2026,11/25/2026,
+APP-2026-2009,Bayview Taqueria,Samuel Abbott,655000,6/29/2026,Aisha Patel,Business Tax Returns (3yr),Under Review,6/29/2026,6/28/2029,Verifying with third party
+APP-2026-2009,Bayview Taqueria,Samuel Abbott,655000,6/29/2026,Aisha Patel,Personal Tax Returns (3yr),Approved,6/30/2026,6/29/2029,Verified
+APP-2026-2009,Bayview Taqueria,Samuel Abbott,655000,6/29/2026,Aisha Patel,Insurance Verification,Received,8/31/2026,8/31/2027,
+APP-2026-2009,Bayview Taqueria,Samuel Abbott,655000,6/29/2026,Aisha Patel,Business Financial Statements,Received,7/19/2026,,
+APP-2026-2009,Bayview Taqueria,Samuel Abbott,655000,6/29/2026,Aisha Patel,Business Licenses & Permits,Approved,8/19/2026,,Verified
+APP-2026-2009,Bayview Taqueria,Samuel Abbott,655000,6/29/2026,Aisha Patel,Articles of Incorporation,Approved,9/9/2026,,Verified
+APP-2026-2009,Bayview Taqueria,Samuel Abbott,655000,6/29/2026,Aisha Patel,Lease Agreement,Approved,10/1/2026,,
+APP-2026-2009,Bayview Taqueria,Samuel Abbott,655000,6/29/2026,Aisha Patel,Debt Schedule,Received,8/18/2026,,Received via email
+APP-2026-2009,Bayview Taqueria,Samuel Abbott,655000,6/29/2026,Aisha Patel,Ownership Verification,Under Review,8/18/2026,,Verifying with third party
+APP-2026-2009,Bayview Taqueria,Samuel Abbott,655000,6/29/2026,Aisha Patel,SBA Form 1919,Pending,,,
+APP-2026-2009,Bayview Taqueria,Samuel Abbott,655000,6/29/2026,Aisha Patel,SBA Form 912,Pending,,,
+APP-2026-2010,Granite Logistics,Imani Osei,1240000,6/4/2025,Aisha Patel,Bank Statements (90 day),Approved,5/2/2026,7/31/2026,Verified
+APP-2026-2010,Granite Logistics,Imani Osei,1240000,6/4/2025,Aisha Patel,Business Tax Returns (3yr),Approved,6/28/2026,6/27/2029,
+APP-2026-2010,Granite Logistics,Imani Osei,1240000,6/4/2025,Aisha Patel,Personal Tax Returns (3yr),Pending,,,Waiting on borrower
+APP-2026-2010,Granite Logistics,Imani Osei,1240000,6/4/2025,Aisha Patel,Insurance Verification,Approved,2/6/2026,2/6/2027,
+APP-2026-2010,Granite Logistics,Imani Osei,1240000,6/4/2025,Aisha Patel,Business Financial Statements,Received,5/1/2026,,
+APP-2026-2010,Granite Logistics,Imani Osei,1240000,6/4/2025,Aisha Patel,Business Licenses & Permits,Pending,,,Follow-up call scheduled
+APP-2026-2010,Granite Logistics,Imani Osei,1240000,6/4/2025,Aisha Patel,Articles of Incorporation,Pending,,,Follow-up call scheduled
+APP-2026-2010,Granite Logistics,Imani Osei,1240000,6/4/2025,Aisha Patel,Lease Agreement,Approved,2/27/2026,,
+APP-2026-2010,Granite Logistics,Imani Osei,1240000,6/4/2025,Aisha Patel,Debt Schedule,Under Review,11/15/2025,,
+APP-2026-2010,Granite Logistics,Imani Osei,1240000,6/4/2025,Aisha Patel,Ownership Verification,Pending,,,Second request sent
+APP-2026-2010,Granite Logistics,Imani Osei,1240000,6/4/2025,Aisha Patel,SBA Form 1919,Under Review,6/24/2026,,
+APP-2026-2010,Granite Logistics,Imani Osei,1240000,6/4/2025,Aisha Patel,SBA Form 912,Under Review,11/3/2025,,Verifying with third party
+APP-2026-2011,Evergreen Tax & Accounting,Victor Quintero,1320000,9/3/2026,Ricardo Fuentes,SBA Form 1919,Not Required,,,Not applicable for this loan type
+APP-2026-2011,Evergreen Tax & Accounting,Victor Quintero,1320000,9/3/2026,Ricardo Fuentes,Insurance Verification,Pending,,,Requested from borrower
+APP-2026-2011,Evergreen Tax & Accounting,Victor Quintero,1320000,9/3/2026,Ricardo Fuentes,Debt Schedule,Under Review,9/4/2026,,Reviewing for completeness
+APP-2026-2011,Evergreen Tax & Accounting,Victor Quintero,1320000,9/3/2026,Ricardo Fuentes,Ownership Verification,Under Review,9/5/2026,,Reviewing for completeness
+APP-2026-2011,Evergreen Tax & Accounting,Victor Quintero,1320000,9/3/2026,Ricardo Fuentes,Business Licenses & Permits,Expired,9/4/2026,,Document expired - replacement requested
+APP-2026-2011,Evergreen Tax & Accounting,Victor Quintero,1320000,9/3/2026,Ricardo Fuentes,Bank Statements (90 day),Pending,,,Second request sent
+APP-2026-2011,Evergreen Tax & Accounting,Victor Quintero,1320000,9/3/2026,Ricardo Fuentes,Business Tax Returns (3yr),Pending,,,
+APP-2026-2011,Evergreen Tax & Accounting,Victor Quintero,1320000,9/3/2026,Ricardo Fuentes,Lease Agreement,Approved,9/6/2026,,
+APP-2026-2011,Evergreen Tax & Accounting,Victor Quintero,1320000,9/3/2026,Ricardo Fuentes,Personal Tax Returns (3yr),Pending,,,
+APP-2026-2011,Evergreen Tax & Accounting,Victor Quintero,1320000,9/3/2026,Ricardo Fuentes,SBA Form 912,Not Required,,,Exempt - sole proprietorship
+APP-2026-2011,Evergreen Tax & Accounting,Victor Quintero,1320000,9/3/2026,Ricardo Fuentes,Business Financial Statements,Received,9/5/2026,,Received via email
+APP-2026-2012,Quarry Bike Shop,Tanya Ibrahim,125000,11/23/2025,Janet Morrison,Bank Statements (90 day),Approved,10/3/2026,1/1/2027,Verified
+APP-2026-2012,Quarry Bike Shop,Tanya Ibrahim,125000,11/23/2025,Janet Morrison,Business Tax Returns (3yr),Pending,,,Follow-up call scheduled
+APP-2026-2012,Quarry Bike Shop,Tanya Ibrahim,125000,11/23/2025,Janet Morrison,Personal Tax Returns (3yr),Received,1/14/2026,1/13/2029,Uploaded to portal
+APP-2026-2012,Quarry Bike Shop,Tanya Ibrahim,125000,11/23/2025,Janet Morrison,Insurance Verification,Approved,5/24/2026,5/24/2027,
+APP-2026-2012,Quarry Bike Shop,Tanya Ibrahim,125000,11/23/2025,Janet Morrison,Business Financial Statements,Under Review,12/13/2025,,
+APP-2026-2012,Quarry Bike Shop,Tanya Ibrahim,125000,11/23/2025,Janet Morrison,Business Licenses & Permits,Under Review,8/10/2026,,Reviewing for completeness
+APP-2026-2012,Quarry Bike Shop,Tanya Ibrahim,125000,11/23/2025,Janet Morrison,Articles of Incorporation,Not Required,,,Waived per SBA guidelines
+APP-2026-2012,Quarry Bike Shop,Tanya Ibrahim,125000,11/23/2025,Janet Morrison,Lease Agreement,Pending,,,Waiting on borrower
+APP-2026-2012,Quarry Bike Shop,Tanya Ibrahim,125000,11/23/2025,Janet Morrison,Debt Schedule,Pending,,,
+APP-2026-2012,Quarry Bike Shop,Tanya Ibrahim,125000,11/23/2025,Janet Morrison,Ownership Verification,Pending,,,
+APP-2026-2012,Quarry Bike Shop,Tanya Ibrahim,125000,11/23/2025,Janet Morrison,SBA Form 1919,Received,12/4/2025,,Received via email
+APP-2026-2012,Quarry Bike Shop,Tanya Ibrahim,125000,11/23/2025,Janet Morrison,SBA Form 912,Not Required,,,Exempt - sole proprietorship
+APP-2026-2013,Yellowstone Dry Cleaners,Rosa Yamamoto,365000,1/12/2026,Janet Morrison,Bank Statements (90 day),Approved,3/20/2026,6/18/2026,
+APP-2026-2013,Yellowstone Dry Cleaners,Rosa Yamamoto,365000,1/12/2026,Janet Morrison,Business Tax Returns (3yr),Approved,6/21/2026,6/20/2029,
+APP-2026-2013,Yellowstone Dry Cleaners,Rosa Yamamoto,365000,1/12/2026,Janet Morrison,Personal Tax Returns (3yr),Not Required,,,Waived per SBA guidelines
+APP-2026-2013,Yellowstone Dry Cleaners,Rosa Yamamoto,365000,1/12/2026,Janet Morrison,Insurance Verification,Approved,1/19/2026,1/19/2027,
+APP-2026-2013,Yellowstone Dry Cleaners,Rosa Yamamoto,365000,1/12/2026,Janet Morrison,Business Financial Statements,Approved,7/21/2026,,
+APP-2026-2013,Yellowstone Dry Cleaners,Rosa Yamamoto,365000,1/12/2026,Janet Morrison,Business Licenses & Permits,Approved,7/20/2026,,
+APP-2026-2013,Yellowstone Dry Cleaners,Rosa Yamamoto,365000,1/12/2026,Janet Morrison,Articles of Incorporation,Approved,2/13/2026,,Verified
+APP-2026-2013,Yellowstone Dry Cleaners,Rosa Yamamoto,365000,1/12/2026,Janet Morrison,Lease Agreement,Approved,5/27/2026,,
+APP-2026-2013,Yellowstone Dry Cleaners,Rosa Yamamoto,365000,1/12/2026,Janet Morrison,Debt Schedule,Approved,7/29/2026,,Verified
+APP-2026-2013,Yellowstone Dry Cleaners,Rosa Yamamoto,365000,1/12/2026,Janet Morrison,Ownership Verification,Approved,4/28/2026,,
+APP-2026-2013,Yellowstone Dry Cleaners,Rosa Yamamoto,365000,1/12/2026,Janet Morrison,SBA Form 1919,Approved,10/15/2026,,
+APP-2026-2013,Yellowstone Dry Cleaners,Rosa Yamamoto,365000,1/12/2026,Janet Morrison,SBA Form 912,Approved,7/19/2026,,Verified
+APP-2026-2014,Lakeside Coffee Roasters,Carmen Ibrahim,1335000,3/24/2026,Janet Morrison,Bank Statements (90 day),Under Review,7/13/2026,10/11/2026,Minor discrepancy noted
+APP-2026-2014,Lakeside Coffee Roasters,Carmen Ibrahim,1335000,3/24/2026,Janet Morrison,Business Tax Returns (3yr),Received,5/16/2026,5/15/2029,
+APP-2026-2014,Lakeside Coffee Roasters,Carmen Ibrahim,1335000,3/24/2026,Janet Morrison,Personal Tax Returns (3yr),Pending,,,Follow-up call scheduled
+APP-2026-2014,Lakeside Coffee Roasters,Carmen Ibrahim,1335000,3/24/2026,Janet Morrison,Insurance Verification,Approved,7/3/2026,7/3/2027,
+APP-2026-2014,Lakeside Coffee Roasters,Carmen Ibrahim,1335000,3/24/2026,Janet Morrison,Business Financial Statements,Pending,,,Follow-up call scheduled
+APP-2026-2014,Lakeside Coffee Roasters,Carmen Ibrahim,1335000,3/24/2026,Janet Morrison,Business Licenses & Permits,Approved,4/19/2026,,
+APP-2026-2014,Lakeside Coffee Roasters,Carmen Ibrahim,1335000,3/24/2026,Janet Morrison,Articles of Incorporation,Approved,6/9/2026,,Verified
+APP-2026-2014,Lakeside Coffee Roasters,Carmen Ibrahim,1335000,3/24/2026,Janet Morrison,Lease Agreement,Pending,,,
+APP-2026-2014,Lakeside Coffee Roasters,Carmen Ibrahim,1335000,3/24/2026,Janet Morrison,Debt Schedule,Approved,10/17/2026,,
+APP-2026-2014,Lakeside Coffee Roasters,Carmen Ibrahim,1335000,3/24/2026,Janet Morrison,Ownership Verification,Approved,9/5/2026,,Verified
+APP-2026-2014,Lakeside Coffee Roasters,Carmen Ibrahim,1335000,3/24/2026,Janet Morrison,SBA Form 1919,Approved,8/27/2026,,
+APP-2026-2014,Lakeside Coffee Roasters,Carmen Ibrahim,1335000,3/24/2026,Janet Morrison,SBA Form 912,Approved,5/25/2026,,Verified
+APP-2026-2015,Highland Veterinary Hospital,Grace Rahman,170000,7/8/2026,Aisha Patel,Bank Statements (90 day),Expired,9/18/2026,12/17/2026,Document expired - replacement requested
+APP-2026-2015,Highland Veterinary Hospital,Grace Rahman,170000,7/8/2026,Aisha Patel,Business Tax Returns (3yr),Pending,,,Second request sent
+APP-2026-2015,Highland Veterinary Hospital,Grace Rahman,170000,7/8/2026,Aisha Patel,Personal Tax Returns (3yr),Not Required,,,Waived per SBA guidelines
+APP-2026-2015,Highland Veterinary Hospital,Grace Rahman,170000,7/8/2026,Aisha Patel,Insurance Verification,Approved,7/14/2026,7/14/2027,
+APP-2026-2015,Highland Veterinary Hospital,Grace Rahman,170000,7/8/2026,Aisha Patel,Business Financial Statements,Received,8/13/2026,,
+APP-2026-2015,Highland Veterinary Hospital,Grace Rahman,170000,7/8/2026,Aisha Patel,Business Licenses & Permits,Approved,8/30/2026,,
+APP-2026-2015,Highland Veterinary Hospital,Grace Rahman,170000,7/8/2026,Aisha Patel,Articles of Incorporation,Under Review,9/12/2026,,Reviewing for completeness
+APP-2026-2015,Highland Veterinary Hospital,Grace Rahman,170000,7/8/2026,Aisha Patel,Lease Agreement,Approved,9/10/2026,,
+APP-2026-2015,Highland Veterinary Hospital,Grace Rahman,170000,7/8/2026,Aisha Patel,Debt Schedule,Pending,,,Borrower contacted via email
+APP-2026-2015,Highland Veterinary Hospital,Grace Rahman,170000,7/8/2026,Aisha Patel,Ownership Verification,Not Required,,,Exempt - sole proprietorship
+APP-2026-2015,Highland Veterinary Hospital,Grace Rahman,170000,7/8/2026,Aisha Patel,SBA Form 1919,Under Review,10/16/2026,,Reviewing for completeness
+APP-2026-2015,Highland Veterinary Hospital,Grace Rahman,170000,7/8/2026,Aisha Patel,SBA Form 912,Pending,,,Requested from borrower
+APP-2026-2016,Bayview Physical Therapy,Mei Petrov,840000,1/29/2026,Ricardo Fuentes,Bank Statements (90 day),Pending,,,Follow-up call scheduled
+APP-2026-2016,Bayview Physical Therapy,Mei Petrov,840000,1/29/2026,Ricardo Fuentes,Business Tax Returns (3yr),Approved,6/26/2026,6/25/2029,
+APP-2026-2016,Bayview Physical Therapy,Mei Petrov,840000,1/29/2026,Ricardo Fuentes,Personal Tax Returns (3yr),Not Required,,,Waived per SBA guidelines
+APP-2026-2016,Bayview Physical Therapy,Mei Petrov,840000,1/29/2026,Ricardo Fuentes,Insurance Verification,Pending,,,
+APP-2026-2016,Bayview Physical Therapy,Mei Petrov,840000,1/29/2026,Ricardo Fuentes,Business Financial Statements,Received,5/7/2026,,
+APP-2026-2016,Bayview Physical Therapy,Mei Petrov,840000,1/29/2026,Ricardo Fuentes,Business Licenses & Permits,Pending,,,
+APP-2026-2016,Bayview Physical Therapy,Mei Petrov,840000,1/29/2026,Ricardo Fuentes,Articles of Incorporation,Pending,,,Follow-up call scheduled
+APP-2026-2016,Bayview Physical Therapy,Mei Petrov,840000,1/29/2026,Ricardo Fuentes,Lease Agreement,Received,5/7/2026,,
+APP-2026-2016,Bayview Physical Therapy,Mei Petrov,840000,1/29/2026,Ricardo Fuentes,Debt Schedule,Pending,,,
+APP-2026-2016,Bayview Physical Therapy,Mei Petrov,840000,1/29/2026,Ricardo Fuentes,Ownership Verification,Approved,5/21/2026,,
+APP-2026-2016,Bayview Physical Therapy,Mei Petrov,840000,1/29/2026,Ricardo Fuentes,SBA Form 1919,Expired,10/4/2026,,Document expired - replacement requested
+APP-2026-2016,Bayview Physical Therapy,Mei Petrov,840000,1/29/2026,Ricardo Fuentes,SBA Form 912,Pending,,,
+APP-2026-2017,Stonebridge Bookstore,Imani Nakamura,635000,4/24/2026,Aisha Patel,Bank Statements (90 day),Approved,6/22/2026,9/20/2026,
+APP-2026-2017,Stonebridge Bookstore,Imani Nakamura,635000,4/24/2026,Aisha Patel,Business Tax Returns (3yr),Not Required,,,Exempt - sole proprietorship
+APP-2026-2017,Stonebridge Bookstore,Imani Nakamura,635000,4/24/2026,Aisha Patel,Personal Tax Returns (3yr),Approved,6/28/2026,6/27/2029,Verified
+APP-2026-2017,Stonebridge Bookstore,Imani Nakamura,635000,4/24/2026,Aisha Patel,Insurance Verification,Approved,9/15/2026,9/15/2027,Verified
+APP-2026-2017,Stonebridge Bookstore,Imani Nakamura,635000,4/24/2026,Aisha Patel,Business Financial Statements,Expired,5/4/2026,,Expired - needs updated statements
+APP-2026-2017,Stonebridge Bookstore,Imani Nakamura,635000,4/24/2026,Aisha Patel,Business Licenses & Permits,Under Review,5/4/2026,,Reviewing for completeness
+APP-2026-2017,Stonebridge Bookstore,Imani Nakamura,635000,4/24/2026,Aisha Patel,Articles of Incorporation,Received,6/17/2026,,
+APP-2026-2017,Stonebridge Bookstore,Imani Nakamura,635000,4/24/2026,Aisha Patel,Lease Agreement,Approved,5/10/2026,,
+APP-2026-2017,Stonebridge Bookstore,Imani Nakamura,635000,4/24/2026,Aisha Patel,Debt Schedule,Approved,8/21/2026,,
+APP-2026-2017,Stonebridge Bookstore,Imani Nakamura,635000,4/24/2026,Aisha Patel,Ownership Verification,Under Review,5/29/2026,,Verifying with third party
+APP-2026-2017,Stonebridge Bookstore,Imani Nakamura,635000,4/24/2026,Aisha Patel,SBA Form 1919,Pending,,,Waiting on borrower
+APP-2026-2017,Stonebridge Bookstore,Imani Nakamura,635000,4/24/2026,Aisha Patel,SBA Form 912,Under Review,10/9/2026,,
+APP-2026-2018,Silverline Landscaping,Imani Osei,870000,12/8/2025,Janet Morrison,Bank Statements (90 day),Received,8/14/2026,11/12/2026,Uploaded to portal
+APP-2026-2018,Silverline Landscaping,Imani Osei,870000,12/8/2025,Janet Morrison,Business Tax Returns (3yr),Received,2/13/2026,2/12/2029,Uploaded to portal
+APP-2026-2018,Silverline Landscaping,Imani Osei,870000,12/8/2025,Janet Morrison,Personal Tax Returns (3yr),Pending,,,Follow-up call scheduled
+APP-2026-2018,Silverline Landscaping,Imani Osei,870000,12/8/2025,Janet Morrison,Insurance Verification,Received,7/24/2026,7/24/2027,Received via email
+APP-2026-2018,Silverline Landscaping,Imani Osei,870000,12/8/2025,Janet Morrison,Business Financial Statements,Approved,4/17/2026,,
+APP-2026-2018,Silverline Landscaping,Imani Osei,870000,12/8/2025,Janet Morrison,Business Licenses & Permits,Approved,12/24/2025,,
+APP-2026-2018,Silverline Landscaping,Imani Osei,870000,12/8/2025,Janet Morrison,Articles of Incorporation,Approved,6/13/2026,,
+APP-2026-2018,Silverline Landscaping,Imani Osei,870000,12/8/2025,Janet Morrison,Lease Agreement,Under Review,10/4/2026,,Minor discrepancy noted
+APP-2026-2018,Silverline Landscaping,Imani Osei,870000,12/8/2025,Janet Morrison,Debt Schedule,Received,9/28/2026,,Received via email
+APP-2026-2018,Silverline Landscaping,Imani Osei,870000,12/8/2025,Janet Morrison,Ownership Verification,Approved,10/14/2026,,
+APP-2026-2018,Silverline Landscaping,Imani Osei,870000,12/8/2025,Janet Morrison,SBA Form 1919,Approved,2/18/2026,,
+APP-2026-2018,Silverline Landscaping,Imani Osei,870000,12/8/2025,Janet Morrison,SBA Form 912,Received,1/2/2026,,
+APP-2026-2019,Granite Pediatric Clinic,Victor Zhang,975000,5/7/2026,Ricardo Fuentes,Bank Statements (90 day),Received,8/14/2026,11/12/2026,
+APP-2026-2019,Granite Pediatric Clinic,Victor Zhang,975000,5/7/2026,Ricardo Fuentes,Business Tax Returns (3yr),Pending,,,Borrower contacted via email
+APP-2026-2019,Granite Pediatric Clinic,Victor Zhang,975000,5/7/2026,Ricardo Fuentes,Personal Tax Returns (3yr),Approved,5/28/2026,5/27/2029,
+APP-2026-2019,Granite Pediatric Clinic,Victor Zhang,975000,5/7/2026,Ricardo Fuentes,Insurance Verification,Approved,6/6/2026,6/6/2027,
+APP-2026-2019,Granite Pediatric Clinic,Victor Zhang,975000,5/7/2026,Ricardo Fuentes,Business Financial Statements,Under Review,5/17/2026,,
+APP-2026-2019,Granite Pediatric Clinic,Victor Zhang,975000,5/7/2026,Ricardo Fuentes,Business Licenses & Permits,Pending,,,
+APP-2026-2019,Granite Pediatric Clinic,Victor Zhang,975000,5/7/2026,Ricardo Fuentes,Articles of Incorporation,Received,6/22/2026,,Received via email
+APP-2026-2019,Granite Pediatric Clinic,Victor Zhang,975000,5/7/2026,Ricardo Fuentes,Lease Agreement,Approved,5/26/2026,,Verified
+APP-2026-2019,Granite Pediatric Clinic,Victor Zhang,975000,5/7/2026,Ricardo Fuentes,Debt Schedule,Expired,10/8/2026,,Expired - needs updated statements
+APP-2026-2019,Granite Pediatric Clinic,Victor Zhang,975000,5/7/2026,Ricardo Fuentes,Ownership Verification,Pending,,,Borrower contacted via email
+APP-2026-2019,Granite Pediatric Clinic,Victor Zhang,975000,5/7/2026,Ricardo Fuentes,SBA Form 1919,Under Review,9/19/2026,,Minor discrepancy noted
+APP-2026-2019,Granite Pediatric Clinic,Victor Zhang,975000,5/7/2026,Ricardo Fuentes,SBA Form 912,Approved,9/23/2026,,
+APP-2026-2020,Golden Gate Plumbing,Nadia Coleman,1440000,6/6/2025,Janet Morrison,Bank Statements (90 day),Under Review,7/17/2026,10/15/2026,
+APP-2026-2020,Golden Gate Plumbing,Nadia Coleman,1440000,6/6/2025,Janet Morrison,Business Tax Returns (3yr),Approved,11/21/2025,11/20/2028,Verified
+APP-2026-2020,Golden Gate Plumbing,Nadia Coleman,1440000,6/6/2025,Janet Morrison,Personal Tax Returns (3yr),Approved,5/27/2026,5/26/2029,
+APP-2026-2020,Golden Gate Plumbing,Nadia Coleman,1440000,6/6/2025,Janet Morrison,Insurance Verification,Under Review,6/9/2026,6/9/2027,Verifying with third party
+APP-2026-2020,Golden Gate Plumbing,Nadia Coleman,1440000,6/6/2025,Janet Morrison,Business Financial Statements,Pending,,,
+APP-2026-2020,Golden Gate Plumbing,Nadia Coleman,1440000,6/6/2025,Janet Morrison,Business Licenses & Permits,Received,3/26/2026,,
+APP-2026-2020,Golden Gate Plumbing,Nadia Coleman,1440000,6/6/2025,Janet Morrison,Articles of Incorporation,Under Review,5/20/2026,,Reviewing for completeness
+APP-2026-2020,Golden Gate Plumbing,Nadia Coleman,1440000,6/6/2025,Janet Morrison,Lease Agreement,Received,11/14/2025,,Uploaded to portal
+APP-2026-2020,Golden Gate Plumbing,Nadia Coleman,1440000,6/6/2025,Janet Morrison,Debt Schedule,Not Required,,,Exempt - sole proprietorship
+APP-2026-2020,Golden Gate Plumbing,Nadia Coleman,1440000,6/6/2025,Janet Morrison,Ownership Verification,Under Review,9/13/2026,,Reviewing for completeness
+APP-2026-2020,Golden Gate Plumbing,Nadia Coleman,1440000,6/6/2025,Janet Morrison,SBA Form 1919,Under Review,6/18/2025,,Verifying with third party
+APP-2026-2020,Golden Gate Plumbing,Nadia Coleman,1440000,6/6/2025,Janet Morrison,SBA Form 912,Under Review,6/21/2026,,Verifying with third party
+APP-2026-2021,Bright Path Construction,Wen Banerjee,605000,1/16/2026,Aisha Patel,Bank Statements (90 day),Received,6/6/2026,9/4/2026,
+APP-2026-2021,Bright Path Construction,Wen Banerjee,605000,1/16/2026,Aisha Patel,Business Tax Returns (3yr),Approved,1/29/2026,1/28/2029,Verified
+APP-2026-2021,Bright Path Construction,Wen Banerjee,605000,1/16/2026,Aisha Patel,Personal Tax Returns (3yr),Pending,,,Requested from borrower
+APP-2026-2021,Bright Path Construction,Wen Banerjee,605000,1/16/2026,Aisha Patel,Insurance Verification,Under Review,6/10/2026,6/10/2027,Minor discrepancy noted
+APP-2026-2021,Bright Path Construction,Wen Banerjee,605000,1/16/2026,Aisha Patel,Business Financial Statements,Approved,6/12/2026,,
+APP-2026-2021,Bright Path Construction,Wen Banerjee,605000,1/16/2026,Aisha Patel,Business Licenses & Permits,Approved,3/3/2026,,
+APP-2026-2021,Bright Path Construction,Wen Banerjee,605000,1/16/2026,Aisha Patel,Articles of Incorporation,Received,2/24/2026,,
+APP-2026-2021,Bright Path Construction,Wen Banerjee,605000,1/16/2026,Aisha Patel,Lease Agreement,Under Review,9/10/2026,,Verifying with third party
+APP-2026-2021,Bright Path Construction,Wen Banerjee,605000,1/16/2026,Aisha Patel,Debt Schedule,Pending,,,
+APP-2026-2021,Bright Path Construction,Wen Banerjee,605000,1/16/2026,Aisha Patel,Ownership Verification,Received,5/28/2026,,Uploaded to portal
+APP-2026-2021,Bright Path Construction,Wen Banerjee,605000,1/16/2026,Aisha Patel,SBA Form 1919,Approved,4/25/2026,,Verified
+APP-2026-2021,Bright Path Construction,Wen Banerjee,605000,1/16/2026,Aisha Patel,SBA Form 912,Received,6/7/2026,,Uploaded to portal
+APP-2026-2022,Redwood Martial Arts Academy,Amara Eriksen,495000,6/23/2026,Aisha Patel,Bank Statements (90 day),Approved,7/20/2026,10/18/2026,Verified
+APP-2026-2022,Redwood Martial Arts Academy,Amara Eriksen,495000,6/23/2026,Aisha Patel,Business Tax Returns (3yr),Pending,,,Borrower contacted via email
+APP-2026-2022,Redwood Martial Arts Academy,Amara Eriksen,495000,6/23/2026,Aisha Patel,Personal Tax Returns (3yr),Approved,6/29/2026,6/28/2029,
+APP-2026-2022,Redwood Martial Arts Academy,Amara Eriksen,495000,6/23/2026,Aisha Patel,Insurance Verification,Not Required,,,Exempt - sole proprietorship
+APP-2026-2022,Redwood Martial Arts Academy,Amara Eriksen,495000,6/23/2026,Aisha Patel,Business Financial Statements,Approved,7/7/2026,,Verified
+APP-2026-2022,Redwood Martial Arts Academy,Amara Eriksen,495000,6/23/2026,Aisha Patel,Business Licenses & Permits,Not Required,,,Waived per SBA guidelines
+APP-2026-2022,Redwood Martial Arts Academy,Amara Eriksen,495000,6/23/2026,Aisha Patel,Articles of Incorporation,Approved,8/18/2026,,Verified
+APP-2026-2022,Redwood Martial Arts Academy,Amara Eriksen,495000,6/23/2026,Aisha Patel,Lease Agreement,Received,7/11/2026,,
+APP-2026-2022,Redwood Martial Arts Academy,Amara Eriksen,495000,6/23/2026,Aisha Patel,Debt Schedule,Pending,,,
+APP-2026-2022,Redwood Martial Arts Academy,Amara Eriksen,495000,6/23/2026,Aisha Patel,Ownership Verification,Approved,8/1/2026,,
+APP-2026-2022,Redwood Martial Arts Academy,Amara Eriksen,495000,6/23/2026,Aisha Patel,SBA Form 1919,Received,6/25/2026,,
+APP-2026-2022,Redwood Martial Arts Academy,Amara Eriksen,495000,6/23/2026,Aisha Patel,SBA Form 912,Received,7/31/2026,,
+APP-2026-2023,Silverline Salon & Spa,Omar Vasquez,345000,4/9/2026,Ricardo Fuentes,Insurance Verification,Approved,8/7/2026,8/7/2027,
+APP-2026-2023,Silverline Salon & Spa,Omar Vasquez,345000,4/9/2026,Ricardo Fuentes,Debt Schedule,Pending,,,Second request sent
+APP-2026-2023,Silverline Salon & Spa,Omar Vasquez,345000,4/9/2026,Ricardo Fuentes,SBA Form 912,Pending,,,
+APP-2026-2023,Silverline Salon & Spa,Omar Vasquez,345000,4/9/2026,Ricardo Fuentes,Business Licenses & Permits,Not Required,,,Exempt - sole proprietorship
+APP-2026-2023,Silverline Salon & Spa,Omar Vasquez,345000,4/9/2026,Ricardo Fuentes,Business Financial Statements,Under Review,10/8/2026,,Verifying with third party
+APP-2026-2023,Silverline Salon & Spa,Omar Vasquez,345000,4/9/2026,Ricardo Fuentes,Personal Tax Returns (3yr),Received,5/23/2026,5/22/2029,Uploaded to portal
+APP-2026-2023,Silverline Salon & Spa,Omar Vasquez,345000,4/9/2026,Ricardo Fuentes,Business Tax Returns (3yr),Pending,,,
+APP-2026-2023,Silverline Salon & Spa,Omar Vasquez,345000,4/9/2026,Ricardo Fuentes,Ownership Verification,Received,5/1/2026,,
+APP-2026-2023,Silverline Salon & Spa,Omar Vasquez,345000,4/9/2026,Ricardo Fuentes,SBA Form 1919,Pending,,,Borrower contacted via email
+APP-2026-2023,Silverline Salon & Spa,Omar Vasquez,345000,4/9/2026,Ricardo Fuentes,Lease Agreement,Pending,,,Requested from borrower
+APP-2026-2024,Riverstone Plumbing,Darius Jensen,1110000,7/9/2026,Aisha Patel,Bank Statements (90 day),Received,8/12/2026,11/10/2026,Received via email
+APP-2026-2024,Riverstone Plumbing,Darius Jensen,1110000,7/9/2026,Aisha Patel,Business Tax Returns (3yr),Pending,,,
+APP-2026-2024,Riverstone Plumbing,Darius Jensen,1110000,7/9/2026,Aisha Patel,Personal Tax Returns (3yr),Pending,,,Waiting on borrower
+APP-2026-2024,Riverstone Plumbing,Darius Jensen,1110000,7/9/2026,Aisha Patel,Insurance Verification,Pending,,,Second request sent
+APP-2026-2024,Riverstone Plumbing,Darius Jensen,1110000,7/9/2026,Aisha Patel,Business Financial Statements,Pending,,,Requested from borrower
+APP-2026-2024,Riverstone Plumbing,Darius Jensen,1110000,7/9/2026,Aisha Patel,Business Licenses & Permits,Approved,9/12/2026,,
+APP-2026-2024,Riverstone Plumbing,Darius Jensen,1110000,7/9/2026,Aisha Patel,Articles of Incorporation,Approved,9/30/2026,,Verified
+APP-2026-2024,Riverstone Plumbing,Darius Jensen,1110000,7/9/2026,Aisha Patel,Lease Agreement,Pending,,,Waiting on borrower
+APP-2026-2024,Riverstone Plumbing,Darius Jensen,1110000,7/9/2026,Aisha Patel,Debt Schedule,Not Required,,,Exempt - sole proprietorship
+APP-2026-2024,Riverstone Plumbing,Darius Jensen,1110000,7/9/2026,Aisha Patel,Ownership Verification,Approved,9/7/2026,,
+APP-2026-2024,Riverstone Plumbing,Darius Jensen,1110000,7/9/2026,Aisha Patel,SBA Form 1919,Under Review,9/12/2026,,
+APP-2026-2024,Riverstone Plumbing,Darius Jensen,1110000,7/9/2026,Aisha Patel,SBA Form 912,Approved,7/29/2026,,
+APP-2026-2025,Twin Oaks Pet Grooming,Keisha Osei,390000,7/31/2026,Aisha Patel,Bank Statements (90 day),Received,8/31/2026,11/29/2026,Uploaded to portal
+APP-2026-2025,Twin Oaks Pet Grooming,Keisha Osei,390000,7/31/2026,Aisha Patel,Business Tax Returns (3yr),Pending,,,Requested from borrower
+APP-2026-2025,Twin Oaks Pet Grooming,Keisha Osei,390000,7/31/2026,Aisha Patel,Personal Tax Returns (3yr),Pending,,,
+APP-2026-2025,Twin Oaks Pet Grooming,Keisha Osei,390000,7/31/2026,Aisha Patel,Insurance Verification,Approved,8/11/2026,8/11/2027,Verified
+APP-2026-2025,Twin Oaks Pet Grooming,Keisha Osei,390000,7/31/2026,Aisha Patel,Business Financial Statements,Received,8/4/2026,,
+APP-2026-2025,Twin Oaks Pet Grooming,Keisha Osei,390000,7/31/2026,Aisha Patel,Business Licenses & Permits,Under Review,9/1/2026,,Reviewing for completeness
+APP-2026-2025,Twin Oaks Pet Grooming,Keisha Osei,390000,7/31/2026,Aisha Patel,Articles of Incorporation,Expired,9/3/2026,,Expired - needs updated statements
+APP-2026-2025,Twin Oaks Pet Grooming,Keisha Osei,390000,7/31/2026,Aisha Patel,Lease Agreement,Under Review,8/20/2026,,Minor discrepancy noted
+APP-2026-2025,Twin Oaks Pet Grooming,Keisha Osei,390000,7/31/2026,Aisha Patel,Debt Schedule,Pending,,,
+APP-2026-2025,Twin Oaks Pet Grooming,Keisha Osei,390000,7/31/2026,Aisha Patel,Ownership Verification,Pending,,,
+APP-2026-2025,Twin Oaks Pet Grooming,Keisha Osei,390000,7/31/2026,Aisha Patel,SBA Form 1919,Received,8/24/2026,,Uploaded to portal
+APP-2026-2025,Twin Oaks Pet Grooming,Keisha Osei,390000,7/31/2026,Aisha Patel,SBA Form 912,Pending,,,Second request sent
+APP-2026-2026,Lakeside Salon & Spa,Nadia Yamamoto,1055000,3/2/2026,Aisha Patel,Business Licenses & Permits,Pending,,,Requested from borrower
+APP-2026-2026,Lakeside Salon & Spa,Nadia Yamamoto,1055000,3/2/2026,Aisha Patel,Articles of Incorporation,Expired,7/6/2026,,Expired - needs updated statements
+APP-2026-2026,Lakeside Salon & Spa,Nadia Yamamoto,1055000,3/2/2026,Aisha Patel,SBA Form 1919,Under Review,6/1/2026,,Verifying with third party
+APP-2026-2026,Lakeside Salon & Spa,Nadia Yamamoto,1055000,3/2/2026,Aisha Patel,Debt Schedule,Received,4/7/2026,,Received via email
+APP-2026-2026,Lakeside Salon & Spa,Nadia Yamamoto,1055000,3/2/2026,Aisha Patel,Ownership Verification,Received,9/10/2026,,Received via email
+APP-2026-2026,Lakeside Salon & Spa,Nadia Yamamoto,1055000,3/2/2026,Aisha Patel,Bank Statements (90 day),Pending,,,Requested from borrower
+APP-2026-2026,Lakeside Salon & Spa,Nadia Yamamoto,1055000,3/2/2026,Aisha Patel,Business Tax Returns (3yr),Not Required,,,Waived per SBA guidelines
+APP-2026-2026,Lakeside Salon & Spa,Nadia Yamamoto,1055000,3/2/2026,Aisha Patel,SBA Form 912,Approved,10/1/2026,,Verified
+APP-2026-2026,Lakeside Salon & Spa,Nadia Yamamoto,1055000,3/2/2026,Aisha Patel,Business Financial Statements,Not Required,,,Not applicable for this loan type
+APP-2026-2026,Lakeside Salon & Spa,Nadia Yamamoto,1055000,3/2/2026,Aisha Patel,Insurance Verification,Approved,4/4/2026,4/4/2027,
+APP-2026-2026,Lakeside Salon & Spa,Nadia Yamamoto,1055000,3/2/2026,Aisha Patel,Personal Tax Returns (3yr),Under Review,6/20/2026,6/19/2029,Verifying with third party
+APP-2026-2027,Lighthouse Machine Shop,Luis Alvarez,760000,8/23/2025,Aisha Patel,Bank Statements (90 day),Approved,3/21/2026,6/19/2026,
+APP-2026-2027,Lighthouse Machine Shop,Luis Alvarez,760000,8/23/2025,Aisha Patel,Business Tax Returns (3yr),Under Review,4/26/2026,4/25/2029,Verifying with third party
+APP-2026-2027,Lighthouse Machine Shop,Luis Alvarez,760000,8/23/2025,Aisha Patel,Personal Tax Returns (3yr),Under Review,4/20/2026,4/19/2029,Minor discrepancy noted
+APP-2026-2027,Lighthouse Machine Shop,Luis Alvarez,760000,8/23/2025,Aisha Patel,Insurance Verification,Received,6/3/2026,6/3/2027,
+APP-2026-2027,Lighthouse Machine Shop,Luis Alvarez,760000,8/23/2025,Aisha Patel,Business Financial Statements,Pending,,,Requested from borrower
+APP-2026-2027,Lighthouse Machine Shop,Luis Alvarez,760000,8/23/2025,Aisha Patel,Business Licenses & Permits,Approved,3/19/2026,,
+APP-2026-2027,Lighthouse Machine Shop,Luis Alvarez,760000,8/23/2025,Aisha Patel,Articles of Incorporation,Received,1/29/2026,,
+APP-2026-2027,Lighthouse Machine Shop,Luis Alvarez,760000,8/23/2025,Aisha Patel,Lease Agreement,Pending,,,Requested from borrower
+APP-2026-2027,Lighthouse Machine Shop,Luis Alvarez,760000,8/23/2025,Aisha Patel,Debt Schedule,Received,5/23/2026,,Received via email
+APP-2026-2027,Lighthouse Machine Shop,Luis Alvarez,760000,8/23/2025,Aisha Patel,Ownership Verification,Approved,10/4/2026,,
+APP-2026-2027,Lighthouse Machine Shop,Luis Alvarez,760000,8/23/2025,Aisha Patel,SBA Form 1919,Under Review,9/3/2026,,
+APP-2026-2027,Lighthouse Machine Shop,Luis Alvarez,760000,8/23/2025,Aisha Patel,SBA Form 912,Approved,11/24/2025,,Verified
+APP-2026-2028,Summit HVAC Services,Uma Rahman,1480000,12/7/2025,Janet Morrison,Bank Statements (90 day),Received,6/28/2026,9/26/2026,
+APP-2026-2028,Summit HVAC Services,Uma Rahman,1480000,12/7/2025,Janet Morrison,Business Tax Returns (3yr),Under Review,3/7/2026,3/6/2029,Verifying with third party
+APP-2026-2028,Summit HVAC Services,Uma Rahman,1480000,12/7/2025,Janet Morrison,Personal Tax Returns (3yr),Approved,1/1/2026,12/31/2028,
+APP-2026-2028,Summit HVAC Services,Uma Rahman,1480000,12/7/2025,Janet Morrison,Insurance Verification,Received,8/7/2026,8/7/2027,Uploaded to portal
+APP-2026-2028,Summit HVAC Services,Uma Rahman,1480000,12/7/2025,Janet Morrison,Business Financial Statements,Pending,,,
+APP-2026-2028,Summit HVAC Services,Uma Rahman,1480000,12/7/2025,Janet Morrison,Business Licenses & Permits,Approved,5/17/2026,,Verified
+APP-2026-2028,Summit HVAC Services,Uma Rahman,1480000,12/7/2025,Janet Morrison,Articles of Incorporation,Received,4/14/2026,,
+APP-2026-2028,Summit HVAC Services,Uma Rahman,1480000,12/7/2025,Janet Morrison,Lease Agreement,Received,1/22/2026,,
+APP-2026-2028,Summit HVAC Services,Uma Rahman,1480000,12/7/2025,Janet Morrison,Debt Schedule,Received,12/25/2025,,
+APP-2026-2028,Summit HVAC Services,Uma Rahman,1480000,12/7/2025,Janet Morrison,Ownership Verification,Pending,,,
+APP-2026-2028,Summit HVAC Services,Uma Rahman,1480000,12/7/2025,Janet Morrison,SBA Form 1919,Approved,4/18/2026,,
+APP-2026-2028,Summit HVAC Services,Uma Rahman,1480000,12/7/2025,Janet Morrison,SBA Form 912,Received,12/12/2025,,Uploaded to portal
+APP-2026-2029,Lakeside Bistro,Uma Petrov,265000,6/30/2026,Aisha Patel,Bank Statements (90 day),Approved,8/4/2026,11/2/2026,
+APP-2026-2029,Lakeside Bistro,Uma Petrov,265000,6/30/2026,Aisha Patel,Business Tax Returns (3yr),Received,7/1/2026,6/30/2029,Uploaded to portal
+APP-2026-2029,Lakeside Bistro,Uma Petrov,265000,6/30/2026,Aisha Patel,Personal Tax Returns (3yr),Received,6/30/2026,6/29/2029,
+APP-2026-2029,Lakeside Bistro,Uma Petrov,265000,6/30/2026,Aisha Patel,Insurance Verification,Approved,7/21/2026,7/21/2027,Verified
+APP-2026-2029,Lakeside Bistro,Uma Petrov,265000,6/30/2026,Aisha Patel,Business Financial Statements,Under Review,9/30/2026,,Minor discrepancy noted
+APP-2026-2029,Lakeside Bistro,Uma Petrov,265000,6/30/2026,Aisha Patel,Business Licenses & Permits,Pending,,,
+APP-2026-2029,Lakeside Bistro,Uma Petrov,265000,6/30/2026,Aisha Patel,Articles of Incorporation,Approved,6/30/2026,,
+APP-2026-2029,Lakeside Bistro,Uma Petrov,265000,6/30/2026,Aisha Patel,Lease Agreement,Approved,9/9/2026,,Verified
+APP-2026-2029,Lakeside Bistro,Uma Petrov,265000,6/30/2026,Aisha Patel,Debt Schedule,Received,9/19/2026,,Received via email
+APP-2026-2029,Lakeside Bistro,Uma Petrov,265000,6/30/2026,Aisha Patel,Ownership Verification,Approved,10/12/2026,,
+APP-2026-2029,Lakeside Bistro,Uma Petrov,265000,6/30/2026,Aisha Patel,SBA Form 1919,Under Review,9/14/2026,,
+APP-2026-2029,Lakeside Bistro,Uma Petrov,265000,6/30/2026,Aisha Patel,SBA Form 912,Not Required,,,Exempt - sole proprietorship
+APP-2026-2030,Bayview Family Dentistry,Ben Petrov,880000,11/6/2025,Aisha Patel,SBA Form 1919,Received,4/9/2026,,Uploaded to portal
+APP-2026-2030,Bayview Family Dentistry,Ben Petrov,880000,11/6/2025,Aisha Patel,SBA Form 912,Received,10/7/2026,,
+APP-2026-2030,Bayview Family Dentistry,Ben Petrov,880000,11/6/2025,Aisha Patel,Business Financial Statements,Approved,4/19/2026,,Verified
+APP-2026-2030,Bayview Family Dentistry,Ben Petrov,880000,11/6/2025,Aisha Patel,Personal Tax Returns (3yr),Not Required,,,Not applicable for this loan type
+APP-2026-2030,Bayview Family Dentistry,Ben Petrov,880000,11/6/2025,Aisha Patel,Ownership Verification,Received,9/25/2026,,Received via email
+APP-2026-2030,Bayview Family Dentistry,Ben Petrov,880000,11/6/2025,Aisha Patel,Articles of Incorporation,Received,6/3/2026,,
+APP-2026-2030,Bayview Family Dentistry,Ben Petrov,880000,11/6/2025,Aisha Patel,Bank Statements (90 day),Under Review,9/18/2026,12/17/2026,Minor discrepancy noted
+APP-2026-2030,Bayview Family Dentistry,Ben Petrov,880000,11/6/2025,Aisha Patel,Debt Schedule,Received,8/8/2026,,Received via email
+APP-2026-2030,Bayview Family Dentistry,Ben Petrov,880000,11/6/2025,Aisha Patel,Lease Agreement,Under Review,8/8/2026,,Verifying with third party
+APP-2026-2031,Bayview Bookstore,Uma Kowalski,740000,10/8/2025,Janet Morrison,Lease Agreement,Received,5/25/2026,,Received via email
+APP-2026-2031,Bayview Bookstore,Uma Kowalski,740000,10/8/2025,Janet Morrison,Insurance Verification,Pending,,,
+APP-2026-2031,Bayview Bookstore,Uma Kowalski,740000,10/8/2025,Janet Morrison,SBA Form 1919,Pending,,,
+APP-2026-2031,Bayview Bookstore,Uma Kowalski,740000,10/8/2025,Janet Morrison,Articles of Incorporation,Approved,2/18/2026,,Verified
+APP-2026-2031,Bayview Bookstore,Uma Kowalski,740000,10/8/2025,Janet Morrison,Business Licenses & Permits,Received,5/3/2026,,
+APP-2026-2031,Bayview Bookstore,Uma Kowalski,740000,10/8/2025,Janet Morrison,Bank Statements (90 day),Pending,,,Waiting on borrower
+APP-2026-2031,Bayview Bookstore,Uma Kowalski,740000,10/8/2025,Janet Morrison,Debt Schedule,Received,11/1/2025,,
+APP-2026-2031,Bayview Bookstore,Uma Kowalski,740000,10/8/2025,Janet Morrison,Business Financial Statements,Approved,6/13/2026,,Verified
+APP-2026-2031,Bayview Bookstore,Uma Kowalski,740000,10/8/2025,Janet Morrison,Ownership Verification,Under Review,9/26/2026,,Reviewing for completeness
+APP-2026-2032,Northgate Martial Arts Academy,Darius Thompson,725000,7/2/2025,Ricardo Fuentes,Bank Statements (90 day),Approved,4/3/2026,7/2/2026,
+APP-2026-2032,Northgate Martial Arts Academy,Darius Thompson,725000,7/2/2025,Ricardo Fuentes,Business Tax Returns (3yr),Pending,,,Follow-up call scheduled
+APP-2026-2032,Northgate Martial Arts Academy,Darius Thompson,725000,7/2/2025,Ricardo Fuentes,Personal Tax Returns (3yr),Approved,2/26/2026,2/25/2029,
+APP-2026-2032,Northgate Martial Arts Academy,Darius Thompson,725000,7/2/2025,Ricardo Fuentes,Insurance Verification,Pending,,,Follow-up call scheduled
+APP-2026-2032,Northgate Martial Arts Academy,Darius Thompson,725000,7/2/2025,Ricardo Fuentes,Business Financial Statements,Approved,6/22/2026,,
+APP-2026-2032,Northgate Martial Arts Academy,Darius Thompson,725000,7/2/2025,Ricardo Fuentes,Business Licenses & Permits,Under Review,6/11/2026,,Minor discrepancy noted
+APP-2026-2032,Northgate Martial Arts Academy,Darius Thompson,725000,7/2/2025,Ricardo Fuentes,Articles of Incorporation,Received,7/10/2025,,
+APP-2026-2032,Northgate Martial Arts Academy,Darius Thompson,725000,7/2/2025,Ricardo Fuentes,Lease Agreement,Approved,10/17/2026,,
+APP-2026-2032,Northgate Martial Arts Academy,Darius Thompson,725000,7/2/2025,Ricardo Fuentes,Debt Schedule,Under Review,7/25/2025,,Reviewing for completeness
+APP-2026-2032,Northgate Martial Arts Academy,Darius Thompson,725000,7/2/2025,Ricardo Fuentes,Ownership Verification,Pending,,,
+APP-2026-2032,Northgate Martial Arts Academy,Darius Thompson,725000,7/2/2025,Ricardo Fuentes,SBA Form 1919,Approved,8/19/2025,,Verified
+APP-2026-2032,Northgate Martial Arts Academy,Darius Thompson,725000,7/2/2025,Ricardo Fuentes,SBA Form 912,Approved,8/17/2026,,
+APP-2026-2033,Lakeside Bakery,Chen Nguyen,545000,7/17/2026,Janet Morrison,Bank Statements (90 day),Not Required,,,Waived per SBA guidelines
+APP-2026-2033,Lakeside Bakery,Chen Nguyen,545000,7/17/2026,Janet Morrison,Business Tax Returns (3yr),Pending,,,Follow-up call scheduled
+APP-2026-2033,Lakeside Bakery,Chen Nguyen,545000,7/17/2026,Janet Morrison,Personal Tax Returns (3yr),Pending,,,
+APP-2026-2033,Lakeside Bakery,Chen Nguyen,545000,7/17/2026,Janet Morrison,Insurance Verification,Approved,7/19/2026,7/19/2027,
+APP-2026-2033,Lakeside Bakery,Chen Nguyen,545000,7/17/2026,Janet Morrison,Business Financial Statements,Pending,,,Borrower contacted via email
+APP-2026-2033,Lakeside Bakery,Chen Nguyen,545000,7/17/2026,Janet Morrison,Business Licenses & Permits,Received,8/20/2026,,
+APP-2026-2033,Lakeside Bakery,Chen Nguyen,545000,7/17/2026,Janet Morrison,Articles of Incorporation,Pending,,,Requested from borrower
+APP-2026-2033,Lakeside Bakery,Chen Nguyen,545000,7/17/2026,Janet Morrison,Lease Agreement,Received,8/10/2026,,
+APP-2026-2033,Lakeside Bakery,Chen Nguyen,545000,7/17/2026,Janet Morrison,Debt Schedule,Under Review,8/4/2026,,Reviewing for completeness
+APP-2026-2033,Lakeside Bakery,Chen Nguyen,545000,7/17/2026,Janet Morrison,Ownership Verification,Approved,7/27/2026,,
+APP-2026-2033,Lakeside Bakery,Chen Nguyen,545000,7/17/2026,Janet Morrison,SBA Form 1919,Approved,8/20/2026,,Verified
+APP-2026-2033,Lakeside Bakery,Chen Nguyen,545000,7/17/2026,Janet Morrison,SBA Form 912,Received,10/1/2026,,Received via email
+APP-2026-2034,Oakmont Bistro,Priya Sato,1270000,7/3/2025,Janet Morrison,Bank Statements (90 day),Received,3/16/2026,6/14/2026,Received via email
+APP-2026-2034,Oakmont Bistro,Priya Sato,1270000,7/3/2025,Janet Morrison,Business Tax Returns (3yr),Received,5/12/2026,5/11/2029,
+APP-2026-2034,Oakmont Bistro,Priya Sato,1270000,7/3/2025,Janet Morrison,Personal Tax Returns (3yr),Under Review,2/18/2026,2/17/2029,
+APP-2026-2034,Oakmont Bistro,Priya Sato,1270000,7/3/2025,Janet Morrison,Insurance Verification,Received,3/16/2026,3/16/2027,Received via email
+APP-2026-2034,Oakmont Bistro,Priya Sato,1270000,7/3/2025,Janet Morrison,Business Financial Statements,Pending,,,Waiting on borrower
+APP-2026-2034,Oakmont Bistro,Priya Sato,1270000,7/3/2025,Janet Morrison,Business Licenses & Permits,Approved,1/6/2026,,
+APP-2026-2034,Oakmont Bistro,Priya Sato,1270000,7/3/2025,Janet Morrison,Articles of Incorporation,Not Required,,,Waived per SBA guidelines
+APP-2026-2034,Oakmont Bistro,Priya Sato,1270000,7/3/2025,Janet Morrison,Lease Agreement,Approved,9/13/2025,,
+APP-2026-2034,Oakmont Bistro,Priya Sato,1270000,7/3/2025,Janet Morrison,Debt Schedule,Approved,9/21/2025,,
+APP-2026-2034,Oakmont Bistro,Priya Sato,1270000,7/3/2025,Janet Morrison,Ownership Verification,Pending,,,Borrower contacted via email
+APP-2026-2034,Oakmont Bistro,Priya Sato,1270000,7/3/2025,Janet Morrison,SBA Form 1919,Received,10/8/2026,,Uploaded to portal
+APP-2026-2034,Oakmont Bistro,Priya Sato,1270000,7/3/2025,Janet Morrison,SBA Form 912,Under Review,12/19/2025,,Reviewing for completeness
+APP-2026-2035,Granite Martial Arts Academy,Samuel Whitfield,905000,3/31/2026,Aisha Patel,Insurance Verification,Received,3/31/2026,3/31/2027,Received via email
+APP-2026-2035,Granite Martial Arts Academy,Samuel Whitfield,905000,3/31/2026,Aisha Patel,Bank Statements (90 day),Pending,,,
+APP-2026-2035,Granite Martial Arts Academy,Samuel Whitfield,905000,3/31/2026,Aisha Patel,Articles of Incorporation,Received,10/2/2026,,Received via email
+APP-2026-2035,Granite Martial Arts Academy,Samuel Whitfield,905000,3/31/2026,Aisha Patel,Business Financial Statements,Received,5/14/2026,,Uploaded to portal
+APP-2026-2035,Granite Martial Arts Academy,Samuel Whitfield,905000,3/31/2026,Aisha Patel,Lease Agreement,Received,6/14/2026,,
+APP-2026-2035,Granite Martial Arts Academy,Samuel Whitfield,905000,3/31/2026,Aisha Patel,Business Tax Returns (3yr),Pending,,,Borrower contacted via email
+APP-2026-2035,Granite Martial Arts Academy,Samuel Whitfield,905000,3/31/2026,Aisha Patel,Debt Schedule,Pending,,,
+APP-2026-2035,Granite Martial Arts Academy,Samuel Whitfield,905000,3/31/2026,Aisha Patel,SBA Form 1919,Pending,,,Follow-up call scheduled
+APP-2026-2035,Granite Martial Arts Academy,Samuel Whitfield,905000,3/31/2026,Aisha Patel,Ownership Verification,Under Review,7/28/2026,,
+APP-2026-2035,Granite Martial Arts Academy,Samuel Whitfield,905000,3/31/2026,Aisha Patel,Business Licenses & Permits,Pending,,,Requested from borrower
+APP-2026-2035,Granite Martial Arts Academy,Samuel Whitfield,905000,3/31/2026,Aisha Patel,Personal Tax Returns (3yr),Received,5/25/2026,5/24/2029,Uploaded to portal
+APP-2026-2036,Ironwood Construction,Ximena Rahman,1360000,10/26/2025,Aisha Patel,Bank Statements (90 day),Approved,8/14/2026,11/12/2026,
+APP-2026-2036,Ironwood Construction,Ximena Rahman,1360000,10/26/2025,Aisha Patel,Business Tax Returns (3yr),Under Review,5/10/2026,5/9/2029,Reviewing for completeness
+APP-2026-2036,Ironwood Construction,Ximena Rahman,1360000,10/26/2025,Aisha Patel,Personal Tax Returns (3yr),Received,2/11/2026,2/10/2029,
+APP-2026-2036,Ironwood Construction,Ximena Rahman,1360000,10/26/2025,Aisha Patel,Insurance Verification,Under Review,2/9/2026,2/9/2027,Verifying with third party
+APP-2026-2036,Ironwood Construction,Ximena Rahman,1360000,10/26/2025,Aisha Patel,Business Financial Statements,Pending,,,
+APP-2026-2036,Ironwood Construction,Ximena Rahman,1360000,10/26/2025,Aisha Patel,Business Licenses & Permits,Received,2/8/2026,,
+APP-2026-2036,Ironwood Construction,Ximena Rahman,1360000,10/26/2025,Aisha Patel,Articles of Incorporation,Received,12/1/2025,,Received via email
+APP-2026-2036,Ironwood Construction,Ximena Rahman,1360000,10/26/2025,Aisha Patel,Lease Agreement,Approved,3/15/2026,,
+APP-2026-2036,Ironwood Construction,Ximena Rahman,1360000,10/26/2025,Aisha Patel,Debt Schedule,Approved,6/6/2026,,
+APP-2026-2036,Ironwood Construction,Ximena Rahman,1360000,10/26/2025,Aisha Patel,Ownership Verification,Received,6/3/2026,,Uploaded to portal
+APP-2026-2036,Ironwood Construction,Ximena Rahman,1360000,10/26/2025,Aisha Patel,SBA Form 1919,Received,6/19/2026,,
+APP-2026-2036,Ironwood Construction,Ximena Rahman,1360000,10/26/2025,Aisha Patel,SBA Form 912,Pending,,,
+APP-2026-2037,Driftwood Auto Repair,Amara Nakamura,600000,1/27/2026,Aisha Patel,Bank Statements (90 day),Pending,,,Follow-up call scheduled
+APP-2026-2037,Driftwood Auto Repair,Amara Nakamura,600000,1/27/2026,Aisha Patel,Business Tax Returns (3yr),Received,3/15/2026,3/14/2029,Uploaded to portal
+APP-2026-2037,Driftwood Auto Repair,Amara Nakamura,600000,1/27/2026,Aisha Patel,Personal Tax Returns (3yr),Not Required,,,Exempt - sole proprietorship
+APP-2026-2037,Driftwood Auto Repair,Amara Nakamura,600000,1/27/2026,Aisha Patel,Insurance Verification,Expired,4/9/2026,4/9/2027,Document expired - replacement requested
+APP-2026-2037,Driftwood Auto Repair,Amara Nakamura,600000,1/27/2026,Aisha Patel,Business Financial Statements,Under Review,8/15/2026,,Verifying with third party
+APP-2026-2037,Driftwood Auto Repair,Amara Nakamura,600000,1/27/2026,Aisha Patel,Business Licenses & Permits,Under Review,2/19/2026,,Verifying with third party
+APP-2026-2037,Driftwood Auto Repair,Amara Nakamura,600000,1/27/2026,Aisha Patel,Articles of Incorporation,Approved,2/22/2026,,
+APP-2026-2037,Driftwood Auto Repair,Amara Nakamura,600000,1/27/2026,Aisha Patel,Lease Agreement,Pending,,,Follow-up call scheduled
+APP-2026-2037,Driftwood Auto Repair,Amara Nakamura,600000,1/27/2026,Aisha Patel,Debt Schedule,Under Review,5/17/2026,,Verifying with third party
+APP-2026-2037,Driftwood Auto Repair,Amara Nakamura,600000,1/27/2026,Aisha Patel,Ownership Verification,Under Review,10/15/2026,,Minor discrepancy noted
+APP-2026-2037,Driftwood Auto Repair,Amara Nakamura,600000,1/27/2026,Aisha Patel,SBA Form 1919,Under Review,7/19/2026,,Reviewing for completeness
+APP-2026-2037,Driftwood Auto Repair,Amara Nakamura,600000,1/27/2026,Aisha Patel,SBA Form 912,Approved,4/19/2026,,
+APP-2026-2038,Elm Street Physical Therapy,Yusuf Coleman,445000,4/10/2026,Aisha Patel,Bank Statements (90 day),Approved,4/12/2026,7/11/2026,
+APP-2026-2038,Elm Street Physical Therapy,Yusuf Coleman,445000,4/10/2026,Aisha Patel,Business Tax Returns (3yr),Approved,7/1/2026,6/30/2029,
+APP-2026-2038,Elm Street Physical Therapy,Yusuf Coleman,445000,4/10/2026,Aisha Patel,Personal Tax Returns (3yr),Approved,6/26/2026,6/25/2029,
+APP-2026-2038,Elm Street Physical Therapy,Yusuf Coleman,445000,4/10/2026,Aisha Patel,Insurance Verification,Approved,7/3/2026,7/3/2027,
+APP-2026-2038,Elm Street Physical Therapy,Yusuf Coleman,445000,4/10/2026,Aisha Patel,Business Financial Statements,Approved,9/12/2026,,
+APP-2026-2038,Elm Street Physical Therapy,Yusuf Coleman,445000,4/10/2026,Aisha Patel,Business Licenses & Permits,Not Required,,,Waived per SBA guidelines
+APP-2026-2038,Elm Street Physical Therapy,Yusuf Coleman,445000,4/10/2026,Aisha Patel,Articles of Incorporation,Approved,9/9/2026,,
+APP-2026-2038,Elm Street Physical Therapy,Yusuf Coleman,445000,4/10/2026,Aisha Patel,Lease Agreement,Approved,9/10/2026,,Verified
+APP-2026-2038,Elm Street Physical Therapy,Yusuf Coleman,445000,4/10/2026,Aisha Patel,Debt Schedule,Approved,5/6/2026,,Verified
+APP-2026-2038,Elm Street Physical Therapy,Yusuf Coleman,445000,4/10/2026,Aisha Patel,Ownership Verification,Not Required,,,Waived per SBA guidelines
+APP-2026-2038,Elm Street Physical Therapy,Yusuf Coleman,445000,4/10/2026,Aisha Patel,SBA Form 1919,Approved,5/6/2026,,Verified
+APP-2026-2038,Elm Street Physical Therapy,Yusuf Coleman,445000,4/10/2026,Aisha Patel,SBA Form 912,Approved,9/28/2026,,
+APP-2026-2039,Maple Leaf Dry Cleaners,Uma Yamamoto,1370000,6/27/2026,Aisha Patel,Bank Statements (90 day),Approved,10/1/2026,12/30/2026,
+APP-2026-2039,Maple Leaf Dry Cleaners,Uma Yamamoto,1370000,6/27/2026,Aisha Patel,Business Tax Returns (3yr),Expired,6/28/2026,6/27/2029,Expired - needs updated statements
+APP-2026-2039,Maple Leaf Dry Cleaners,Uma Yamamoto,1370000,6/27/2026,Aisha Patel,Personal Tax Returns (3yr),Approved,6/28/2026,6/27/2029,
+APP-2026-2039,Maple Leaf Dry Cleaners,Uma Yamamoto,1370000,6/27/2026,Aisha Patel,Insurance Verification,Received,9/7/2026,9/7/2027,Uploaded to portal
+APP-2026-2039,Maple Leaf Dry Cleaners,Uma Yamamoto,1370000,6/27/2026,Aisha Patel,Business Financial Statements,Approved,9/9/2026,,
+APP-2026-2039,Maple Leaf Dry Cleaners,Uma Yamamoto,1370000,6/27/2026,Aisha Patel,Business Licenses & Permits,Under Review,9/17/2026,,Minor discrepancy noted
+APP-2026-2039,Maple Leaf Dry Cleaners,Uma Yamamoto,1370000,6/27/2026,Aisha Patel,Articles of Incorporation,Approved,9/20/2026,,
+APP-2026-2039,Maple Leaf Dry Cleaners,Uma Yamamoto,1370000,6/27/2026,Aisha Patel,Lease Agreement,Approved,7/27/2026,,
+APP-2026-2039,Maple Leaf Dry Cleaners,Uma Yamamoto,1370000,6/27/2026,Aisha Patel,Debt Schedule,Approved,8/14/2026,,
+APP-2026-2039,Maple Leaf Dry Cleaners,Uma Yamamoto,1370000,6/27/2026,Aisha Patel,Ownership Verification,Pending,,,Follow-up call scheduled
+APP-2026-2039,Maple Leaf Dry Cleaners,Uma Yamamoto,1370000,6/27/2026,Aisha Patel,SBA Form 1919,Approved,7/24/2026,,
+APP-2026-2039,Maple Leaf Dry Cleaners,Uma Yamamoto,1370000,6/27/2026,Aisha Patel,SBA Form 912,Pending,,,
+APP-2026-2040,Oakmont Bookstore,Nadia Coleman,85000,6/9/2026,Aisha Patel,Bank Statements (90 day),Pending,,,
+APP-2026-2040,Oakmont Bookstore,Nadia Coleman,85000,6/9/2026,Aisha Patel,Business Tax Returns (3yr),Approved,6/12/2026,6/11/2029,Verified
+APP-2026-2040,Oakmont Bookstore,Nadia Coleman,85000,6/9/2026,Aisha Patel,Personal Tax Returns (3yr),Received,6/23/2026,6/22/2029,Uploaded to portal
+APP-2026-2040,Oakmont Bookstore,Nadia Coleman,85000,6/9/2026,Aisha Patel,Insurance Verification,Under Review,10/2/2026,10/2/2027,
+APP-2026-2040,Oakmont Bookstore,Nadia Coleman,85000,6/9/2026,Aisha Patel,Business Financial Statements,Approved,8/15/2026,,
+APP-2026-2040,Oakmont Bookstore,Nadia Coleman,85000,6/9/2026,Aisha Patel,Business Licenses & Permits,Pending,,,
+APP-2026-2040,Oakmont Bookstore,Nadia Coleman,85000,6/9/2026,Aisha Patel,Articles of Incorporation,Not Required,,,Not applicable for this loan type
+APP-2026-2040,Oakmont Bookstore,Nadia Coleman,85000,6/9/2026,Aisha Patel,Lease Agreement,Under Review,7/18/2026,,Minor discrepancy noted
+APP-2026-2040,Oakmont Bookstore,Nadia Coleman,85000,6/9/2026,Aisha Patel,Debt Schedule,Approved,9/8/2026,,
+APP-2026-2040,Oakmont Bookstore,Nadia Coleman,85000,6/9/2026,Aisha Patel,Ownership Verification,Approved,7/31/2026,,
+APP-2026-2040,Oakmont Bookstore,Nadia Coleman,85000,6/9/2026,Aisha Patel,SBA Form 1919,Pending,,,Borrower contacted via email
+APP-2026-2040,Oakmont Bookstore,Nadia Coleman,85000,6/9/2026,Aisha Patel,SBA Form 912,Received,8/6/2026,,Uploaded to portal
+APP-2026-2041,Lakeside Fitness Studio,Elif Abbott,335000,8/30/2026,Janet Morrison,Bank Statements (90 day),Under Review,9/24/2026,12/23/2026,Reviewing for completeness
+APP-2026-2041,Lakeside Fitness Studio,Elif Abbott,335000,8/30/2026,Janet Morrison,Debt Schedule,Received,9/12/2026,,
+APP-2026-2041,Lakeside Fitness Studio,Elif Abbott,335000,8/30/2026,Janet Morrison,SBA Form 1919,Pending,,,
+APP-2026-2041,Lakeside Fitness Studio,Elif Abbott,335000,8/30/2026,Janet Morrison,Lease Agreement,Pending,,,Borrower contacted via email
+APP-2026-2041,Lakeside Fitness Studio,Elif Abbott,335000,8/30/2026,Janet Morrison,Business Licenses & Permits,Received,10/15/2026,,
+APP-2026-2041,Lakeside Fitness Studio,Elif Abbott,335000,8/30/2026,Janet Morrison,Insurance Verification,Under Review,9/28/2026,9/28/2027,Reviewing for completeness
+APP-2026-2041,Lakeside Fitness Studio,Elif Abbott,335000,8/30/2026,Janet Morrison,Business Financial Statements,Pending,,,Requested from borrower
+APP-2026-2041,Lakeside Fitness Studio,Elif Abbott,335000,8/30/2026,Janet Morrison,SBA Form 912,Pending,,,Second request sent
+APP-2026-2041,Lakeside Fitness Studio,Elif Abbott,335000,8/30/2026,Janet Morrison,Personal Tax Returns (3yr),Pending,,,Follow-up call scheduled
+APP-2026-2042,Willow Creek Plumbing,Samuel Nakamura,535000,1/3/2026,Ricardo Fuentes,Bank Statements (90 day),Pending,,,Borrower contacted via email
+APP-2026-2042,Willow Creek Plumbing,Samuel Nakamura,535000,1/3/2026,Ricardo Fuentes,Business Tax Returns (3yr),Pending,,,Second request sent
+APP-2026-2042,Willow Creek Plumbing,Samuel Nakamura,535000,1/3/2026,Ricardo Fuentes,Personal Tax Returns (3yr),Approved,2/18/2026,2/17/2029,Verified
+APP-2026-2042,Willow Creek Plumbing,Samuel Nakamura,535000,1/3/2026,Ricardo Fuentes,Insurance Verification,Received,4/17/2026,4/17/2027,
+APP-2026-2042,Willow Creek Plumbing,Samuel Nakamura,535000,1/3/2026,Ricardo Fuentes,Business Financial Statements,Received,8/25/2026,,Received via email
+APP-2026-2042,Willow Creek Plumbing,Samuel Nakamura,535000,1/3/2026,Ricardo Fuentes,Business Licenses & Permits,Pending,,,Borrower contacted via email
+APP-2026-2042,Willow Creek Plumbing,Samuel Nakamura,535000,1/3/2026,Ricardo Fuentes,Articles of Incorporation,Pending,,,Waiting on borrower
+APP-2026-2042,Willow Creek Plumbing,Samuel Nakamura,535000,1/3/2026,Ricardo Fuentes,Lease Agreement,Approved,3/20/2026,,
+APP-2026-2042,Willow Creek Plumbing,Samuel Nakamura,535000,1/3/2026,Ricardo Fuentes,Debt Schedule,Approved,10/3/2026,,
+APP-2026-2042,Willow Creek Plumbing,Samuel Nakamura,535000,1/3/2026,Ricardo Fuentes,Ownership Verification,Approved,1/12/2026,,Verified
+APP-2026-2042,Willow Creek Plumbing,Samuel Nakamura,535000,1/3/2026,Ricardo Fuentes,SBA Form 1919,Approved,1/27/2026,,
+APP-2026-2042,Willow Creek Plumbing,Samuel Nakamura,535000,1/3/2026,Ricardo Fuentes,SBA Form 912,Under Review,5/22/2026,,Reviewing for completeness
+APP-2026-2043,Ironwood Tax & Accounting,Keisha Alvarez,1170000,6/11/2025,Janet Morrison,Bank Statements (90 day),Received,6/22/2026,9/20/2026,Uploaded to portal
+APP-2026-2043,Ironwood Tax & Accounting,Keisha Alvarez,1170000,6/11/2025,Janet Morrison,Business Tax Returns (3yr),Approved,5/3/2026,5/2/2029,
+APP-2026-2043,Ironwood Tax & Accounting,Keisha Alvarez,1170000,6/11/2025,Janet Morrison,Personal Tax Returns (3yr),Approved,6/1/2026,5/31/2029,
+APP-2026-2043,Ironwood Tax & Accounting,Keisha Alvarez,1170000,6/11/2025,Janet Morrison,Insurance Verification,Approved,6/5/2026,6/5/2027,
+APP-2026-2043,Ironwood Tax & Accounting,Keisha Alvarez,1170000,6/11/2025,Janet Morrison,Business Financial Statements,Received,4/3/2026,,Uploaded to portal
+APP-2026-2043,Ironwood Tax & Accounting,Keisha Alvarez,1170000,6/11/2025,Janet Morrison,Business Licenses & Permits,Pending,,,Follow-up call scheduled
+APP-2026-2043,Ironwood Tax & Accounting,Keisha Alvarez,1170000,6/11/2025,Janet Morrison,Articles of Incorporation,Approved,10/4/2026,,
+APP-2026-2043,Ironwood Tax & Accounting,Keisha Alvarez,1170000,6/11/2025,Janet Morrison,Lease Agreement,Approved,6/3/2026,,
+APP-2026-2043,Ironwood Tax & Accounting,Keisha Alvarez,1170000,6/11/2025,Janet Morrison,Debt Schedule,Approved,9/4/2026,,
+APP-2026-2043,Ironwood Tax & Accounting,Keisha Alvarez,1170000,6/11/2025,Janet Morrison,Ownership Verification,Approved,4/26/2026,,
+APP-2026-2043,Ironwood Tax & Accounting,Keisha Alvarez,1170000,6/11/2025,Janet Morrison,SBA Form 1919,Pending,,,
+APP-2026-2043,Ironwood Tax & Accounting,Keisha Alvarez,1170000,6/11/2025,Janet Morrison,SBA Form 912,Approved,7/9/2026,,
+APP-2026-2044,Summit Pet Grooming,Hiro Eriksen,1310000,6/21/2025,Ricardo Fuentes,SBA Form 912,Approved,9/11/2025,,
+APP-2026-2044,Summit Pet Grooming,Hiro Eriksen,1310000,6/21/2025,Ricardo Fuentes,Personal Tax Returns (3yr),Received,6/10/2026,6/9/2029,
+APP-2026-2044,Summit Pet Grooming,Hiro Eriksen,1310000,6/21/2025,Ricardo Fuentes,Debt Schedule,Approved,10/13/2026,,Verified
+APP-2026-2044,Summit Pet Grooming,Hiro Eriksen,1310000,6/21/2025,Ricardo Fuentes,Articles of Incorporation,Pending,,,Borrower contacted via email
+APP-2026-2044,Summit Pet Grooming,Hiro Eriksen,1310000,6/21/2025,Ricardo Fuentes,SBA Form 1919,Received,5/2/2026,,
+APP-2026-2044,Summit Pet Grooming,Hiro Eriksen,1310000,6/21/2025,Ricardo Fuentes,Bank Statements (90 day),Pending,,,Requested from borrower
+APP-2026-2044,Summit Pet Grooming,Hiro Eriksen,1310000,6/21/2025,Ricardo Fuentes,Insurance Verification,Approved,5/22/2026,5/22/2027,Verified
+APP-2026-2044,Summit Pet Grooming,Hiro Eriksen,1310000,6/21/2025,Ricardo Fuentes,Lease Agreement,Approved,1/11/2026,,
+APP-2026-2044,Summit Pet Grooming,Hiro Eriksen,1310000,6/21/2025,Ricardo Fuentes,Business Tax Returns (3yr),Under Review,1/2/2026,1/1/2029,Minor discrepancy noted
+APP-2026-2045,Keystone Dry Cleaners,Priya Fischer,860000,6/12/2026,Aisha Patel,Ownership Verification,Not Required,,,Waived per SBA guidelines
+APP-2026-2045,Keystone Dry Cleaners,Priya Fischer,860000,6/12/2026,Aisha Patel,Business Tax Returns (3yr),Pending,,,
+APP-2026-2045,Keystone Dry Cleaners,Priya Fischer,860000,6/12/2026,Aisha Patel,Debt Schedule,Under Review,6/12/2026,,Reviewing for completeness
+APP-2026-2045,Keystone Dry Cleaners,Priya Fischer,860000,6/12/2026,Aisha Patel,Bank Statements (90 day),Pending,,,Follow-up call scheduled
+APP-2026-2045,Keystone Dry Cleaners,Priya Fischer,860000,6/12/2026,Aisha Patel,Lease Agreement,Not Required,,,Not applicable for this loan type
+APP-2026-2045,Keystone Dry Cleaners,Priya Fischer,860000,6/12/2026,Aisha Patel,Insurance Verification,Expired,6/29/2026,6/29/2027,Expired - needs updated statements
+APP-2026-2045,Keystone Dry Cleaners,Priya Fischer,860000,6/12/2026,Aisha Patel,Business Licenses & Permits,Pending,,,Requested from borrower
+APP-2026-2045,Keystone Dry Cleaners,Priya Fischer,860000,6/12/2026,Aisha Patel,Business Financial Statements,Received,10/15/2026,,Uploaded to portal
+APP-2026-2045,Keystone Dry Cleaners,Priya Fischer,860000,6/12/2026,Aisha Patel,SBA Form 1919,Received,9/9/2026,,Uploaded to portal
+APP-2026-2046,Highland Optometry,Chen Kowalski,645000,9/13/2025,Aisha Patel,Bank Statements (90 day),Under Review,4/14/2026,7/13/2026,Minor discrepancy noted
+APP-2026-2046,Highland Optometry,Chen Kowalski,645000,9/13/2025,Aisha Patel,Business Tax Returns (3yr),Received,11/10/2025,11/9/2028,Received via email
+APP-2026-2046,Highland Optometry,Chen Kowalski,645000,9/13/2025,Aisha Patel,Personal Tax Returns (3yr),Under Review,10/30/2025,10/29/2028,Reviewing for completeness
+APP-2026-2046,Highland Optometry,Chen Kowalski,645000,9/13/2025,Aisha Patel,Insurance Verification,Pending,,,
+APP-2026-2046,Highland Optometry,Chen Kowalski,645000,9/13/2025,Aisha Patel,Business Financial Statements,Approved,8/22/2026,,
+APP-2026-2046,Highland Optometry,Chen Kowalski,645000,9/13/2025,Aisha Patel,Business Licenses & Permits,Under Review,2/5/2026,,
+APP-2026-2046,Highland Optometry,Chen Kowalski,645000,9/13/2025,Aisha Patel,Articles of Incorporation,Pending,,,Waiting on borrower
+APP-2026-2046,Highland Optometry,Chen Kowalski,645000,9/13/2025,Aisha Patel,Lease Agreement,Under Review,6/29/2026,,
+APP-2026-2046,Highland Optometry,Chen Kowalski,645000,9/13/2025,Aisha Patel,Debt Schedule,Approved,1/21/2026,,Verified
+APP-2026-2046,Highland Optometry,Chen Kowalski,645000,9/13/2025,Aisha Patel,Ownership Verification,Pending,,,Follow-up call scheduled
+APP-2026-2046,Highland Optometry,Chen Kowalski,645000,9/13/2025,Aisha Patel,SBA Form 1919,Under Review,1/11/2026,,Reviewing for completeness
+APP-2026-2046,Highland Optometry,Chen Kowalski,645000,9/13/2025,Aisha Patel,SBA Form 912,Approved,1/30/2026,,
+APP-2026-2047,Union Square Pharmacy,Hiro Abbott,135000,6/7/2026,Aisha Patel,Bank Statements (90 day),Pending,,,
+APP-2026-2047,Union Square Pharmacy,Hiro Abbott,135000,6/7/2026,Aisha Patel,Business Tax Returns (3yr),Approved,6/18/2026,6/17/2029,
+APP-2026-2047,Union Square Pharmacy,Hiro Abbott,135000,6/7/2026,Aisha Patel,Personal Tax Returns (3yr),Under Review,6/7/2026,6/6/2029,
+APP-2026-2047,Union Square Pharmacy,Hiro Abbott,135000,6/7/2026,Aisha Patel,Insurance Verification,Approved,9/26/2026,9/26/2027,
+APP-2026-2047,Union Square Pharmacy,Hiro Abbott,135000,6/7/2026,Aisha Patel,Business Financial Statements,Pending,,,Borrower contacted via email
+APP-2026-2047,Union Square Pharmacy,Hiro Abbott,135000,6/7/2026,Aisha Patel,Business Licenses & Permits,Approved,9/28/2026,,
+APP-2026-2047,Union Square Pharmacy,Hiro Abbott,135000,6/7/2026,Aisha Patel,Articles of Incorporation,Under Review,9/8/2026,,
+APP-2026-2047,Union Square Pharmacy,Hiro Abbott,135000,6/7/2026,Aisha Patel,Lease Agreement,Not Required,,,Not applicable for this loan type
+APP-2026-2047,Union Square Pharmacy,Hiro Abbott,135000,6/7/2026,Aisha Patel,Debt Schedule,Pending,,,
+APP-2026-2047,Union Square Pharmacy,Hiro Abbott,135000,6/7/2026,Aisha Patel,Ownership Verification,Pending,,,
+APP-2026-2047,Union Square Pharmacy,Hiro Abbott,135000,6/7/2026,Aisha Patel,SBA Form 1919,Pending,,,
+APP-2026-2047,Union Square Pharmacy,Hiro Abbott,135000,6/7/2026,Aisha Patel,SBA Form 912,Not Required,,,Not applicable for this loan type
+APP-2026-2048,Ironwood Logistics,Ximena Brennan,1190000,8/18/2026,Ricardo Fuentes,Bank Statements (90 day),Under Review,8/22/2026,11/20/2026,Reviewing for completeness
+APP-2026-2048,Ironwood Logistics,Ximena Brennan,1190000,8/18/2026,Ricardo Fuentes,Business Tax Returns (3yr),Pending,,,Second request sent
+APP-2026-2048,Ironwood Logistics,Ximena Brennan,1190000,8/18/2026,Ricardo Fuentes,Personal Tax Returns (3yr),Pending,,,Waiting on borrower
+APP-2026-2048,Ironwood Logistics,Ximena Brennan,1190000,8/18/2026,Ricardo Fuentes,Insurance Verification,Pending,,,
+APP-2026-2048,Ironwood Logistics,Ximena Brennan,1190000,8/18/2026,Ricardo Fuentes,Business Financial Statements,Approved,8/26/2026,,
+APP-2026-2048,Ironwood Logistics,Ximena Brennan,1190000,8/18/2026,Ricardo Fuentes,Business Licenses & Permits,Approved,8/25/2026,,
+APP-2026-2048,Ironwood Logistics,Ximena Brennan,1190000,8/18/2026,Ricardo Fuentes,Articles of Incorporation,Under Review,8/21/2026,,Verifying with third party
+APP-2026-2048,Ironwood Logistics,Ximena Brennan,1190000,8/18/2026,Ricardo Fuentes,Lease Agreement,Pending,,,Second request sent
+APP-2026-2048,Ironwood Logistics,Ximena Brennan,1190000,8/18/2026,Ricardo Fuentes,Debt Schedule,Received,8/23/2026,,Uploaded to portal
+APP-2026-2048,Ironwood Logistics,Ximena Brennan,1190000,8/18/2026,Ricardo Fuentes,Ownership Verification,Received,8/21/2026,,
+APP-2026-2048,Ironwood Logistics,Ximena Brennan,1190000,8/18/2026,Ricardo Fuentes,SBA Form 1919,Approved,8/23/2026,,
+APP-2026-2048,Ironwood Logistics,Ximena Brennan,1190000,8/18/2026,Ricardo Fuentes,SBA Form 912,Not Required,,,Not applicable for this loan type
+APP-2026-2049,Union Square Bookstore,Uma Coleman,850000,4/17/2026,Aisha Patel,Bank Statements (90 day),Approved,4/22/2026,7/21/2026,
+APP-2026-2049,Union Square Bookstore,Uma Coleman,850000,4/17/2026,Aisha Patel,Business Tax Returns (3yr),Approved,5/11/2026,5/10/2029,
+APP-2026-2049,Union Square Bookstore,Uma Coleman,850000,4/17/2026,Aisha Patel,Personal Tax Returns (3yr),Received,5/25/2026,5/24/2029,Uploaded to portal
+APP-2026-2049,Union Square Bookstore,Uma Coleman,850000,4/17/2026,Aisha Patel,Insurance Verification,Received,10/8/2026,10/8/2027,
+APP-2026-2049,Union Square Bookstore,Uma Coleman,850000,4/17/2026,Aisha Patel,Business Financial Statements,Expired,7/20/2026,,Document expired - replacement requested
+APP-2026-2049,Union Square Bookstore,Uma Coleman,850000,4/17/2026,Aisha Patel,Business Licenses & Permits,Received,7/25/2026,,
+APP-2026-2049,Union Square Bookstore,Uma Coleman,850000,4/17/2026,Aisha Patel,Articles of Incorporation,Approved,5/3/2026,,Verified
+APP-2026-2049,Union Square Bookstore,Uma Coleman,850000,4/17/2026,Aisha Patel,Lease Agreement,Pending,,,
+APP-2026-2049,Union Square Bookstore,Uma Coleman,850000,4/17/2026,Aisha Patel,Debt Schedule,Pending,,,
+APP-2026-2049,Union Square Bookstore,Uma Coleman,850000,4/17/2026,Aisha Patel,Ownership Verification,Pending,,,
+APP-2026-2049,Union Square Bookstore,Uma Coleman,850000,4/17/2026,Aisha Patel,SBA Form 1919,Received,6/29/2026,,
+APP-2026-2049,Union Square Bookstore,Uma Coleman,850000,4/17/2026,Aisha Patel,SBA Form 912,Under Review,6/8/2026,,
+APP-2026-2050,Twin Oaks Dry Cleaners,Felix Fischer,1100000,11/12/2025,Ricardo Fuentes,Bank Statements (90 day),Approved,3/14/2026,6/12/2026,
+APP-2026-2050,Twin Oaks Dry Cleaners,Felix Fischer,1100000,11/12/2025,Ricardo Fuentes,Business Tax Returns (3yr),Received,2/16/2026,2/15/2029,Received via email
+APP-2026-2050,Twin Oaks Dry Cleaners,Felix Fischer,1100000,11/12/2025,Ricardo Fuentes,Personal Tax Returns (3yr),Received,1/7/2026,1/6/2029,Uploaded to portal
+APP-2026-2050,Twin Oaks Dry Cleaners,Felix Fischer,1100000,11/12/2025,Ricardo Fuentes,Insurance Verification,Not Required,,,Exempt - sole proprietorship
+APP-2026-2050,Twin Oaks Dry Cleaners,Felix Fischer,1100000,11/12/2025,Ricardo Fuentes,Business Financial Statements,Approved,3/11/2026,,
+APP-2026-2050,Twin Oaks Dry Cleaners,Felix Fischer,1100000,11/12/2025,Ricardo Fuentes,Business Licenses & Permits,Approved,5/25/2026,,Verified
+APP-2026-2050,Twin Oaks Dry Cleaners,Felix Fischer,1100000,11/12/2025,Ricardo Fuentes,Articles of Incorporation,Received,5/30/2026,,
+APP-2026-2050,Twin Oaks Dry Cleaners,Felix Fischer,1100000,11/12/2025,Ricardo Fuentes,Lease Agreement,Under Review,8/2/2026,,Reviewing for completeness
+APP-2026-2050,Twin Oaks Dry Cleaners,Felix Fischer,1100000,11/12/2025,Ricardo Fuentes,Debt Schedule,Under Review,12/7/2025,,Minor discrepancy noted
+APP-2026-2050,Twin Oaks Dry Cleaners,Felix Fischer,1100000,11/12/2025,Ricardo Fuentes,Ownership Verification,Pending,,,Second request sent
+APP-2026-2050,Twin Oaks Dry Cleaners,Felix Fischer,1100000,11/12/2025,Ricardo Fuentes,SBA Form 1919,Received,9/28/2026,,
+APP-2026-2050,Twin Oaks Dry Cleaners,Felix Fischer,1100000,11/12/2025,Ricardo Fuentes,SBA Form 912,Approved,8/6/2026,,
+APP-2026-2051,Blue Ridge Pediatric Clinic,Wen Alvarez,590000,9/27/2025,Ricardo Fuentes,Bank Statements (90 day),Received,10/16/2026,1/14/2027,Uploaded to portal
+APP-2026-2051,Blue Ridge Pediatric Clinic,Wen Alvarez,590000,9/27/2025,Ricardo Fuentes,Business Tax Returns (3yr),Approved,12/28/2025,12/27/2028,
+APP-2026-2051,Blue Ridge Pediatric Clinic,Wen Alvarez,590000,9/27/2025,Ricardo Fuentes,Personal Tax Returns (3yr),Under Review,11/12/2025,11/11/2028,
+APP-2026-2051,Blue Ridge Pediatric Clinic,Wen Alvarez,590000,9/27/2025,Ricardo Fuentes,Insurance Verification,Pending,,,
+APP-2026-2051,Blue Ridge Pediatric Clinic,Wen Alvarez,590000,9/27/2025,Ricardo Fuentes,Business Financial Statements,Approved,4/12/2026,,Verified
+APP-2026-2051,Blue Ridge Pediatric Clinic,Wen Alvarez,590000,9/27/2025,Ricardo Fuentes,Business Licenses & Permits,Received,4/13/2026,,Uploaded to portal
+APP-2026-2051,Blue Ridge Pediatric Clinic,Wen Alvarez,590000,9/27/2025,Ricardo Fuentes,Articles of Incorporation,Under Review,10/29/2025,,
+APP-2026-2051,Blue Ridge Pediatric Clinic,Wen Alvarez,590000,9/27/2025,Ricardo Fuentes,Lease Agreement,Pending,,,Requested from borrower
+APP-2026-2051,Blue Ridge Pediatric Clinic,Wen Alvarez,590000,9/27/2025,Ricardo Fuentes,Debt Schedule,Received,2/28/2026,,Uploaded to portal
+APP-2026-2051,Blue Ridge Pediatric Clinic,Wen Alvarez,590000,9/27/2025,Ricardo Fuentes,Ownership Verification,Pending,,,
+APP-2026-2051,Blue Ridge Pediatric Clinic,Wen Alvarez,590000,9/27/2025,Ricardo Fuentes,SBA Form 1919,Pending,,,Second request sent
+APP-2026-2051,Blue Ridge Pediatric Clinic,Wen Alvarez,590000,9/27/2025,Ricardo Fuentes,SBA Form 912,Expired,11/22/2025,,Expired - needs updated statements
+APP-2026-2052,Oakmont Optometry,Omar Dubois,950000,11/19/2025,Janet Morrison,Bank Statements (90 day),Approved,6/28/2026,9/26/2026,
+APP-2026-2052,Oakmont Optometry,Omar Dubois,950000,11/19/2025,Janet Morrison,Business Tax Returns (3yr),Pending,,,Requested from borrower
+APP-2026-2052,Oakmont Optometry,Omar Dubois,950000,11/19/2025,Janet Morrison,Personal Tax Returns (3yr),Approved,6/1/2026,5/31/2029,
+APP-2026-2052,Oakmont Optometry,Omar Dubois,950000,11/19/2025,Janet Morrison,Insurance Verification,Expired,3/3/2026,3/3/2027,Expired - needs updated statements
+APP-2026-2052,Oakmont Optometry,Omar Dubois,950000,11/19/2025,Janet Morrison,Business Financial Statements,Received,9/21/2026,,
+APP-2026-2052,Oakmont Optometry,Omar Dubois,950000,11/19/2025,Janet Morrison,Business Licenses & Permits,Approved,3/27/2026,,Verified
+APP-2026-2052,Oakmont Optometry,Omar Dubois,950000,11/19/2025,Janet Morrison,Articles of Incorporation,Received,4/12/2026,,Received via email
+APP-2026-2052,Oakmont Optometry,Omar Dubois,950000,11/19/2025,Janet Morrison,Lease Agreement,Pending,,,
+APP-2026-2052,Oakmont Optometry,Omar Dubois,950000,11/19/2025,Janet Morrison,Debt Schedule,Approved,4/17/2026,,
+APP-2026-2052,Oakmont Optometry,Omar Dubois,950000,11/19/2025,Janet Morrison,Ownership Verification,Received,1/6/2026,,
+APP-2026-2052,Oakmont Optometry,Omar Dubois,950000,11/19/2025,Janet Morrison,SBA Form 1919,Approved,12/3/2025,,
+APP-2026-2052,Oakmont Optometry,Omar Dubois,950000,11/19/2025,Janet Morrison,SBA Form 912,Approved,1/12/2026,,
+APP-2026-2053,Pinecrest Pharmacy,Jonah Sato,365000,1/3/2026,Janet Morrison,Bank Statements (90 day),Pending,,,
+APP-2026-2053,Pinecrest Pharmacy,Jonah Sato,365000,1/3/2026,Janet Morrison,Business Tax Returns (3yr),Not Required,,,Not applicable for this loan type
+APP-2026-2053,Pinecrest Pharmacy,Jonah Sato,365000,1/3/2026,Janet Morrison,Personal Tax Returns (3yr),Approved,3/30/2026,3/29/2029,Verified
+APP-2026-2053,Pinecrest Pharmacy,Jonah Sato,365000,1/3/2026,Janet Morrison,Insurance Verification,Under Review,3/10/2026,3/10/2027,Verifying with third party
+APP-2026-2053,Pinecrest Pharmacy,Jonah Sato,365000,1/3/2026,Janet Morrison,Business Financial Statements,Received,2/23/2026,,Uploaded to portal
+APP-2026-2053,Pinecrest Pharmacy,Jonah Sato,365000,1/3/2026,Janet Morrison,Business Licenses & Permits,Approved,3/4/2026,,Verified
+APP-2026-2053,Pinecrest Pharmacy,Jonah Sato,365000,1/3/2026,Janet Morrison,Articles of Incorporation,Pending,,,Second request sent
+APP-2026-2053,Pinecrest Pharmacy,Jonah Sato,365000,1/3/2026,Janet Morrison,Lease Agreement,Approved,3/25/2026,,Verified
+APP-2026-2053,Pinecrest Pharmacy,Jonah Sato,365000,1/3/2026,Janet Morrison,Debt Schedule,Pending,,,Waiting on borrower
+APP-2026-2053,Pinecrest Pharmacy,Jonah Sato,365000,1/3/2026,Janet Morrison,Ownership Verification,Pending,,,Borrower contacted via email
+APP-2026-2053,Pinecrest Pharmacy,Jonah Sato,365000,1/3/2026,Janet Morrison,SBA Form 1919,Not Required,,,Exempt - sole proprietorship
+APP-2026-2053,Pinecrest Pharmacy,Jonah Sato,365000,1/3/2026,Janet Morrison,SBA Form 912,Received,9/5/2026,,Received via email
+APP-2026-2054,Quarry Optometry,Carmen Coleman,65000,4/7/2026,Aisha Patel,Bank Statements (90 day),Pending,,,
+APP-2026-2054,Quarry Optometry,Carmen Coleman,65000,4/7/2026,Aisha Patel,Business Tax Returns (3yr),Approved,4/29/2026,4/28/2029,
+APP-2026-2054,Quarry Optometry,Carmen Coleman,65000,4/7/2026,Aisha Patel,Personal Tax Returns (3yr),Received,5/28/2026,5/27/2029,Received via email
+APP-2026-2054,Quarry Optometry,Carmen Coleman,65000,4/7/2026,Aisha Patel,Insurance Verification,Approved,7/19/2026,7/19/2027,
+APP-2026-2054,Quarry Optometry,Carmen Coleman,65000,4/7/2026,Aisha Patel,Business Financial Statements,Pending,,,
+APP-2026-2054,Quarry Optometry,Carmen Coleman,65000,4/7/2026,Aisha Patel,Business Licenses & Permits,Approved,9/16/2026,,
+APP-2026-2054,Quarry Optometry,Carmen Coleman,65000,4/7/2026,Aisha Patel,Articles of Incorporation,Pending,,,Second request sent
+APP-2026-2054,Quarry Optometry,Carmen Coleman,65000,4/7/2026,Aisha Patel,Lease Agreement,Not Required,,,Exempt - sole proprietorship
+APP-2026-2054,Quarry Optometry,Carmen Coleman,65000,4/7/2026,Aisha Patel,Debt Schedule,Not Required,,,Not applicable for this loan type
+APP-2026-2054,Quarry Optometry,Carmen Coleman,65000,4/7/2026,Aisha Patel,Ownership Verification,Approved,7/31/2026,,
+APP-2026-2054,Quarry Optometry,Carmen Coleman,65000,4/7/2026,Aisha Patel,SBA Form 1919,Not Required,,,Not applicable for this loan type
+APP-2026-2054,Quarry Optometry,Carmen Coleman,65000,4/7/2026,Aisha Patel,SBA Form 912,Approved,9/11/2026,,
+APP-2026-2055,Keystone Construction,Elif Jensen,360000,9/25/2025,Aisha Patel,Lease Agreement,Approved,10/26/2025,,Verified
+APP-2026-2055,Keystone Construction,Elif Jensen,360000,9/25/2025,Aisha Patel,Articles of Incorporation,Under Review,5/10/2026,,Reviewing for completeness
+APP-2026-2055,Keystone Construction,Elif Jensen,360000,9/25/2025,Aisha Patel,Bank Statements (90 day),Pending,,,Second request sent
+APP-2026-2055,Keystone Construction,Elif Jensen,360000,9/25/2025,Aisha Patel,SBA Form 1919,Approved,1/5/2026,,
+APP-2026-2055,Keystone Construction,Elif Jensen,360000,9/25/2025,Aisha Patel,Insurance Verification,Under Review,4/13/2026,4/13/2027,Verifying with third party
+APP-2026-2055,Keystone Construction,Elif Jensen,360000,9/25/2025,Aisha Patel,Personal Tax Returns (3yr),Not Required,,,Exempt - sole proprietorship
+APP-2026-2055,Keystone Construction,Elif Jensen,360000,9/25/2025,Aisha Patel,SBA Form 912,Expired,10/7/2026,,Expired - needs updated statements
+APP-2026-2055,Keystone Construction,Elif Jensen,360000,9/25/2025,Aisha Patel,Business Financial Statements,Pending,,,Follow-up call scheduled
+APP-2026-2055,Keystone Construction,Elif Jensen,360000,9/25/2025,Aisha Patel,Business Licenses & Permits,Approved,8/10/2026,,
+APP-2026-2055,Keystone Construction,Elif Jensen,360000,9/25/2025,Aisha Patel,Ownership Verification,Pending,,,Follow-up call scheduled
+APP-2026-2055,Keystone Construction,Elif Jensen,360000,9/25/2025,Aisha Patel,Business Tax Returns (3yr),Approved,4/3/2026,4/2/2029,
+APP-2026-2056,Meadowbrook Fitness Studio,Victor Abbott,1300000,7/22/2026,Aisha Patel,Bank Statements (90 day),Received,7/29/2026,10/27/2026,
+APP-2026-2056,Meadowbrook Fitness Studio,Victor Abbott,1300000,7/22/2026,Aisha Patel,Business Tax Returns (3yr),Pending,,,Requested from borrower
+APP-2026-2056,Meadowbrook Fitness Studio,Victor Abbott,1300000,7/22/2026,Aisha Patel,Personal Tax Returns (3yr),Pending,,,
+APP-2026-2056,Meadowbrook Fitness Studio,Victor Abbott,1300000,7/22/2026,Aisha Patel,Insurance Verification,Approved,9/22/2026,9/22/2027,
+APP-2026-2056,Meadowbrook Fitness Studio,Victor Abbott,1300000,7/22/2026,Aisha Patel,Business Financial Statements,Approved,8/3/2026,,Verified
+APP-2026-2056,Meadowbrook Fitness Studio,Victor Abbott,1300000,7/22/2026,Aisha Patel,Business Licenses & Permits,Approved,8/13/2026,,
+APP-2026-2056,Meadowbrook Fitness Studio,Victor Abbott,1300000,7/22/2026,Aisha Patel,Articles of Incorporation,Approved,8/8/2026,,Verified
+APP-2026-2056,Meadowbrook Fitness Studio,Victor Abbott,1300000,7/22/2026,Aisha Patel,Lease Agreement,Under Review,9/23/2026,,Minor discrepancy noted
+APP-2026-2056,Meadowbrook Fitness Studio,Victor Abbott,1300000,7/22/2026,Aisha Patel,Debt Schedule,Expired,10/8/2026,,Document expired - replacement requested
+APP-2026-2056,Meadowbrook Fitness Studio,Victor Abbott,1300000,7/22/2026,Aisha Patel,Ownership Verification,Received,8/18/2026,,
+APP-2026-2056,Meadowbrook Fitness Studio,Victor Abbott,1300000,7/22/2026,Aisha Patel,SBA Form 1919,Under Review,7/24/2026,,Verifying with third party
+APP-2026-2056,Meadowbrook Fitness Studio,Victor Abbott,1300000,7/22/2026,Aisha Patel,SBA Form 912,Pending,,,Waiting on borrower
+APP-2026-2057,Twin Oaks Pediatric Clinic,Luis Whitfield,365000,7/27/2025,Ricardo Fuentes,Bank Statements (90 day),Expired,8/8/2026,11/6/2026,Document expired - replacement requested
+APP-2026-2057,Twin Oaks Pediatric Clinic,Luis Whitfield,365000,7/27/2025,Ricardo Fuentes,Business Tax Returns (3yr),Under Review,8/4/2025,8/3/2028,Verifying with third party
+APP-2026-2057,Twin Oaks Pediatric Clinic,Luis Whitfield,365000,7/27/2025,Ricardo Fuentes,Personal Tax Returns (3yr),Approved,9/3/2025,9/2/2028,
+APP-2026-2057,Twin Oaks Pediatric Clinic,Luis Whitfield,365000,7/27/2025,Ricardo Fuentes,Insurance Verification,Pending,,,Borrower contacted via email
+APP-2026-2057,Twin Oaks Pediatric Clinic,Luis Whitfield,365000,7/27/2025,Ricardo Fuentes,Business Financial Statements,Under Review,6/18/2026,,Verifying with third party
+APP-2026-2057,Twin Oaks Pediatric Clinic,Luis Whitfield,365000,7/27/2025,Ricardo Fuentes,Business Licenses & Permits,Received,12/23/2025,,
+APP-2026-2057,Twin Oaks Pediatric Clinic,Luis Whitfield,365000,7/27/2025,Ricardo Fuentes,Articles of Incorporation,Pending,,,Waiting on borrower
+APP-2026-2057,Twin Oaks Pediatric Clinic,Luis Whitfield,365000,7/27/2025,Ricardo Fuentes,Lease Agreement,Approved,3/28/2026,,
+APP-2026-2057,Twin Oaks Pediatric Clinic,Luis Whitfield,365000,7/27/2025,Ricardo Fuentes,Debt Schedule,Approved,4/10/2026,,
+APP-2026-2057,Twin Oaks Pediatric Clinic,Luis Whitfield,365000,7/27/2025,Ricardo Fuentes,Ownership Verification,Received,2/7/2026,,
+APP-2026-2057,Twin Oaks Pediatric Clinic,Luis Whitfield,365000,7/27/2025,Ricardo Fuentes,SBA Form 1919,Approved,4/22/2026,,
+APP-2026-2057,Twin Oaks Pediatric Clinic,Luis Whitfield,365000,7/27/2025,Ricardo Fuentes,SBA Form 912,Received,1/4/2026,,
+APP-2026-2058,Foxhollow Pet Grooming,Mei Banerjee,885000,6/11/2026,Aisha Patel,Bank Statements (90 day),Approved,9/21/2026,12/20/2026,Verified
+APP-2026-2058,Foxhollow Pet Grooming,Mei Banerjee,885000,6/11/2026,Aisha Patel,Business Tax Returns (3yr),Pending,,,
+APP-2026-2058,Foxhollow Pet Grooming,Mei Banerjee,885000,6/11/2026,Aisha Patel,Personal Tax Returns (3yr),Pending,,,
+APP-2026-2058,Foxhollow Pet Grooming,Mei Banerjee,885000,6/11/2026,Aisha Patel,Insurance Verification,Under Review,7/20/2026,7/20/2027,Reviewing for completeness
+APP-2026-2058,Foxhollow Pet Grooming,Mei Banerjee,885000,6/11/2026,Aisha Patel,Business Financial Statements,Received,7/5/2026,,
+APP-2026-2058,Foxhollow Pet Grooming,Mei Banerjee,885000,6/11/2026,Aisha Patel,Business Licenses & Permits,Pending,,,
+APP-2026-2058,Foxhollow Pet Grooming,Mei Banerjee,885000,6/11/2026,Aisha Patel,Articles of Incorporation,Pending,,,Second request sent
+APP-2026-2058,Foxhollow Pet Grooming,Mei Banerjee,885000,6/11/2026,Aisha Patel,Lease Agreement,Received,8/18/2026,,
+APP-2026-2058,Foxhollow Pet Grooming,Mei Banerjee,885000,6/11/2026,Aisha Patel,Debt Schedule,Received,6/16/2026,,
+APP-2026-2058,Foxhollow Pet Grooming,Mei Banerjee,885000,6/11/2026,Aisha Patel,Ownership Verification,Approved,7/27/2026,,Verified
+APP-2026-2058,Foxhollow Pet Grooming,Mei Banerjee,885000,6/11/2026,Aisha Patel,SBA Form 1919,Pending,,,Requested from borrower
+APP-2026-2058,Foxhollow Pet Grooming,Mei Banerjee,885000,6/11/2026,Aisha Patel,SBA Form 912,Approved,6/28/2026,,
+APP-2026-2059,Bayview Machine Shop,Hiro Quintero,955000,9/7/2026,Ricardo Fuentes,Bank Statements (90 day),Received,9/21/2026,12/20/2026,Received via email
+APP-2026-2059,Bayview Machine Shop,Hiro Quintero,955000,9/7/2026,Ricardo Fuentes,Business Tax Returns (3yr),Pending,,,
+APP-2026-2059,Bayview Machine Shop,Hiro Quintero,955000,9/7/2026,Ricardo Fuentes,Personal Tax Returns (3yr),Pending,,,
+APP-2026-2059,Bayview Machine Shop,Hiro Quintero,955000,9/7/2026,Ricardo Fuentes,Insurance Verification,Received,9/19/2026,9/19/2027,Uploaded to portal
+APP-2026-2059,Bayview Machine Shop,Hiro Quintero,955000,9/7/2026,Ricardo Fuentes,Business Financial Statements,Pending,,,Requested from borrower
+APP-2026-2059,Bayview Machine Shop,Hiro Quintero,955000,9/7/2026,Ricardo Fuentes,Business Licenses & Permits,Expired,9/19/2026,,Document expired - replacement requested
+APP-2026-2059,Bayview Machine Shop,Hiro Quintero,955000,9/7/2026,Ricardo Fuentes,Articles of Incorporation,Received,9/15/2026,,
+APP-2026-2059,Bayview Machine Shop,Hiro Quintero,955000,9/7/2026,Ricardo Fuentes,Lease Agreement,Approved,9/27/2026,,
+APP-2026-2059,Bayview Machine Shop,Hiro Quintero,955000,9/7/2026,Ricardo Fuentes,Debt Schedule,Under Review,9/25/2026,,Minor discrepancy noted
+APP-2026-2059,Bayview Machine Shop,Hiro Quintero,955000,9/7/2026,Ricardo Fuentes,Ownership Verification,Approved,9/10/2026,,
+APP-2026-2059,Bayview Machine Shop,Hiro Quintero,955000,9/7/2026,Ricardo Fuentes,SBA Form 1919,Approved,9/21/2026,,Verified
+APP-2026-2059,Bayview Machine Shop,Hiro Quintero,955000,9/7/2026,Ricardo Fuentes,SBA Form 912,Pending,,,
+APP-2026-2060,Cedar Family Dentistry,Zoe Haddad,335000,12/29/2025,Janet Morrison,Bank Statements (90 day),Approved,5/6/2026,8/4/2026,
+APP-2026-2060,Cedar Family Dentistry,Zoe Haddad,335000,12/29/2025,Janet Morrison,Business Tax Returns (3yr),Pending,,,
+APP-2026-2060,Cedar Family Dentistry,Zoe Haddad,335000,12/29/2025,Janet Morrison,Personal Tax Returns (3yr),Approved,4/12/2026,4/11/2029,
+APP-2026-2060,Cedar Family Dentistry,Zoe Haddad,335000,12/29/2025,Janet Morrison,Insurance Verification,Pending,,,Borrower contacted via email
+APP-2026-2060,Cedar Family Dentistry,Zoe Haddad,335000,12/29/2025,Janet Morrison,Business Financial Statements,Approved,5/17/2026,,
+APP-2026-2060,Cedar Family Dentistry,Zoe Haddad,335000,12/29/2025,Janet Morrison,Business Licenses & Permits,Under Review,8/17/2026,,Verifying with third party
+APP-2026-2060,Cedar Family Dentistry,Zoe Haddad,335000,12/29/2025,Janet Morrison,Articles of Incorporation,Under Review,1/12/2026,,Reviewing for completeness
+APP-2026-2060,Cedar Family Dentistry,Zoe Haddad,335000,12/29/2025,Janet Morrison,Lease Agreement,Expired,8/13/2026,,Expired - needs updated statements
+APP-2026-2060,Cedar Family Dentistry,Zoe Haddad,335000,12/29/2025,Janet Morrison,Debt Schedule,Under Review,6/13/2026,,Reviewing for completeness
+APP-2026-2060,Cedar Family Dentistry,Zoe Haddad,335000,12/29/2025,Janet Morrison,Ownership Verification,Received,10/5/2026,,
+APP-2026-2060,Cedar Family Dentistry,Zoe Haddad,335000,12/29/2025,Janet Morrison,SBA Form 1919,Approved,5/4/2026,,
+APP-2026-2060,Cedar Family Dentistry,Zoe Haddad,335000,12/29/2025,Janet Morrison,SBA Form 912,Approved,4/22/2026,,
+APP-2026-2061,Juniper Logistics,Tanya Yamamoto,395000,10/5/2025,Ricardo Fuentes,Bank Statements (90 day),Approved,3/19/2026,6/17/2026,
+APP-2026-2061,Juniper Logistics,Tanya Yamamoto,395000,10/5/2025,Ricardo Fuentes,Business Tax Returns (3yr),Approved,12/30/2025,12/29/2028,
+APP-2026-2061,Juniper Logistics,Tanya Yamamoto,395000,10/5/2025,Ricardo Fuentes,Personal Tax Returns (3yr),Approved,3/19/2026,3/18/2029,
+APP-2026-2061,Juniper Logistics,Tanya Yamamoto,395000,10/5/2025,Ricardo Fuentes,Insurance Verification,Approved,3/20/2026,3/20/2027,
+APP-2026-2061,Juniper Logistics,Tanya Yamamoto,395000,10/5/2025,Ricardo Fuentes,Business Financial Statements,Approved,8/8/2026,,
+APP-2026-2061,Juniper Logistics,Tanya Yamamoto,395000,10/5/2025,Ricardo Fuentes,Business Licenses & Permits,Approved,2/4/2026,,
+APP-2026-2061,Juniper Logistics,Tanya Yamamoto,395000,10/5/2025,Ricardo Fuentes,Articles of Incorporation,Approved,6/5/2026,,
+APP-2026-2061,Juniper Logistics,Tanya Yamamoto,395000,10/5/2025,Ricardo Fuentes,Lease Agreement,Approved,9/29/2026,,
+APP-2026-2061,Juniper Logistics,Tanya Yamamoto,395000,10/5/2025,Ricardo Fuentes,Debt Schedule,Approved,9/1/2026,,Verified
+APP-2026-2061,Juniper Logistics,Tanya Yamamoto,395000,10/5/2025,Ricardo Fuentes,Ownership Verification,Approved,7/19/2026,,Verified
+APP-2026-2061,Juniper Logistics,Tanya Yamamoto,395000,10/5/2025,Ricardo Fuentes,SBA Form 1919,Approved,11/19/2025,,Verified
+APP-2026-2061,Juniper Logistics,Tanya Yamamoto,395000,10/5/2025,Ricardo Fuentes,SBA Form 912,Approved,4/22/2026,,Verified
+APP-2026-2062,Pinecrest Veterinary Hospital,Andre Zhang,1185000,7/11/2025,Ricardo Fuentes,Bank Statements (90 day),Received,10/6/2026,1/4/2027,
+APP-2026-2062,Pinecrest Veterinary Hospital,Andre Zhang,1185000,7/11/2025,Ricardo Fuentes,Business Tax Returns (3yr),Under Review,7/17/2025,7/16/2028,Verifying with third party
+APP-2026-2062,Pinecrest Veterinary Hospital,Andre Zhang,1185000,7/11/2025,Ricardo Fuentes,Personal Tax Returns (3yr),Under Review,6/15/2026,6/14/2029,Verifying with third party
+APP-2026-2062,Pinecrest Veterinary Hospital,Andre Zhang,1185000,7/11/2025,Ricardo Fuentes,Insurance Verification,Received,10/21/2025,10/21/2026,Received via email
+APP-2026-2062,Pinecrest Veterinary Hospital,Andre Zhang,1185000,7/11/2025,Ricardo Fuentes,Business Financial Statements,Not Required,,,Exempt - sole proprietorship
+APP-2026-2062,Pinecrest Veterinary Hospital,Andre Zhang,1185000,7/11/2025,Ricardo Fuentes,Business Licenses & Permits,Pending,,,
+APP-2026-2062,Pinecrest Veterinary Hospital,Andre Zhang,1185000,7/11/2025,Ricardo Fuentes,Articles of Incorporation,Pending,,,Borrower contacted via email
+APP-2026-2062,Pinecrest Veterinary Hospital,Andre Zhang,1185000,7/11/2025,Ricardo Fuentes,Lease Agreement,Approved,7/4/2026,,
+APP-2026-2062,Pinecrest Veterinary Hospital,Andre Zhang,1185000,7/11/2025,Ricardo Fuentes,Debt Schedule,Expired,11/12/2025,,Expired - needs updated statements
+APP-2026-2062,Pinecrest Veterinary Hospital,Andre Zhang,1185000,7/11/2025,Ricardo Fuentes,Ownership Verification,Pending,,,
+APP-2026-2062,Pinecrest Veterinary Hospital,Andre Zhang,1185000,7/11/2025,Ricardo Fuentes,SBA Form 1919,Received,4/29/2026,,Uploaded to portal
+APP-2026-2062,Pinecrest Veterinary Hospital,Andre Zhang,1185000,7/11/2025,Ricardo Fuentes,SBA Form 912,Expired,7/1/2026,,Document expired - replacement requested
+APP-2026-2063,Twin Oaks HVAC Services,Darius Goldberg,975000,10/1/2025,Ricardo Fuentes,Bank Statements (90 day),Under Review,6/24/2026,9/22/2026,Reviewing for completeness
+APP-2026-2063,Twin Oaks HVAC Services,Darius Goldberg,975000,10/1/2025,Ricardo Fuentes,Business Tax Returns (3yr),Pending,,,Requested from borrower
+APP-2026-2063,Twin Oaks HVAC Services,Darius Goldberg,975000,10/1/2025,Ricardo Fuentes,Personal Tax Returns (3yr),Approved,12/3/2025,12/2/2028,
+APP-2026-2063,Twin Oaks HVAC Services,Darius Goldberg,975000,10/1/2025,Ricardo Fuentes,Insurance Verification,Received,9/13/2026,9/13/2027,Received via email
+APP-2026-2063,Twin Oaks HVAC Services,Darius Goldberg,975000,10/1/2025,Ricardo Fuentes,Business Financial Statements,Pending,,,
+APP-2026-2063,Twin Oaks HVAC Services,Darius Goldberg,975000,10/1/2025,Ricardo Fuentes,Business Licenses & Permits,Pending,,,Follow-up call scheduled
+APP-2026-2063,Twin Oaks HVAC Services,Darius Goldberg,975000,10/1/2025,Ricardo Fuentes,Articles of Incorporation,Received,1/3/2026,,
+APP-2026-2063,Twin Oaks HVAC Services,Darius Goldberg,975000,10/1/2025,Ricardo Fuentes,Lease Agreement,Under Review,10/10/2026,,Minor discrepancy noted
+APP-2026-2063,Twin Oaks HVAC Services,Darius Goldberg,975000,10/1/2025,Ricardo Fuentes,Debt Schedule,Received,6/8/2026,,
+APP-2026-2063,Twin Oaks HVAC Services,Darius Goldberg,975000,10/1/2025,Ricardo Fuentes,Ownership Verification,Pending,,,
+APP-2026-2063,Twin Oaks HVAC Services,Darius Goldberg,975000,10/1/2025,Ricardo Fuentes,SBA Form 1919,Expired,3/3/2026,,Document expired - replacement requested
+APP-2026-2063,Twin Oaks HVAC Services,Darius Goldberg,975000,10/1/2025,Ricardo Fuentes,SBA Form 912,Pending,,,Borrower contacted via email
+APP-2026-2064,Silverline Bistro,Yusuf Abbott,715000,4/18/2026,Janet Morrison,Bank Statements (90 day),Received,9/28/2026,12/27/2026,Received via email
+APP-2026-2064,Silverline Bistro,Yusuf Abbott,715000,4/18/2026,Janet Morrison,Business Tax Returns (3yr),Received,5/9/2026,5/8/2029,
+APP-2026-2064,Silverline Bistro,Yusuf Abbott,715000,4/18/2026,Janet Morrison,Personal Tax Returns (3yr),Approved,4/25/2026,4/24/2029,Verified
+APP-2026-2064,Silverline Bistro,Yusuf Abbott,715000,4/18/2026,Janet Morrison,Insurance Verification,Expired,9/17/2026,9/17/2027,Expired - needs updated statements
+APP-2026-2064,Silverline Bistro,Yusuf Abbott,715000,4/18/2026,Janet Morrison,Business Financial Statements,Not Required,,,Not applicable for this loan type
+APP-2026-2064,Silverline Bistro,Yusuf Abbott,715000,4/18/2026,Janet Morrison,Business Licenses & Permits,Approved,7/7/2026,,
+APP-2026-2064,Silverline Bistro,Yusuf Abbott,715000,4/18/2026,Janet Morrison,Articles of Incorporation,Not Required,,,Exempt - sole proprietorship
+APP-2026-2064,Silverline Bistro,Yusuf Abbott,715000,4/18/2026,Janet Morrison,Lease Agreement,Not Required,,,Waived per SBA guidelines
+APP-2026-2064,Silverline Bistro,Yusuf Abbott,715000,4/18/2026,Janet Morrison,Debt Schedule,Received,4/25/2026,,Received via email
+APP-2026-2064,Silverline Bistro,Yusuf Abbott,715000,4/18/2026,Janet Morrison,Ownership Verification,Under Review,6/1/2026,,Minor discrepancy noted
+APP-2026-2064,Silverline Bistro,Yusuf Abbott,715000,4/18/2026,Janet Morrison,SBA Form 1919,Under Review,9/12/2026,,Reviewing for completeness
+APP-2026-2064,Silverline Bistro,Yusuf Abbott,715000,4/18/2026,Janet Morrison,SBA Form 912,Expired,9/20/2026,,Document expired - replacement requested
+APP-2026-2065,Silverline Dry Cleaners,Quinn Dubois,1315000,6/20/2026,Janet Morrison,Bank Statements (90 day),Approved,9/29/2026,12/28/2026,
+APP-2026-2065,Silverline Dry Cleaners,Quinn Dubois,1315000,6/20/2026,Janet Morrison,Business Tax Returns (3yr),Approved,6/22/2026,6/21/2029,
+APP-2026-2065,Silverline Dry Cleaners,Quinn Dubois,1315000,6/20/2026,Janet Morrison,Personal Tax Returns (3yr),Not Required,,,Exempt - sole proprietorship
+APP-2026-2065,Silverline Dry Cleaners,Quinn Dubois,1315000,6/20/2026,Janet Morrison,Insurance Verification,Approved,8/17/2026,8/17/2027,
+APP-2026-2065,Silverline Dry Cleaners,Quinn Dubois,1315000,6/20/2026,Janet Morrison,Business Financial Statements,Not Required,,,Waived per SBA guidelines
+APP-2026-2065,Silverline Dry Cleaners,Quinn Dubois,1315000,6/20/2026,Janet Morrison,Business Licenses & Permits,Approved,9/23/2026,,
+APP-2026-2065,Silverline Dry Cleaners,Quinn Dubois,1315000,6/20/2026,Janet Morrison,Articles of Incorporation,Approved,8/11/2026,,
+APP-2026-2065,Silverline Dry Cleaners,Quinn Dubois,1315000,6/20/2026,Janet Morrison,Lease Agreement,Approved,7/4/2026,,
+APP-2026-2065,Silverline Dry Cleaners,Quinn Dubois,1315000,6/20/2026,Janet Morrison,Debt Schedule,Approved,9/5/2026,,
+APP-2026-2065,Silverline Dry Cleaners,Quinn Dubois,1315000,6/20/2026,Janet Morrison,Ownership Verification,Approved,9/11/2026,,Verified
+APP-2026-2065,Silverline Dry Cleaners,Quinn Dubois,1315000,6/20/2026,Janet Morrison,SBA Form 1919,Approved,7/27/2026,,Verified
+APP-2026-2065,Silverline Dry Cleaners,Quinn Dubois,1315000,6/20/2026,Janet Morrison,SBA Form 912,Not Required,,,Not applicable for this loan type
+APP-2026-2066,Meadowbrook Salon & Spa,Zoe Brennan,505000,4/2/2026,Janet Morrison,Bank Statements (90 day),Pending,,,Borrower contacted via email
+APP-2026-2066,Meadowbrook Salon & Spa,Zoe Brennan,505000,4/2/2026,Janet Morrison,Business Tax Returns (3yr),Pending,,,
+APP-2026-2066,Meadowbrook Salon & Spa,Zoe Brennan,505000,4/2/2026,Janet Morrison,Personal Tax Returns (3yr),Under Review,5/25/2026,5/24/2029,
+APP-2026-2066,Meadowbrook Salon & Spa,Zoe Brennan,505000,4/2/2026,Janet Morrison,Insurance Verification,Pending,,,Follow-up call scheduled
+APP-2026-2066,Meadowbrook Salon & Spa,Zoe Brennan,505000,4/2/2026,Janet Morrison,Business Financial Statements,Approved,4/21/2026,,Verified
+APP-2026-2066,Meadowbrook Salon & Spa,Zoe Brennan,505000,4/2/2026,Janet Morrison,Business Licenses & Permits,Received,7/22/2026,,
+APP-2026-2066,Meadowbrook Salon & Spa,Zoe Brennan,505000,4/2/2026,Janet Morrison,Articles of Incorporation,Received,10/1/2026,,
+APP-2026-2066,Meadowbrook Salon & Spa,Zoe Brennan,505000,4/2/2026,Janet Morrison,Lease Agreement,Pending,,,Follow-up call scheduled
+APP-2026-2066,Meadowbrook Salon & Spa,Zoe Brennan,505000,4/2/2026,Janet Morrison,Debt Schedule,Approved,5/12/2026,,
+APP-2026-2066,Meadowbrook Salon & Spa,Zoe Brennan,505000,4/2/2026,Janet Morrison,Ownership Verification,Received,6/13/2026,,
+APP-2026-2066,Meadowbrook Salon & Spa,Zoe Brennan,505000,4/2/2026,Janet Morrison,SBA Form 1919,Received,7/23/2026,,
+APP-2026-2066,Meadowbrook Salon & Spa,Zoe Brennan,505000,4/2/2026,Janet Morrison,SBA Form 912,Approved,8/2/2026,,
+APP-2026-2067,Blue Ridge Machine Shop,Ximena Eriksen,570000,7/28/2026,Janet Morrison,Bank Statements (90 day),Approved,8/6/2026,11/4/2026,
+APP-2026-2067,Blue Ridge Machine Shop,Ximena Eriksen,570000,7/28/2026,Janet Morrison,Business Tax Returns (3yr),Not Required,,,Exempt - sole proprietorship
+APP-2026-2067,Blue Ridge Machine Shop,Ximena Eriksen,570000,7/28/2026,Janet Morrison,Personal Tax Returns (3yr),Pending,,,Requested from borrower
+APP-2026-2067,Blue Ridge Machine Shop,Ximena Eriksen,570000,7/28/2026,Janet Morrison,Insurance Verification,Expired,9/12/2026,9/12/2027,Document expired - replacement requested
+APP-2026-2067,Blue Ridge Machine Shop,Ximena Eriksen,570000,7/28/2026,Janet Morrison,Business Financial Statements,Pending,,,
+APP-2026-2067,Blue Ridge Machine Shop,Ximena Eriksen,570000,7/28/2026,Janet Morrison,Business Licenses & Permits,Received,9/19/2026,,
+APP-2026-2067,Blue Ridge Machine Shop,Ximena Eriksen,570000,7/28/2026,Janet Morrison,Articles of Incorporation,Received,9/15/2026,,Uploaded to portal
+APP-2026-2067,Blue Ridge Machine Shop,Ximena Eriksen,570000,7/28/2026,Janet Morrison,Lease Agreement,Under Review,10/15/2026,,Reviewing for completeness
+APP-2026-2067,Blue Ridge Machine Shop,Ximena Eriksen,570000,7/28/2026,Janet Morrison,Debt Schedule,Not Required,,,Not applicable for this loan type
+APP-2026-2067,Blue Ridge Machine Shop,Ximena Eriksen,570000,7/28/2026,Janet Morrison,Ownership Verification,Pending,,,Second request sent
+APP-2026-2067,Blue Ridge Machine Shop,Ximena Eriksen,570000,7/28/2026,Janet Morrison,SBA Form 1919,Approved,8/29/2026,,Verified
+APP-2026-2067,Blue Ridge Machine Shop,Ximena Eriksen,570000,7/28/2026,Janet Morrison,SBA Form 912,Pending,,,
+APP-2026-2068,Driftwood HVAC Services,Keisha Nguyen,270000,8/28/2025,Aisha Patel,Lease Agreement,Approved,10/29/2025,,Verified
+APP-2026-2068,Driftwood HVAC Services,Keisha Nguyen,270000,8/28/2025,Aisha Patel,Business Financial Statements,Received,6/3/2026,,
+APP-2026-2068,Driftwood HVAC Services,Keisha Nguyen,270000,8/28/2025,Aisha Patel,Personal Tax Returns (3yr),Received,10/13/2025,10/12/2028,
+APP-2026-2068,Driftwood HVAC Services,Keisha Nguyen,270000,8/28/2025,Aisha Patel,Debt Schedule,Approved,8/1/2026,,
+APP-2026-2068,Driftwood HVAC Services,Keisha Nguyen,270000,8/28/2025,Aisha Patel,Articles of Incorporation,Received,5/22/2026,,
+APP-2026-2068,Driftwood HVAC Services,Keisha Nguyen,270000,8/28/2025,Aisha Patel,Business Tax Returns (3yr),Received,1/8/2026,1/7/2029,Received via email
+APP-2026-2068,Driftwood HVAC Services,Keisha Nguyen,270000,8/28/2025,Aisha Patel,SBA Form 1919,Under Review,6/5/2026,,Verifying with third party
+APP-2026-2068,Driftwood HVAC Services,Keisha Nguyen,270000,8/28/2025,Aisha Patel,Bank Statements (90 day),Pending,,,Second request sent
+APP-2026-2068,Driftwood HVAC Services,Keisha Nguyen,270000,8/28/2025,Aisha Patel,SBA Form 912,Received,10/11/2026,,
+APP-2026-2069,Silverline Machine Shop,Wen Whitfield,890000,6/23/2026,Janet Morrison,Bank Statements (90 day),Pending,,,Follow-up call scheduled
+APP-2026-2069,Silverline Machine Shop,Wen Whitfield,890000,6/23/2026,Janet Morrison,Business Tax Returns (3yr),Approved,6/30/2026,6/29/2029,
+APP-2026-2069,Silverline Machine Shop,Wen Whitfield,890000,6/23/2026,Janet Morrison,Personal Tax Returns (3yr),Received,6/30/2026,6/29/2029,
+APP-2026-2069,Silverline Machine Shop,Wen Whitfield,890000,6/23/2026,Janet Morrison,Insurance Verification,Received,7/21/2026,7/21/2027,Received via email
+APP-2026-2069,Silverline Machine Shop,Wen Whitfield,890000,6/23/2026,Janet Morrison,Business Financial Statements,Received,10/17/2026,,Received via email
+APP-2026-2069,Silverline Machine Shop,Wen Whitfield,890000,6/23/2026,Janet Morrison,Business Licenses & Permits,Received,8/23/2026,,Uploaded to portal
+APP-2026-2069,Silverline Machine Shop,Wen Whitfield,890000,6/23/2026,Janet Morrison,Articles of Incorporation,Pending,,,Second request sent
+APP-2026-2069,Silverline Machine Shop,Wen Whitfield,890000,6/23/2026,Janet Morrison,Lease Agreement,Received,9/4/2026,,
+APP-2026-2069,Silverline Machine Shop,Wen Whitfield,890000,6/23/2026,Janet Morrison,Debt Schedule,Approved,7/22/2026,,
+APP-2026-2069,Silverline Machine Shop,Wen Whitfield,890000,6/23/2026,Janet Morrison,Ownership Verification,Pending,,,Follow-up call scheduled
+APP-2026-2069,Silverline Machine Shop,Wen Whitfield,890000,6/23/2026,Janet Morrison,SBA Form 1919,Under Review,8/21/2026,,Minor discrepancy noted
+APP-2026-2069,Silverline Machine Shop,Wen Whitfield,890000,6/23/2026,Janet Morrison,SBA Form 912,Under Review,7/31/2026,,Verifying with third party
+APP-2026-2070,Cedar Tax & Accounting,Tanya Petrov,120000,10/23/2025,Aisha Patel,Bank Statements (90 day),Received,4/13/2026,7/12/2026,Received via email
+APP-2026-2070,Cedar Tax & Accounting,Tanya Petrov,120000,10/23/2025,Aisha Patel,Business Tax Returns (3yr),Approved,4/7/2026,4/6/2029,Verified
+APP-2026-2070,Cedar Tax & Accounting,Tanya Petrov,120000,10/23/2025,Aisha Patel,Personal Tax Returns (3yr),Approved,12/9/2025,12/8/2028,Verified
+APP-2026-2070,Cedar Tax & Accounting,Tanya Petrov,120000,10/23/2025,Aisha Patel,Insurance Verification,Under Review,3/7/2026,3/7/2027,
+APP-2026-2070,Cedar Tax & Accounting,Tanya Petrov,120000,10/23/2025,Aisha Patel,Business Financial Statements,Approved,5/28/2026,,
+APP-2026-2070,Cedar Tax & Accounting,Tanya Petrov,120000,10/23/2025,Aisha Patel,Business Licenses & Permits,Pending,,,
+APP-2026-2070,Cedar Tax & Accounting,Tanya Petrov,120000,10/23/2025,Aisha Patel,Articles of Incorporation,Pending,,,
+APP-2026-2070,Cedar Tax & Accounting,Tanya Petrov,120000,10/23/2025,Aisha Patel,Lease Agreement,Pending,,,Second request sent
+APP-2026-2070,Cedar Tax & Accounting,Tanya Petrov,120000,10/23/2025,Aisha Patel,Debt Schedule,Received,5/11/2026,,
+APP-2026-2070,Cedar Tax & Accounting,Tanya Petrov,120000,10/23/2025,Aisha Patel,Ownership Verification,Pending,,,Borrower contacted via email
+APP-2026-2070,Cedar Tax & Accounting,Tanya Petrov,120000,10/23/2025,Aisha Patel,SBA Form 1919,Approved,10/5/2026,,
+APP-2026-2070,Cedar Tax & Accounting,Tanya Petrov,120000,10/23/2025,Aisha Patel,SBA Form 912,Approved,4/28/2026,,
+APP-2026-2071,Bayview Bistro,Carmen Zhang,935000,4/22/2026,Ricardo Fuentes,Bank Statements (90 day),Pending,,,
+APP-2026-2071,Bayview Bistro,Carmen Zhang,935000,4/22/2026,Ricardo Fuentes,Business Tax Returns (3yr),Approved,4/24/2026,4/23/2029,
+APP-2026-2071,Bayview Bistro,Carmen Zhang,935000,4/22/2026,Ricardo Fuentes,Personal Tax Returns (3yr),Pending,,,
+APP-2026-2071,Bayview Bistro,Carmen Zhang,935000,4/22/2026,Ricardo Fuentes,Insurance Verification,Pending,,,
+APP-2026-2071,Bayview Bistro,Carmen Zhang,935000,4/22/2026,Ricardo Fuentes,Business Financial Statements,Pending,,,
+APP-2026-2071,Bayview Bistro,Carmen Zhang,935000,4/22/2026,Ricardo Fuentes,Business Licenses & Permits,Approved,7/4/2026,,
+APP-2026-2071,Bayview Bistro,Carmen Zhang,935000,4/22/2026,Ricardo Fuentes,Articles of Incorporation,Approved,8/6/2026,,Verified
+APP-2026-2071,Bayview Bistro,Carmen Zhang,935000,4/22/2026,Ricardo Fuentes,Lease Agreement,Received,5/27/2026,,
+APP-2026-2071,Bayview Bistro,Carmen Zhang,935000,4/22/2026,Ricardo Fuentes,Debt Schedule,Under Review,5/2/2026,,Reviewing for completeness
+APP-2026-2071,Bayview Bistro,Carmen Zhang,935000,4/22/2026,Ricardo Fuentes,Ownership Verification,Received,7/28/2026,,Received via email
+APP-2026-2071,Bayview Bistro,Carmen Zhang,935000,4/22/2026,Ricardo Fuentes,SBA Form 1919,Pending,,,
+APP-2026-2071,Bayview Bistro,Carmen Zhang,935000,4/22/2026,Ricardo Fuentes,SBA Form 912,Pending,,,
+APP-2026-2072,Pinecrest Bistro,Jonah Dubois,905000,11/9/2025,Janet Morrison,Personal Tax Returns (3yr),Approved,4/17/2026,4/16/2029,
+APP-2026-2072,Pinecrest Bistro,Jonah Dubois,905000,11/9/2025,Janet Morrison,Debt Schedule,Approved,11/10/2025,,
+APP-2026-2072,Pinecrest Bistro,Jonah Dubois,905000,11/9/2025,Janet Morrison,Business Licenses & Permits,Approved,10/10/2026,,
+APP-2026-2072,Pinecrest Bistro,Jonah Dubois,905000,11/9/2025,Janet Morrison,Insurance Verification,Approved,12/2/2025,12/2/2026,Verified
+APP-2026-2072,Pinecrest Bistro,Jonah Dubois,905000,11/9/2025,Janet Morrison,Business Financial Statements,Approved,8/31/2026,,
+APP-2026-2072,Pinecrest Bistro,Jonah Dubois,905000,11/9/2025,Janet Morrison,Lease Agreement,Approved,8/30/2026,,
+APP-2026-2072,Pinecrest Bistro,Jonah Dubois,905000,11/9/2025,Janet Morrison,Ownership Verification,Approved,4/12/2026,,Verified
+APP-2026-2072,Pinecrest Bistro,Jonah Dubois,905000,11/9/2025,Janet Morrison,Bank Statements (90 day),Approved,6/16/2026,9/14/2026,
+APP-2026-2072,Pinecrest Bistro,Jonah Dubois,905000,11/9/2025,Janet Morrison,SBA Form 1919,Approved,1/8/2026,,
+APP-2026-2072,Pinecrest Bistro,Jonah Dubois,905000,11/9/2025,Janet Morrison,SBA Form 912,Approved,2/17/2026,,
+APP-2026-2073,Sunrise Bike Shop,Omar Ibrahim,885000,9/24/2025,Aisha Patel,Bank Statements (90 day),Approved,7/5/2026,10/3/2026,
+APP-2026-2073,Sunrise Bike Shop,Omar Ibrahim,885000,9/24/2025,Aisha Patel,Business Tax Returns (3yr),Approved,5/29/2026,5/28/2029,
+APP-2026-2073,Sunrise Bike Shop,Omar Ibrahim,885000,9/24/2025,Aisha Patel,Personal Tax Returns (3yr),Received,5/12/2026,5/11/2029,
+APP-2026-2073,Sunrise Bike Shop,Omar Ibrahim,885000,9/24/2025,Aisha Patel,Insurance Verification,Pending,,,
+APP-2026-2073,Sunrise Bike Shop,Omar Ibrahim,885000,9/24/2025,Aisha Patel,Business Financial Statements,Approved,1/15/2026,,Verified
+APP-2026-2073,Sunrise Bike Shop,Omar Ibrahim,885000,9/24/2025,Aisha Patel,Business Licenses & Permits,Under Review,10/10/2025,,Reviewing for completeness
+APP-2026-2073,Sunrise Bike Shop,Omar Ibrahim,885000,9/24/2025,Aisha Patel,Articles of Incorporation,Received,10/23/2025,,
+APP-2026-2073,Sunrise Bike Shop,Omar Ibrahim,885000,9/24/2025,Aisha Patel,Lease Agreement,Received,10/5/2026,,
+APP-2026-2073,Sunrise Bike Shop,Omar Ibrahim,885000,9/24/2025,Aisha Patel,Debt Schedule,Approved,2/25/2026,,
+APP-2026-2073,Sunrise Bike Shop,Omar Ibrahim,885000,9/24/2025,Aisha Patel,Ownership Verification,Received,12/30/2025,,
+APP-2026-2073,Sunrise Bike Shop,Omar Ibrahim,885000,9/24/2025,Aisha Patel,SBA Form 1919,Pending,,,
+APP-2026-2073,Sunrise Bike Shop,Omar Ibrahim,885000,9/24/2025,Aisha Patel,SBA Form 912,Under Review,5/10/2026,,Minor discrepancy noted
+APP-2026-2074,Crescent Pediatric Clinic,Victor Dubois,500000,11/15/2025,Ricardo Fuentes,SBA Form 1919,Not Required,,,Not applicable for this loan type
+APP-2026-2074,Crescent Pediatric Clinic,Victor Dubois,500000,11/15/2025,Ricardo Fuentes,Business Tax Returns (3yr),Approved,12/14/2025,12/13/2028,
+APP-2026-2074,Crescent Pediatric Clinic,Victor Dubois,500000,11/15/2025,Ricardo Fuentes,Bank Statements (90 day),Under Review,4/3/2026,7/2/2026,Reviewing for completeness
+APP-2026-2074,Crescent Pediatric Clinic,Victor Dubois,500000,11/15/2025,Ricardo Fuentes,Personal Tax Returns (3yr),Under Review,1/27/2026,1/26/2029,Reviewing for completeness
+APP-2026-2074,Crescent Pediatric Clinic,Victor Dubois,500000,11/15/2025,Ricardo Fuentes,Business Financial Statements,Expired,5/27/2026,,Document expired - replacement requested
+APP-2026-2074,Crescent Pediatric Clinic,Victor Dubois,500000,11/15/2025,Ricardo Fuentes,Articles of Incorporation,Received,8/30/2026,,Received via email
+APP-2026-2074,Crescent Pediatric Clinic,Victor Dubois,500000,11/15/2025,Ricardo Fuentes,Lease Agreement,Approved,7/24/2026,,
+APP-2026-2074,Crescent Pediatric Clinic,Victor Dubois,500000,11/15/2025,Ricardo Fuentes,Insurance Verification,Under Review,6/18/2026,6/18/2027,Verifying with third party
+APP-2026-2074,Crescent Pediatric Clinic,Victor Dubois,500000,11/15/2025,Ricardo Fuentes,Debt Schedule,Received,3/25/2026,,Uploaded to portal
+APP-2026-2074,Crescent Pediatric Clinic,Victor Dubois,500000,11/15/2025,Ricardo Fuentes,Business Licenses & Permits,Approved,3/4/2026,,
+APP-2026-2075,Silverline Hardware,Zoe Larsen,690000,7/15/2025,Janet Morrison,Business Tax Returns (3yr),Expired,9/17/2025,9/16/2028,Expired - needs updated statements
+APP-2026-2075,Silverline Hardware,Zoe Larsen,690000,7/15/2025,Janet Morrison,Business Financial Statements,Expired,9/4/2025,,Document expired - replacement requested
+APP-2026-2075,Silverline Hardware,Zoe Larsen,690000,7/15/2025,Janet Morrison,Bank Statements (90 day),Pending,,,
+APP-2026-2075,Silverline Hardware,Zoe Larsen,690000,7/15/2025,Janet Morrison,Personal Tax Returns (3yr),Pending,,,
+APP-2026-2075,Silverline Hardware,Zoe Larsen,690000,7/15/2025,Janet Morrison,Articles of Incorporation,Approved,5/13/2026,,Verified
+APP-2026-2075,Silverline Hardware,Zoe Larsen,690000,7/15/2025,Janet Morrison,Lease Agreement,Pending,,,Borrower contacted via email
+APP-2026-2075,Silverline Hardware,Zoe Larsen,690000,7/15/2025,Janet Morrison,SBA Form 912,Received,7/25/2025,,Uploaded to portal
+APP-2026-2075,Silverline Hardware,Zoe Larsen,690000,7/15/2025,Janet Morrison,Debt Schedule,Received,5/17/2026,,Received via email
+APP-2026-2075,Silverline Hardware,Zoe Larsen,690000,7/15/2025,Janet Morrison,SBA Form 1919,Approved,9/30/2026,,Verified
