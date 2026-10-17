@@ -234,3 +234,31 @@ h1, h2, h3 { margin: 0; font-weight: 650; letter-spacing: -0.01em; }
 .progress-track { width: 64px; height: 6px; border-radius: 3px; background: var(--rule); overflow: hidden; }
 .progress-fill { display: block; height: 100%; background: var(--accent); border-radius: 3px; }
 .flags { display: flex; flex-wrap: wrap; gap: var(--s1); }
+
+/* Checklist */
+.checklist-head { margin-bottom: var(--s4); }
+.back { padding-left: 0; margin-bottom: var(--s2); }
+.checklist-title { display: flex; flex-wrap: wrap; align-items: baseline; gap: var(--s3); }
+.checklist-title h2 { font-size: var(--text-lg); }
+.checklist-actions { margin-left: auto; display: flex; gap: var(--s2); }
+.facts { display: flex; flex-wrap: wrap; gap: var(--s2) var(--s6); margin: var(--s3) 0 0; }
+.facts dt { font-size: var(--text-xs); color: var(--ink-muted); }
+.facts dd { margin: 0; display: flex; align-items: center; gap: var(--s2); font-weight: 550; }
+.checklist-sheet { border-radius: var(--radius-tab); }
+.doc-table { width: 100%; border-collapse: collapse; font-size: var(--text-sm); }
+.doc-table thead th {
+  text-align: left; font-weight: 600; color: var(--ink-muted);
+  padding: var(--s2) var(--s3); border-bottom: 1px solid var(--rule-strong);
+}
+.doc-table td, .doc-table tbody th { padding: var(--s2) var(--s3); border-bottom: 1px solid var(--rule); vertical-align: top; }
+.doc-name { text-align: left; font-weight: 600; padding-top: 14px !important; white-space: nowrap; }
+.is-undecided { background: #faf9fe; }
+.decision { display: flex; align-items: center; gap: var(--s2); white-space: nowrap; }
+.decision .select { width: 140px; }
+.status-select { min-width: 210px; font-weight: 550; }
+.status-pending, .status-expired { color: var(--expired-ink); }
+.status-received, .status-under-review { color: var(--progress-ink); }
+.status-approved, .status-not-required { color: var(--done-ink); }
+.date-cell { display: flex; flex-direction: column; gap: 2px; margin-bottom: var(--s1); }
+.input-date { width: 150px; }
+.notes-input { width: 100%; min-width: 200px; }

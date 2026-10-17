@@ -2,6 +2,7 @@ import { useState } from 'react'
 import { exportCsv, exportFilename } from '../data/csvExport'
 import { formatLongDate, todayIso } from '../domain/dates'
 import { downloadText } from './download'
+import { ChecklistPage } from './ChecklistPage'
 import { Header } from './Header'
 import { HomePage } from './HomePage'
 import { useChecklistStore } from './useChecklistStore'
@@ -54,7 +55,15 @@ export function App() {
       )}
       <main className="page">
         {selected ? (
-          <button className="btn" onClick={() => setSelectedAppId(null)}>Back</button>
+          <ChecklistPage
+            app={selected}
+            documents={state.data.documents.filter(d => d.applicationId === selected.id)}
+            asOf={asOf}
+            dispatch={dispatch}
+            onBack={() => setSelectedAppId(null)}
+            onEdit={() => {}}
+            onDelete={() => {}}
+          />
         ) : (
           <HomePage data={state.data} asOf={asOf} onOpen={setSelectedAppId} onNew={() => {}} />
         )}
