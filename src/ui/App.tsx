@@ -3,6 +3,7 @@ import { exportCsv, exportFilename } from '../data/csvExport'
 import { formatLongDate, todayIso } from '../domain/dates'
 import { downloadText } from './download'
 import { Header } from './Header'
+import { HomePage } from './HomePage'
 import { useChecklistStore } from './useChecklistStore'
 
 export function App() {
@@ -55,7 +56,7 @@ export function App() {
         {selected ? (
           <button className="btn" onClick={() => setSelectedAppId(null)}>Back</button>
         ) : (
-          <p>{state.data.applications.length} applications</p>
+          <HomePage data={state.data} asOf={asOf} onOpen={setSelectedAppId} onNew={() => {}} />
         )}
       </main>
     </>
