@@ -398,6 +398,7 @@ Made without input from the ops team; each is a question to raise with them.
 | A9 | CSV export is an acceptable exit ramp back to the spreadsheet | Same columns and date format; only additions are the Needs decision status value and a trailing `last_activity` column |
 | A10 | The team can save their spreadsheet as CSV | Standard in Excel and Google Sheets |
 | A11 | The weekly summary leadership wants is a snapshot of current pipeline health | Brief: "a weekly pipeline summary … compiled manually into an email every Monday" |
+| A12 | Tax returns expire after 1,095 days and insurance after 365 days, not on the calendar anniversary | Matches every row in the sample data; differs from "3 calendar years" by one day when the span includes Feb 29 (e.g. 1/29/2026 → 1/28/2029). Confirm with the ops team whether policy means calendar years. |
 
 ### Tradeoffs
 
