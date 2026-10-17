@@ -1,6 +1,4 @@
 import { useCallback, useEffect, useState } from 'react'
-import { importCsv } from '../data/csvImport'
-import sampleCsv from '../data/sample.csv?raw'
 import { loadState, saveState, STORAGE_KEY } from '../data/storage'
 import { todayIso } from '../domain/dates'
 import type { ChecklistData, IsoDate } from '../domain/types'
@@ -17,18 +15,14 @@ function browserStorage(): Storage | null {
   }
 }
 
-export function sampleData(): ChecklistData {
-  const r = importCsv(sampleCsv)
-  if (!r.ok) throw new Error(`Bundled sample data is invalid: ${r.error}`)
-  return r.data
-}
+const EMPTY: ChecklistData = { applications: [], documents: [] }
 
 function boot(): { state: PersistedState | null; storage: StorageStatus } {
   const r = loadState(browserStorage())
   switch (r.kind) {
     case 'ok': return { state: r.state, storage: 'ok' }
-    case 'empty': return { state: initialState(sampleData()), storage: 'ok' }
-    case 'unavailable': return { state: initialState(sampleData()), storage: 'unavailable' }
+    case 'empty': return { state: initialState(EMPTY), storage: 'ok' }
+    case 'unavailable': return { state: initialState(EMPTY), storage: 'unavailable' }
     case 'corrupt': return { state: null, storage: 'corrupt' }
   }
 }
@@ -45,8 +39,9 @@ export function useChecklistStore() {
     setStorage(prev => (prev === 'corrupt' ? 'ok' : prev))
   }, [])
 
-  const loadSample = useCallback(() => {
-    setState(initialState(sampleData()))
+  /** Starts over with no applications (also the way out of unreadable saved data). */
+  const clearData = useCallback(() => {
+    setState(initialState(EMPTY))
     setStorage(prev => (prev === 'corrupt' ? 'ok' : prev))
   }, [])
 
@@ -68,5 +63,5 @@ export function useChecklistStore() {
   }, [])
 
   const asOf: IsoDate = state?.asOfOverride ?? todayIso()
-  return { state, dispatch, asOf, storage, loadSample, replaceData }
+  return { state, dispatch, asOf, storage, clearData, replaceData }
 }

@@ -1,6 +1,6 @@
 import { describe, expect, it } from 'vitest'
 import { CSV_COLUMNS, importCsv } from './csvImport'
-import sampleCsv from './sample.csv?raw'
+import sampleCsv from '../test/fixtures/sample.csv?raw'
 
 const HEADER = CSV_COLUMNS.join(',')
 const row = (o: Partial<Record<string, string>> = {}) =>

@@ -19,13 +19,13 @@ type Dialog =
   | { kind: 'new' }
   | { kind: 'edit' }
   | { kind: 'delete' }
-  | { kind: 'reset' }
+  | { kind: 'clear' }
   | { kind: 'summary' }
   | { kind: 'import'; result: Extract<ImportResult, { ok: true }> }
   | { kind: 'import-error'; message: string }
 
 export function App() {
-  const { state, dispatch, asOf, storage, loadSample, replaceData } = useChecklistStore()
+  const { state, dispatch, asOf, storage, clearData, replaceData } = useChecklistStore()
   const [selectedAppId, setSelectedAppId] = useState<string | null>(null)
   const [dialog, setDialog] = useState<Dialog | null>(null)
   const fileInput = useRef<HTMLInputElement>(null)
@@ -70,9 +70,9 @@ export function App() {
     return (
       <main className="message-screen">
         <h1>Your saved data couldn't be read.</h1>
-        <p>It has been kept as a backup. Load the sample data or import a CSV to keep working.</p>
+        <p>It has been kept as a backup. Start empty or import a CSV to keep working.</p>
         <div className="message-actions">
-          <button className="btn btn-primary" onClick={loadSample}>Load sample data</button>
+          <button className="btn btn-primary" onClick={clearData}>Start empty</button>
           <button className="btn" onClick={() => fileInput.current?.click()}>Import CSV</button>
         </div>
         {importUi}
@@ -91,7 +91,7 @@ export function App() {
         onSetAsOf={date => dispatch({ type: 'setAsOf', date })}
         onExport={exportData}
         onImport={() => fileInput.current?.click()}
-        onReset={() => setDialog({ kind: 'reset' })}
+        onClear={() => setDialog({ kind: 'clear' })}
         onWeeklySummary={() => setDialog({ kind: 'summary' })}
       />
       {state.asOfOverride && (
@@ -117,7 +117,13 @@ export function App() {
             onDelete={() => setDialog({ kind: 'delete' })}
           />
         ) : (
-          <HomePage data={state.data} asOf={asOf} onOpen={setSelectedAppId} onNew={() => setDialog({ kind: 'new' })} />
+          <HomePage
+            data={state.data}
+            asOf={asOf}
+            onOpen={setSelectedAppId}
+            onNew={() => setDialog({ kind: 'new' })}
+            onImport={() => fileInput.current?.click()}
+          />
         )}
       </main>
 
@@ -154,15 +160,15 @@ export function App() {
           }}
         />
       )}
-      {dialog?.kind === 'reset' && (
+      {dialog?.kind === 'clear' && (
         <ConfirmDialog
-          title="Reset to sample data"
-          message="This replaces all your changes with the sample data."
-          confirmLabel="Reset sample data"
+          title="Clear all data"
+          message="Delete all applications from this browser? Export first if you want to keep them."
+          confirmLabel="Clear all data"
           danger
           onCancel={close}
           onConfirm={() => {
-            loadSample()
+            clearData()
             setSelectedAppId(null)
             close()
           }}

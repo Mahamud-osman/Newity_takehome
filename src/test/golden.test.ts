@@ -1,6 +1,6 @@
 import { describe, expect, it } from 'vitest'
 import { importCsv } from '../data/csvImport'
-import sampleCsv from '../data/sample.csv?raw'
+import sampleCsv from './fixtures/sample.csv?raw'
 import { buildSummaries, cardCounts } from '../domain/pipeline'
 import type { AppSummary } from '../domain/rules'
 import { expiryBadge } from '../domain/rules'

@@ -8,7 +8,7 @@ interface Props {
   onSetAsOf(date: IsoDate | null): void
   onExport(): void
   onImport(): void
-  onReset(): void
+  onClear(): void
   onWeeklySummary(): void
 }
 
@@ -19,7 +19,7 @@ function lastExportedText(at: IsoDate | null): string {
   return `Last exported ${days} day${days === 1 ? '' : 's'} ago`
 }
 
-export function Header({ asOf, lastExportedAt, onSetAsOf, onExport, onImport, onReset, onWeeklySummary }: Props) {
+export function Header({ asOf, lastExportedAt, onSetAsOf, onExport, onImport, onClear, onWeeklySummary }: Props) {
   return (
     <header className="app-header">
       <div className="app-header-inner">
@@ -41,7 +41,7 @@ export function Header({ asOf, lastExportedAt, onSetAsOf, onExport, onImport, on
           <button className="btn" onClick={onWeeklySummary}>Weekly summary</button>
           <button className="btn" onClick={onImport}>Import CSV</button>
           <button className="btn" onClick={onExport}>Export CSV</button>
-          <button className="btn btn-quiet" onClick={onReset}>Reset sample data</button>
+          <button className="btn btn-quiet" onClick={onClear}>Clear all data</button>
         </div>
         <p className="last-exported">{lastExportedText(lastExportedAt)}</p>
       </div>

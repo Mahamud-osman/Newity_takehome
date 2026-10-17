@@ -1,6 +1,6 @@
 import { describe, expect, it } from 'vitest'
 import { importCsv } from '../data/csvImport'
-import sampleCsv from '../data/sample.csv?raw'
+import sampleCsv from '../test/fixtures/sample.csv?raw'
 import { makeData } from '../test/factories'
 import { findDuplicate, nextApplicationId, validateApplicationForm } from './applicationForm'
 import type { ApplicationFormInput } from './applicationForm'

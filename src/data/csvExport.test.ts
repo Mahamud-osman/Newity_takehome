@@ -2,7 +2,7 @@ import { describe, expect, it } from 'vitest'
 import { makeApp, makeData, makeDoc } from '../test/factories'
 import { exportCsv, exportFilename } from './csvExport'
 import { CSV_COLUMNS, importCsv } from './csvImport'
-import sampleCsv from './sample.csv?raw'
+import sampleCsv from '../test/fixtures/sample.csv?raw'
 
 describe('exportCsv', () => {
   it('round-trips the sample exactly', () => {

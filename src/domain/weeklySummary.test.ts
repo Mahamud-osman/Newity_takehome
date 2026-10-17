@@ -1,6 +1,6 @@
 import { describe, expect, it } from 'vitest'
 import { importCsv } from '../data/csvImport'
-import sampleCsv from '../data/sample.csv?raw'
+import sampleCsv from '../test/fixtures/sample.csv?raw'
 import { makeApp, makeData, makeDoc } from '../test/factories'
 import { buildWeeklySummary } from './weeklySummary'
 

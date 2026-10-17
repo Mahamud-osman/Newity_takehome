@@ -2,7 +2,7 @@
 
 A browser tool that replaces the loan operations team's SBA document spreadsheet. It shows which applications are **stalled** waiting on documents, gives each application a 12-document **checklist** that can be updated with one click, and flags documents that have **expired or are about to expire**, using their expiration dates rather than a status someone typed. Bank statements expire after 90 days, tax returns after 1,095 days and insurance after 365 days.
 
-It runs entirely in the browser. There is no server and no database. The sample data loads automatically the first time you open it.
+It runs entirely in the browser. There is no server and no database. It starts empty: import your spreadsheet (saved as CSV) or add applications.
 
 ## Requirements
 
@@ -27,15 +27,15 @@ The tests cover the business rules, CSV import and export, saving, and the weekl
 
 ## Demo tip
 
-The sample data runs from July 2025 to February 2026, so measured against today almost everything has expired. Set **As of** in the header to **Feb 15, 2026** to see the data as the team would have seen it. A banner reminds you that you aren't viewing today's date, and **Back to today** switches back.
+Click **Import CSV** and choose `NEWITY_Sample_Data_A_Document_Checklist.csv` (a copy is in `src/test/fixtures/sample.csv`). The sample data runs from July 2025 to February 2026, so measured against today almost everything has expired. Set **As of** in the header to **Feb 15, 2026** to see the data as the team would have seen it. A banner reminds you that you aren't viewing today's date, and **Back to today** switches back.
 
 ## Manual smoke test
 
-- [ ] A fresh open (or **Reset sample data**) loads 60 applications.
+- [ ] A fresh open (or **Clear all data**) shows the empty state. **Import CSV** with the sample file loads 60 applications.
 - [ ] With As of = Feb 15, 2026 the tabs read: All 60 · Stalled 11 · Expired documents 6 · Expiring soon 1 · Needs decision 43.
 - [ ] Change a document's status, refresh the page, and the change is still there.
 - [ ] Add an application, edit its details, then delete it.
-- [ ] **Export CSV** → **Reset sample data** → **Import CSV** the exported file → your changes are back.
+- [ ] **Export CSV** → **Clear all data** → **Import CSV** the exported file → your changes are back.
 - [ ] Change **As of** and the badges change. **Back to today** returns to today's date.
 - [ ] Importing a file with the wrong columns shows an error and changes nothing. Opening the app in a private window still works, with a warning that changes can't be saved.
 

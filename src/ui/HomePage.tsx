@@ -10,9 +10,10 @@ interface Props {
   asOf: IsoDate
   onOpen(appId: string): void
   onNew(): void
+  onImport(): void
 }
 
-export function HomePage({ data, asOf, onOpen, onNew }: Props) {
+export function HomePage({ data, asOf, onOpen, onNew, onImport }: Props) {
   const [card, setCard] = useState<Card>('all')
   const [search, setSearch] = useState('')
   const [processor, setProcessor] = useState<string | null>(null)
@@ -22,6 +23,19 @@ export function HomePage({ data, asOf, onOpen, onNew }: Props) {
   const counts = cardCounts(summaries, { search, processor })
   const rows = sortSummaries(filterSummaries(summaries, { card, search, processor }), sort)
   const processors = processorsOf(data)
+
+  if (data.applications.length === 0) {
+    return (
+      <div className="empty-start">
+        <h2>No applications yet</h2>
+        <p>Import your spreadsheet (saved as CSV) or add an application.</p>
+        <div className="message-actions">
+          <button className="btn btn-primary" onClick={onImport}>Import CSV</button>
+          <button className="btn" onClick={onNew}>+ New application</button>
+        </div>
+      </div>
+    )
+  }
 
   return (
     <>

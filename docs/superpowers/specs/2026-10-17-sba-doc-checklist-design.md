@@ -49,7 +49,7 @@ All figures use an "as of" date of **Feb 15, 2026** (the end of the sample data'
 ## 4. Architecture
 
 - **Single-page web app, browser only, no backend.** React + TypeScript + Vite. Papa Parse for CSV. Vitest for tests.
-- The sample CSV is bundled with the app and loads automatically on first open — no seeding step.
+- The app ships with **no data**: it opens empty and the team imports their spreadsheet (as CSV) or adds applications. The sample CSV is a test fixture only (`src/test/fixtures/`), never bundled into the app.
 - All data is saved in the browser (localStorage). Each browser holds its own copy.
 - Setup for a reviewer: `npm install && npm run dev` (Node 20.19+ or 22.12+, required by current Vite).
 
@@ -128,13 +128,14 @@ Two screens plus a header. Navigation is "click a row" and "← Back".
 ### Header (always visible)
 
 ```
-SBA Document Checklist     As of: Oct 17, 2026 [change]     Weekly summary · Import CSV · Export CSV · Reset sample data
+SBA Document Checklist     As of: Oct 17, 2026 [change]     Weekly summary · Import CSV · Export CSV · Clear all data
                                                             Last exported: 6 days ago
 ```
 
 - **As of** defaults to today. Changing it recalculates all badges and flags. When it isn't today, a banner shows: *"Viewing as of Feb 15, 2026 · [Back to today]"*.
 - **Last exported** reminder, because Export is the only backup.
-- **Reset sample data** asks for confirmation: *"This replaces all your changes with the sample data."*
+- **Clear all data** asks for confirmation: *"Delete all applications from this browser? Export first if you want to keep them."*
+- **Empty state:** with no applications, the home page shows *"No applications yet — Import your spreadsheet (saved as CSV) or add an application."* with **Import CSV** and **+ New application**.
 
 ### Screen 1 — Home
 
@@ -248,7 +249,7 @@ Usability rules, which apply to every screen:
 - Text and badge colors meet WCAG AA contrast.
 - Click targets are at least 32 px tall; every control is reachable by keyboard.
 - The home table reads like a spreadsheet: dense rows, left-aligned text, right-aligned numbers.
-- Confirmations only for destructive actions (Delete, Reset, Import); everything else saves instantly.
+- Confirmations only for destructive actions (Delete, Clear all data, Import); everything else saves instantly.
 
 ## 8. Data Flow & Saving
 
@@ -257,16 +258,17 @@ Usability rules, which apply to every screen:
  (sample or import)  (dates, 12 docs,  │   ▲
                       last activity)   │   │ actions (setStatus, updateDocument,
                                        ▼   │  addApplication, editApplication,
-                       rules (stalled, expiry, counts) ──► screens     deleteApplication, import, reset, setAsOf)
+                       rules (stalled, expiry, counts) ──► screens     deleteApplication, import, clear, setAsOf)
 ```
 
 - **State** is held in one React `useReducer`. Every change is a named action handled by a pure reducer.
 - **Derived values** (stalled, expiry badges, counts) are computed from state + "as of" on render, never stored.
 
 ### First open
-1. If localStorage has no saved data, load the bundled sample CSV.
-2. Normalize: convert dates; add Needs decision documents for unlisted types; set each application's last activity to its latest received date (or application date).
-3. Save.
+If localStorage has no saved data, the app starts with no applications and shows the empty state. Nothing is seeded.
+
+### Normalizing imported data
+Convert dates; add Needs decision documents for unlisted types; set each application's last activity to its latest received date (or application date).
 
 ### Saving
 - One localStorage entry containing applications, documents, the "as of" override, and the last-exported time (~150 KB).
@@ -287,8 +289,8 @@ Usability rules, which apply to every screen:
 - Extra trailing column `last_activity` so in-app activity survives a round trip. Extra columns are optional on import; the original CSV imports cleanly and last activity is computed.
 - Filename `sba-checklist-YYYY-MM-DD.csv`. Updates the "Last exported" reminder.
 
-### Reset sample data
-Confirm, then repeat the first-open steps.
+### Clear all data
+Confirm, then start over with no applications (also clears the "as of" override and last-exported time).
 
 ## 9. Error Handling
 
@@ -313,7 +315,7 @@ Row-level problems are never silent: the preview lists every issue before anythi
 | Problem | Behavior |
 |---|---|
 | localStorage unavailable or full | App keeps working in memory; persistent banner: *"Changes can't be saved in this browser. Use Export to keep your work."* |
-| Saved data corrupted or unknown version | Not overwritten; raw data kept as a backup; user offered **Load sample data** or **Import CSV** |
+| Saved data corrupted or unknown version | Not overwritten; raw data kept as a backup; user offered **Start empty** or **Import CSV** |
 | App open in two tabs | Each tab reloads state when the other saves (browser `storage` event) |
 
 ### Forms and fields
@@ -367,11 +369,11 @@ A React error boundary shows *"Something went wrong. Your saved data is safe. [R
 | Weekly summary | Contains the figures above, $15.62M, and the 11 stalled applications in idle order (1060 first at 67 days, 1020 last at 21 days) |
 
 ### Manual smoke test (README checklist)
-1. Fresh open loads the sample.
+1. Fresh open is empty; Import CSV of the sample loads 60 applications.
 2. Each filter card shows the expected count.
 3. Change a status → refresh → still changed.
 4. Add, edit, then delete an application.
-5. Export → Reset → Import the export → data matches.
+5. Export → Clear all data → Import the export → data matches.
 6. Change "as of" → badges change → Back to today.
 7. Import a broken CSV; open in a private window.
 
