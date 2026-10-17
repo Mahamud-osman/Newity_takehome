@@ -1,3 +1,4 @@
+import { NOT_ON_IMPORT_NOTE } from '../domain/settings'
 import type { PersistedState } from '../state/reducer'
 
 export const STORAGE_KEY = 'sba-checklist:v1'
@@ -15,6 +16,20 @@ function isPersistedState(v: unknown): v is PersistedState {
     Array.isArray(s.data?.applications) && Array.isArray(s.data?.documents)
 }
 
+/** Earlier versions saved unlisted documents as "Needs Decision"; they now mean not needed. */
+function migrate(state: PersistedState): PersistedState {
+  const legacy = (status: string) => status === 'Needs Decision'
+  if (!state.data.documents.some(d => legacy(d.status))) return state
+  return {
+    ...state,
+    data: {
+      ...state.data,
+      documents: state.data.documents.map(d =>
+        legacy(d.status) ? { ...d, status: 'Not Required', notes: d.notes || NOT_ON_IMPORT_NOTE } : d),
+    },
+  }
+}
+
 /** Never overwrites unreadable data: it is copied to BACKUP_KEY and left in place. */
 export function loadState(storage: Storage | null): LoadResult {
   if (!storage) return { kind: 'unavailable' }
@@ -27,7 +42,7 @@ export function loadState(storage: Storage | null): LoadResult {
   if (raw === null) return { kind: 'empty' }
   try {
     const parsed: unknown = JSON.parse(raw)
-    if (isPersistedState(parsed)) return { kind: 'ok', state: parsed }
+    if (isPersistedState(parsed)) return { kind: 'ok', state: migrate(parsed) }
   } catch {
     // fall through to backup
   }

@@ -21,7 +21,6 @@ export const STATUSES = [
   'Approved',
   'Expired',
   'Not Required',
-  'Needs Decision',
 ] as const
 export type Status = (typeof STATUSES)[number]
 

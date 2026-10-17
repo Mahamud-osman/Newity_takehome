@@ -21,7 +21,7 @@ export function buildWeeklySummary(data: ChecklistData, asOf: IsoDate): string {
     '',
     'PIPELINE',
     `  ${summaries.length} active applications · $${(volume / 1_000_000).toFixed(2)}M total loan volume`,
-    `  ${summaries.filter(s => s.outstanding > 0).length} waiting on documents · ${summaries.filter(s => s.done === 12).length} fully complete`,
+    `  ${summaries.filter(s => s.outstanding > 0).length} waiting on documents · ${summaries.filter(s => s.complete).length} fully complete`,
     '',
     'NEEDS ATTENTION',
     `  Stalled (no documents in ${STALLED_DAYS}+ days): ${stalled.length}`,
@@ -29,7 +29,6 @@ export function buildWeeklySummary(data: ChecklistData, asOf: IsoDate): string {
       `    ${s.app.id} ${s.app.businessName} — ${s.idleDays} days, ${s.outstanding} outstanding (${s.app.processor})`),
     `  Expired documents: ${expiredDocs.length}${bankNote}`,
     `  Expiring in the next ${EXPIRING_SOON_DAYS} days: ${expiringDocs.length}`,
-    `  Applications with undecided documents: ${summaries.filter(s => s.needsDecision > 0).length}`,
     '',
     'BY PROCESSOR',
     ...processorsOf(data).map(p => {

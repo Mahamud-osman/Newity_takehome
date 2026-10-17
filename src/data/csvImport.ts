@@ -1,5 +1,6 @@
 import Papa from 'papaparse'
 import { parseUsDate } from '../domain/dates'
+import { NOT_ON_IMPORT_NOTE } from '../domain/settings'
 import { DOC_TYPES, STATUSES } from '../domain/types'
 import type { Application, ChecklistData, ChecklistDocument, DocType, IsoDate, Status } from '../domain/types'
 
@@ -23,6 +24,8 @@ const NOT_A_CHECKLIST = "This file doesn't look like a document checklist. Nothi
 
 const normalizeKey = (s: string) => s.trim().replace(/\s+/g, ' ').toLowerCase()
 const STATUS_BY_KEY = new Map<string, Status>(STATUSES.map(s => [normalizeKey(s), s]))
+/** Earlier versions exported unlisted documents as "Needs Decision"; they now mean not needed. */
+const LEGACY_NEEDS_DECISION = 'needs decision'
 const TYPE_BY_KEY = new Map<string, DocType>(DOC_TYPES.map(t => [normalizeKey(t), t]))
 
 function parseLoanAmount(raw: string): number | null {
@@ -55,7 +58,8 @@ export function importCsv(text: string): ImportResult {
     const id = cell('application_id')
     const applicationDate = parseUsDate(cell('application_date'))
     if (!applicationDate) return report(`application date "${cell('application_date')}" isn't a valid date`)
-    const status = STATUS_BY_KEY.get(normalizeKey(cell('document_status')))
+    const legacyUnlisted = normalizeKey(cell('document_status')) === LEGACY_NEEDS_DECISION
+    const status = legacyUnlisted ? 'Not Required' : STATUS_BY_KEY.get(normalizeKey(cell('document_status')))
     if (!status) return report(`unknown status "${cell('document_status')}"`)
     const type = TYPE_BY_KEY.get(normalizeKey(cell('document_type')))
     if (!type) return report(`unknown document type "${cell('document_type')}"`)
@@ -101,7 +105,7 @@ export function importCsv(text: string): ImportResult {
       status,
       dateReceived: readDate('date_received'),
       expirationDate: readDate('expiration_date'),
-      notes: cell('notes'),
+      notes: legacyUnlisted ? cell('notes') || NOT_ON_IMPORT_NOTE : cell('notes'),
     })
   })
 
@@ -111,8 +115,9 @@ export function importCsv(text: string): ImportResult {
   const documents: ChecklistDocument[] = []
   for (const [id, { app, lastActivityCol }] of apps) {
     const byType = docs.get(id)!
+    // Types the spreadsheet didn't list are taken as not needed for this loan (spec assumption A4).
     const appDocs = DOC_TYPES.map(type => byType.get(type) ?? {
-      applicationId: id, type, status: 'Needs Decision' as const, dateReceived: null, expirationDate: null, notes: '',
+      applicationId: id, type, status: 'Not Required' as const, dateReceived: null, expirationDate: null, notes: NOT_ON_IMPORT_NOTE,
     })
     const received = appDocs.map(d => d.dateReceived).filter((d): d is IsoDate => d !== null).sort()
     applications.push({ ...app, lastActivity: lastActivityCol ?? received.at(-1) ?? app.applicationDate })

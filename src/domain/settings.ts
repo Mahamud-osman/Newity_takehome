@@ -14,6 +14,9 @@ export const EXPIRY_DAYS: Partial<Record<DocType, number>> = {
   'Insurance Verification': 365,
 }
 
+/** Note on document types that were not listed for an application in an imported spreadsheet. */
+export const NOT_ON_IMPORT_NOTE = 'Not on imported checklist'
+
 export const NOT_REQUIRED_REASONS = [
   'Waived per SBA guidelines',
   'Exempt - sole proprietorship',

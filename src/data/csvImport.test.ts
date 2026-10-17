@@ -16,9 +16,17 @@ describe('importCsv', () => {
     if (!r.ok) throw new Error(r.error)
     expect(r.data.applications).toHaveLength(1)
     expect(r.data.documents).toHaveLength(12)
-    expect(r.data.documents.filter(d => d.status === 'Needs Decision')).toHaveLength(11)
+    const notNeeded = r.data.documents.filter(d => d.status === 'Not Required')
+    expect(notNeeded).toHaveLength(11)
+    expect(notNeeded.every(d => d.notes === 'Not on imported checklist')).toBe(true)
     expect(r.data.applications[0].lastActivity).toBe('2026-01-28')
     expect(r.data.documents[0]).toMatchObject({ type: 'Bank Statements (90 day)', dateReceived: '2026-01-28', expirationDate: '2026-04-28' })
+  })
+
+  it('converts Needs Decision rows from older exports to not needed', () => {
+    const r = importCsv([HEADER, row(), row({ type: 'Lease Agreement', status: 'Needs Decision', received: '', exp: '' })].join('\n'))
+    expect(r.ok && r.issues).toEqual([])
+    expect(r.ok && r.data.documents.find(d => d.type === 'Lease Agreement')).toMatchObject({ status: 'Not Required', notes: 'Not on imported checklist' })
   })
 
   it('falls back to application date for last activity', () => {

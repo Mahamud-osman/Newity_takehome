@@ -5,7 +5,7 @@ import { summarizeApplication } from '../domain/rules'
 import type { Application, ChecklistDocument, IsoDate } from '../domain/types'
 import type { Action } from '../state/reducer'
 import { daysAgoText } from './ApplicationTable'
-import { DocumentRow } from './DocumentRow'
+import { DocumentRow, NotNeededRow } from './DocumentRow'
 import { Icon } from './Icon'
 
 interface Props {
@@ -22,6 +22,9 @@ const money = new Intl.NumberFormat('en-US', { style: 'currency', currency: 'USD
 
 export function ChecklistPage({ app, documents, asOf, dispatch, onBack, onEdit, onDelete }: Props) {
   const summary = summarizeApplication(app, documents, asOf)
+  const sorted = sortChecklistDocuments(documents, asOf)
+  const needed = sorted.filter(d => d.status !== 'Not Required')
+  const notNeeded = sorted.filter(d => d.status === 'Not Required')
   const [saved, setSaved] = useState(false)
   const timer = useRef<number | undefined>(undefined)
   useEffect(() => () => window.clearTimeout(timer.current), [])
@@ -57,7 +60,7 @@ export function ChecklistPage({ app, documents, asOf, dispatch, onBack, onEdit, 
               {summary.stalled && <span className="badge tone-stalled"><Icon name="stalled" size={12} />Stalled</span>}
             </dd>
           </div>
-          <div><dt>Done</dt><dd>{summary.done} of 12</dd></div>
+          <div><dt>Approved</dt><dd>{summary.done} of {summary.needed} needed</dd></div>
         </dl>
       </div>
 
@@ -65,6 +68,7 @@ export function ChecklistPage({ app, documents, asOf, dispatch, onBack, onEdit, 
         <table className="doc-table">
           <thead>
             <tr>
+              <th scope="col" className="needed-cell">Needed</th>
               <th scope="col">Document</th>
               <th scope="col">Status</th>
               <th scope="col">Received</th>
@@ -73,11 +77,17 @@ export function ChecklistPage({ app, documents, asOf, dispatch, onBack, onEdit, 
             </tr>
           </thead>
           <tbody>
-            {sortChecklistDocuments(documents, asOf).map(d => (
-              <DocumentRow key={d.type} doc={d} asOf={asOf} dispatch={save} />
-            ))}
+            {needed.map(d => <DocumentRow key={d.type} doc={d} asOf={asOf} dispatch={save} />)}
           </tbody>
         </table>
+        {notNeeded.length > 0 && (
+          <details className="not-needed">
+            <summary>Not needed for this loan ({notNeeded.length})</summary>
+            <ul>
+              {notNeeded.map(d => <NotNeededRow key={d.type} doc={d} dispatch={save} />)}
+            </ul>
+          </details>
+        )}
       </div>
       {saved && <div className="toast" role="status">Saved ✓</div>}
     </>

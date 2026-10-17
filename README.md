@@ -34,7 +34,7 @@ For a larger, current dataset, import `demo-data/sba_checklist_demo_75.csv`: 75 
 ## Manual smoke test
 
 - [ ] A fresh open (or **Clear all data**) shows the empty state. **Import CSV** with the sample file loads 60 applications.
-- [ ] With As of = Feb 15, 2026 the tabs read: All 60 · Stalled 11 · Expired documents 6 · Expiring soon 1 · Needs decision 43.
+- [ ] With As of = Feb 15, 2026 the tabs read: All 60 · Stalled 11 · Expired documents 6 · Expiring soon 1.
 - [ ] Change a document's status, refresh the page, and the change is still there.
 - [ ] Add an application, edit its details, then delete it.
 - [ ] **Export CSV** → **Clear all data** → **Import CSV** the exported file → your changes are back.

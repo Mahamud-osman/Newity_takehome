@@ -11,8 +11,7 @@ describe('rules', () => {
     expect(statusGroup('Received')).toBe('in-progress')
     expect(statusGroup('Under Review')).toBe('in-progress')
     expect(statusGroup('Approved')).toBe('done')
-    expect(statusGroup('Not Required')).toBe('done')
-    expect(statusGroup('Needs Decision')).toBe('needs-decision')
+    expect(statusGroup('Not Required')).toBe('not-needed')
   })
 
   it('computes expiry badges', () => {
@@ -46,16 +45,21 @@ describe('rules', () => {
     expect(s.stalled).toBe(false)
   })
 
-  it('counts outstanding, done, needs decision, and expiry badges', () => {
+  it('counts progress against needed documents only', () => {
     const docs = [
       makeDoc({ status: 'Pending' }),
       makeDoc({ status: 'Expired' }),
       makeDoc({ status: 'Approved', expirationDate: '2026-02-01' }),
       makeDoc({ status: 'Not Required' }),
-      makeDoc({ status: 'Needs Decision' }),
       makeDoc({ status: 'Received', expirationDate: '2026-02-20' }),
     ]
     const s = summarizeApplication(makeApp(), docs, asOf)
-    expect([s.outstanding, s.done, s.needsDecision, s.expired, s.expiringSoon]).toEqual([2, 2, 1, 1, 1])
+    expect([s.outstanding, s.done, s.needed, s.expired, s.expiringSoon]).toEqual([2, 1, 4, 1, 1])
+  })
+
+  it('is complete when every needed document is approved', () => {
+    const docs = [makeDoc({ status: 'Approved' }), makeDoc({ status: 'Not Required' })]
+    expect(summarizeApplication(makeApp(), docs, asOf).complete).toBe(true)
+    expect(summarizeApplication(makeApp(), [makeDoc({ status: 'Not Required' })], asOf).complete).toBe(false)
   })
 })

@@ -11,13 +11,13 @@ describe('buildWeeklySummary', () => {
   it('summarizes the sample pipeline', () => {
     const lines = buildWeeklySummary(sample.data, '2026-02-15').split('\n')
     expect(lines[0]).toBe('SBA Pipeline Summary — as of Feb 15, 2026')
+    expect(lines.some(l => /undecided/i.test(l))).toBe(false)
     for (const l of [
       '  60 active applications · $15.62M total loan volume',
       '  57 waiting on documents · 0 fully complete',
       '  Stalled (no documents in 21+ days): 11',
       '  Expired documents: 6 (6 bank statements)',
       '  Expiring in the next 14 days: 1',
-      '  Applications with undecided documents: 43',
       '  Aisha Patel — 18 applications, 5 stalled',
       '  Janet Morrison — 18 applications, 2 stalled',
       '  Ricardo Fuentes — 24 applications, 4 stalled',

@@ -45,6 +45,14 @@ describe('storage', () => {
     expect(loadState(s)).toEqual({ kind: 'corrupt' })
   })
 
+  it('converts Needs Decision documents saved by an earlier version', () => {
+    const s = memoryStorage()
+    const old = { ...state, data: { ...state.data, documents: [{ ...makeDoc(), status: 'Needs Decision' }] } }
+    s.setItem(STORAGE_KEY, JSON.stringify(old))
+    const r = loadState(s)
+    expect(r.kind === 'ok' && r.state.data.documents[0]).toMatchObject({ status: 'Not Required', notes: 'Not on imported checklist' })
+  })
+
   it('reports save failures', () => {
     expect(saveState(memoryStorage({ throwOnSet: true }), state)).toBe(false)
   })

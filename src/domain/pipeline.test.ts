@@ -13,7 +13,7 @@ const data = makeData(
     makeDoc({ applicationId: 'APP-1', status: 'Pending' }),
     makeDoc({ applicationId: 'APP-1', status: 'Expired', type: 'Debt Schedule' }),
     makeDoc({ applicationId: 'APP-2', status: 'Pending' }),
-    makeDoc({ applicationId: 'APP-3', status: 'Needs Decision' }),
+    makeDoc({ applicationId: 'APP-3', status: 'Not Required' }),
   ],
 )
 const summaries = buildSummaries(data, asOf)
@@ -30,12 +30,11 @@ describe('pipeline', () => {
   it('filters by processor and card', () => {
     expect(ids(filterSummaries(summaries, { ...all, processor: 'Aisha Patel' }))).toEqual(['APP-2', 'APP-3'])
     expect(ids(filterSummaries(summaries, { ...all, card: 'stalled' }))).toEqual(['APP-2'])
-    expect(ids(filterSummaries(summaries, { ...all, card: 'needs-decision' }))).toEqual(['APP-3'])
   })
 
   it('recounts cards under a processor filter', () => {
-    expect(cardCounts(summaries, { search: '', processor: null })).toMatchObject({ all: 3, stalled: 1, 'needs-decision': 1 })
-    expect(cardCounts(summaries, { search: '', processor: 'Janet Morrison' })).toMatchObject({ all: 1, stalled: 0, 'needs-decision': 0 })
+    expect(cardCounts(summaries, { search: '', processor: null })).toEqual({ all: 3, stalled: 1, expired: 0, expiring: 0 })
+    expect(cardCounts(summaries, { search: '', processor: 'Janet Morrison' })).toEqual({ all: 1, stalled: 0, expired: 0, expiring: 0 })
   })
 
   it('sorts stalled first, then most outstanding', () => {
@@ -54,10 +53,10 @@ describe('pipeline', () => {
       makeDoc({ type: 'SBA Form 912', status: 'Received' }),
       makeDoc({ type: 'Lease Agreement', status: 'Pending' }),
       makeDoc({ type: 'Debt Schedule', status: 'Approved', expirationDate: '2026-01-01' }),
-      makeDoc({ type: 'SBA Form 1919', status: 'Needs Decision' }),
+      makeDoc({ type: 'SBA Form 1919', status: 'Not Required' }),
     ]
     expect(sortChecklistDocuments(docs, asOf).map(d => d.type)).toEqual([
-      'SBA Form 1919', 'Debt Schedule', 'Lease Agreement', 'SBA Form 912', 'Bank Statements (90 day)',
+      'Debt Schedule', 'Lease Agreement', 'SBA Form 912', 'Bank Statements (90 day)', 'SBA Form 1919',
     ])
   })
 })

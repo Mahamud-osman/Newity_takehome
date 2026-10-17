@@ -80,9 +80,9 @@ export function ApplicationTable({ rows, sort, onSort, onOpen }: Props) {
             <td className="num">
               <div className="progress">
                 <span className="progress-track" aria-hidden="true">
-                  <span className="progress-fill" style={{ width: `${(s.done / 12) * 100}%` }} />
+                  <span className="progress-fill" style={{ width: `${s.needed ? (s.done / s.needed) * 100 : 0}%` }} />
                 </span>
-                <span>{s.done}/12</span>
+                <span>{s.done}/{s.needed}</span>
               </div>
             </td>
             <td className="num">{s.outstanding}</td>
@@ -93,9 +93,6 @@ export function ApplicationTable({ rows, sort, onSort, onOpen }: Props) {
                 )}
                 {s.expiringSoon > 0 && (
                   <span className="badge tone-soon"><Icon name="soon" size={12} />{s.expiringSoon} expiring</span>
-                )}
-                {s.needsDecision > 0 && (
-                  <span className="badge tone-decision"><Icon name="decision" size={12} />{s.needsDecision} to decide</span>
                 )}
               </div>
             </td>

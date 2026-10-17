@@ -8,7 +8,6 @@ const CARD_LABEL: Record<Card, string> = {
   stalled: 'Stalled',
   expired: 'Expired documents',
   expiring: 'Expiring soon',
-  'needs-decision': 'Needs decision',
 }
 
 const CARD_ICON: Record<Card, IconName> = {
@@ -16,7 +15,6 @@ const CARD_ICON: Record<Card, IconName> = {
   stalled: 'stalled',
   expired: 'expired',
   expiring: 'soon',
-  'needs-decision': 'decision',
 }
 
 const CARD_HINT: Record<Card, string> = {
@@ -24,7 +22,6 @@ const CARD_HINT: Record<Card, string> = {
   stalled: 'Waiting on documents with nothing received in 21+ days',
   expired: 'Has a document past its expiration date',
   expiring: 'Has a document expiring in the next 14 days',
-  'needs-decision': 'Has documents nobody has requested or waived yet',
 }
 
 interface Props {

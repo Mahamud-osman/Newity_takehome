@@ -36,7 +36,7 @@ All figures use an "as of" date of **Feb 15, 2026** (the end of the sample data'
 | Finding | Number | Design consequence |
 |---|---|---|
 | Applications with at least one Pending or Expired document | 57 of 60 | Filtering to "has outstanding" alone hides almost nothing → home page must *prioritize*, not just filter |
-| Applications listing fewer than 12 document types | 43 of 60 (72%), 100 documents total | Unlisted types are normal, spread across every type, not tied to loan size → "Needs decision" status |
+| Applications listing fewer than 12 document types | 43 of 60 (72%), 100 documents total | Unlisted types are normal, spread across every type, not tied to loan size → listed documents are the checklist; unlisted types are "not needed" (hidden) |
 | "Not Required" rows, all with a reason note | 26, every type waived at least once | "Optional" is a per-application decision the team already records |
 | Applications fully complete (all Approved / Not Required) | 0 | No evidence for what a "complete" application looks like |
 | Stored "Expired" rows with note "replacement requested" | 35 of 37 | "Expired" is a manual workflow flag, not a date check |
@@ -81,7 +81,9 @@ The processor is shown as a column and can be used as a filter on the home page.
 
 **Document types (fixed list of 12):** Bank Statements (90 day), Business Tax Returns (3yr), Personal Tax Returns (3yr), Insurance Verification, Business Financial Statements, Business Licenses & Permits, Articles of Incorporation, Lease Agreement, Debt Schedule, Ownership Verification, SBA Form 1919, SBA Form 912.
 
-**Status values:** the team's six — Pending, Received, Under Review, Approved, Expired, Not Required — plus **Needs decision**, assigned to any document type not listed for an application in the imported CSV.
+**Status values:** the team's six — Pending, Received, Under Review, Approved, Expired, Not Required.
+
+**Needed vs. not needed:** a document is *needed* unless its status is **Not Required**. Not Required documents are unticked from the application's checklist and hidden. Document types not listed for an application in an imported CSV come in as Not Required with the note *"Not on imported checklist"*. (Earlier versions used a "Needs Decision" status for these; it is converted on import and when loading saved data.)
 
 ### Rules
 
@@ -91,9 +93,10 @@ All rules are pure functions that take the "as of" date as an input.
 |---|---|
 | **Outstanding** | Status is Pending or Expired |
 | **In progress** | Status is Received or Under Review |
-| **Done** | Status is Approved or Not Required |
-| **Needs decision** | Document type not listed for the application in the CSV. Not outstanding, not done. |
-| **Progress** | Done ÷ 12 (e.g. "4/12") |
+| **Done** | Status is Approved |
+| **Not needed** | Status is Not Required. Hidden from the checklist and excluded from progress, outstanding, stalled, and expiry. |
+| **Progress** | Approved ÷ needed (e.g. "5/9") |
+| **Complete** | Every needed document is approved |
 | **Expiry badge** | Only when the document has an expiration date and status is not Not Required. 🔴 **Expired** if the date is before "as of"; 🟠 **Expiring soon** if within the next 14 days; otherwise none. |
 | **Last activity** | Latest of: any document's received date, or any change made in the app to that application or its documents. Falls back to the application date. Never moves backwards (an edit made while viewing a past "as of" date doesn't reset it). |
 | **Stalled** | Application has ≥1 outstanding document **and** "as of" − last activity ≥ 21 days |
@@ -142,7 +145,7 @@ SBA Document Checklist     As of: Oct 17, 2026 [change]     Weekly summary · Im
 **Filter cards** (each counts applications; one active at a time; clicking filters the table):
 
 ```
-[ All ]  [ 🐢 Stalled ]  [ 🔴 Expired docs ]  [ 🟠 Expiring soon ]  [ ❓ Needs decision ]
+[ All ]  [ 🐢 Stalled ]  [ 🔴 Expired docs ]  [ 🟠 Expiring soon ]
 ```
 
 | Card | Counts applications with… |
@@ -151,7 +154,6 @@ SBA Document Checklist     As of: Oct 17, 2026 [change]     Weekly summary · Im
 | 🐢 Stalled | the Stalled rule |
 | 🔴 Expired docs | ≥1 document with a 🔴 expiry **badge** (date-based, not the stored "Expired" status) |
 | 🟠 Expiring soon | ≥1 document with a 🟠 expiry badge |
-| ❓ Needs decision | ≥1 document with status Needs decision |
 
 **Search** by business name, borrower name, or application ID.
 
@@ -183,17 +185,22 @@ SBA Document Checklist     As of: Oct 17, 2026 [change]     Weekly summary · Im
 Priya White · $90,000 · Janet Morrison · Opened 76 days ago · Last activity 22 days ago 🐢 · 4/12 done
 ```
 
-**All 12 documents**, sorted by what needs attention: Needs decision → 🔴/🟠 expiry → Pending/Expired → In progress → Done.
+**Needed documents**, each with a ticked **Needed** checkbox, sorted by what needs attention: 🔴/🟠 expiry → Pending/Expired → In progress → Approved. Below the table, a collapsed **"Not needed for this loan (n) ▸"** section lists the unticked documents.
 
-| Document | Status | Received | Expires | Notes |
-|---|---|---|---|---|
-| Lease Agreement | ❓ Needs decision **[Request]** **[Not required ▾]** | — | — | |
-| Bank Statements (90 day) | [Expired ▾] | 7/18/2025 | 10/16/2025 🔴 | Needs updated statements |
-| SBA Form 1919 | [Pending ▾] | — | — | Requested from borrower 2/3 |
+| Needed | Document | Status | Received | Expires | Notes |
+|---|---|---|---|---|---|
+| ☑ | Bank Statements (90 day) | [Expired ▾] | 7/18/2025 | 10/16/2025 🔴 | Needs updated statements |
+| ☑ | SBA Form 1919 | [Pending ▾] | — | — | Requested from borrower 2/3 |
+
+```
+Not needed for this loan (1) ▾
+  ☐ Lease Agreement      [Not on imported checklist ▾]
+```
 
 **Editing:**
 - **Status** is a dropdown; changes save instantly with a brief "Saved ✓" confirmation.
-- **Needs decision** shows two buttons: **Request** (→ Pending) and **Not required** (→ Not Required, with a reason picked from the team's existing list: *Waived per SBA guidelines*, *Exempt – sole proprietorship*, *Not applicable for this loan type*, *Other*). The reason is placed at the start of the document's notes, keeping any existing note text after it.
+- **Unticking Needed** marks the document Not Required and moves it to the hidden section. **Re-ticking** puts it back on the checklist as Pending. The status dropdown does not offer Not Required (the checkbox is the one way to set it).
+- **Reason (optional):** each hidden document has a reason dropdown with the team's existing list (*Waived per SBA guidelines*, *Exempt – sole proprietorship*, *Not applicable for this loan type*, *Other*). The reason sits at the start of the notes and replaces an earlier reason rather than stacking.
 - **Setting a status of Received, Under Review, or Approved** on a document with no received date fills the received date with **today's date** (the day the change is made), and the expiration date via the auto-expiry rule.
 - **Received date, expiration date, and notes** are edited inline by clicking, and saved when the user leaves the field or presses Enter (never mid-typing).
 - **Dropdowns** save immediately on a mouse choice; with the keyboard, the choice is saved on Enter or on leaving the field, so arrowing through options never saves by accident.
@@ -201,7 +208,7 @@ Priya White · $90,000 · Janet Morrison · Opened 76 days ago · Last activity 
 
 ### Application management
 
-- **New application:** a form for business name, borrower name, loan amount, application date, processor (all required). The ID is generated. Saving opens the new checklist with all 12 documents as Needs decision.
+- **New application:** a form for business name, borrower name, loan amount, application date, processor (all required). The ID is generated. Saving opens the new checklist with all 12 documents ticked as Pending; the processor unticks the ones the loan doesn't need.
 - **Processor input:** a dropdown of the processors already in the data plus **Other…**, which reveals a text box for a new name. A dropdown prevents spelling variants ("Aisha Patel" / "aisha patel") from splitting the filter and the weekly summary.
 - **Duplicate warning:** if the business name matches an existing application: *"Metro Dental Group already has APP-2026-1001. Create anyway?"*
 - **Edit details:** the same form, pre-filled.
@@ -227,7 +234,6 @@ NEEDS ATTENTION
     ...
   Expired documents: 6 (6 bank statements)
   Expiring in the next 14 days: 1
-  Applications with undecided documents: 43
 
 BY PROCESSOR
   Aisha Patel — 18 applications, 5 stalled
@@ -268,7 +274,7 @@ Usability rules, which apply to every screen:
 If localStorage has no saved data, the app starts with no applications and shows the empty state. Nothing is seeded.
 
 ### Normalizing imported data
-Convert dates; add Needs decision documents for unlisted types; set each application's last activity to its latest received date (or application date).
+Convert dates; add unlisted document types as Not Required ("Not on imported checklist"); set each application's last activity to its latest received date (or application date).
 
 ### Saving
 - One localStorage entry containing applications, documents, the "as of" override, and the last-exported time (~150 KB).
@@ -286,7 +292,7 @@ Convert dates; add Needs decision documents for unlisted types; set each applica
 3. Replace and save.
 
 ### Export CSV
-- The original columns in the original order, dates in the original format, one row per document — all 12 per application, so Needs decision rows are included.
+- The original columns in the original order, dates in the original format, one row per document — all 12 per application, so hidden (Not Required) documents are included and stay hidden after a re-import.
 - Extra trailing column `last_activity` so in-app activity survives a round trip. Extra columns are optional on import; the original CSV imports cleanly and last activity is computed.
 - Filename `sba-checklist-YYYY-MM-DD.csv`. Updates the "Last exported" reminder.
 
@@ -338,12 +344,12 @@ A React error boundary shows *"Something went wrong. Your saved data is safe. [R
 - Stalled: 20 days idle → not stalled; 21 days → stalled; 30 days idle with 0 outstanding → not stalled.
 - Expiry badge: expired yesterday → 🔴; expires in 14 days → 🟠; in 15 days → none; no date → none; Not Required with a past date → none.
 - Auto expiration: bank +90 days; tax +1,095 days, including a span over Feb 29 (received 1/1/2024 → 12/31/2026); insurance +365 days; non-expiring types → no date.
-- Outstanding / progress: Pending and Expired count; Needs decision does not; Not Required counts as done.
+- Outstanding / progress: Pending and Expired are outstanding; progress is Approved ÷ needed; Not Required is excluded; complete = every needed document approved.
 - Last activity: latest received date; in-app change updates it; falls back to application date.
 
 **Data (`data/`)**
 - Round-trip: sample CSV → import → export → re-import is identical.
-- Normalize: an application with 8 listed types becomes 12 documents, 4 Needs decision.
+- Normalize: an application with 8 listed types becomes 12 documents, 4 Not Required with "Not on imported checklist"; legacy "Needs Decision" rows are converted the same way.
 - Import problems: missing column → blocked; `approved` → Approved; `Recieved` → skipped and reported; bad date → blank and reported.
 - Storage: corrupted data is not overwritten and is backed up.
 
@@ -353,7 +359,8 @@ A React error boundary shows *"Something went wrong. Your saved data is safe. [R
 
 **State (`state/`)**
 - `setStatus(Received)` fills received and expiration dates and updates last activity.
-- `addApplication` creates 12 Needs decision documents with the next ID.
+- `addApplication` creates 12 Pending documents with the next ID.
+- `setNeeded` false → Not Required, true → Pending; `setNotNeededReason` replaces rather than stacks reasons.
 - `deleteApplication` removes the application and its 12 documents.
 
 **Golden tests against the sample data** (as of 2026-02-15)
@@ -361,7 +368,8 @@ A React error boundary shows *"Something went wrong. Your saved data is safe. [R
 | Check | Expected |
 |---|---|
 | Applications with outstanding documents | 57 |
-| Applications with Needs decision documents | 43 (100 documents) |
+| Not needed documents | 126 (100 unlisted + 26 Not Required) across 48 applications |
+| Fully complete applications | 0 |
 | Stalled applications (21 days) | 11 — APP-2026-1002, 1005, 1010, 1012, 1014, 1020, 1035, 1047, 1053, 1056, 1060 |
 | Documents with 🔴 expiry badge | 6 |
 | Documents with 🟠 expiry badge | 1 |
@@ -394,12 +402,12 @@ Made without input from the ops team; each is a question to raise with them.
 | A1 | An application is stalled after 21+ days with no document activity while it has outstanding documents | The data breaks naturally at about 3 weeks; flags 11 of 60; nearly a quarter of a bank statement's 90-day window |
 | A2 | "Expiring soon" means within 14 days | Two weeks to obtain fresh bank statements |
 | A3 | Insurance expires 1 year after receipt | Inferred from the data (all 33 insurance rows); the brief names only bank statements and tax returns |
-| A4 | An unlisted document type means "not yet decided", not "not needed" | 72% of applications have gaps, across every type; the team already records waivers as Not Required with a reason |
+| A4 | The documents listed for an application are its checklist; an unlisted type is not needed for that loan | SBA requirements vary by program, entity type, and loan size; 72% of applications have gaps, across every type; processors set up each file knowing the deal |
 | A5 | The stored "Expired" status means "replacement requested" | 35 of 37 Expired rows carry that note; 27 are on non-expiring types |
 | A6 | All three users share one pool of applications | Confirmed in brainstorming |
 | A7 | Knowing *who* made a change isn't needed for v1 | Three users; no user identity in the data |
 | A8 | The 12 document types are the complete list | Brief: "up to 12 different document types" |
-| A9 | CSV export is an acceptable exit ramp back to the spreadsheet | Same columns and date format; only additions are the Needs decision status value and a trailing `last_activity` column |
+| A9 | CSV export is an acceptable exit ramp back to the spreadsheet | Same columns and date format; only additions are Not Required rows for unlisted types (note "Not on imported checklist") and a trailing `last_activity` column |
 | A10 | The team can save their spreadsheet as CSV | Standard in Excel and Google Sheets |
 | A11 | The weekly summary leadership wants is a snapshot of current pipeline health | Brief: "a weekly pipeline summary … compiled manually into an email every Monday" |
 | A12 | Tax returns expire after 1,095 days and insurance after 365 days, not on the calendar anniversary | Matches every row in the sample data; differs from "3 calendar years" by one day when the span includes Feb 29 (e.g. 1/29/2026 → 1/28/2029). Confirm with the ops team whether policy means calendar years. |
@@ -410,7 +418,7 @@ Made without input from the ops team; each is a question to raise with them.
 |---|---|---|---|
 | T1 | Browser-only storage | A backend with a shared database | **Sharing between users and protection against a cleared browser.** Export/Import is the manual workaround. The biggest v1 limitation. |
 | T2 | Adjustable "as of" date | Always using the real date | One extra control on screen |
-| T3 | "Needs decision" status | Mirroring the spreadsheet, or counting unlisted types as missing | A new idea the team has to learn |
+| T3 | Listed documents are the checklist; unlisted are hidden as not needed (a Needed checkbox on each document) | A "Needs decision" status on every unlisted type, or counting them as Pending | An imported application with a genuinely forgotten document is not flagged — the same risk as the spreadsheet. v2: required checklists per loan program and entity type. |
 | T4 | Status and expiry kept separate | Dates changing status automatically | Two signals on one document |
 | T5 | Last document activity as the stalled signal | Application age | It's a proxy until in-app edits build real activity history |
 | T6 | No email alerts | Building a bank-statement expiry alert | Proactive warnings; badges only help when someone opens the app |

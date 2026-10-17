@@ -16,9 +16,9 @@ const ids = (l: AppSummary[]) => l.map(x => x.app.id).sort()
 describe('golden figures (sample data as of 2026-02-15)', () => {
   it('outstanding', () => expect(s.filter(x => x.outstanding > 0)).toHaveLength(57))
 
-  it('needs decision', () => {
-    expect(s.filter(x => x.needsDecision > 0)).toHaveLength(43)
-    expect(data.documents.filter(d => d.status === 'Needs Decision')).toHaveLength(100)
+  it('not needed', () => {
+    expect(data.documents.filter(d => d.status === 'Not Required')).toHaveLength(126)
+    expect(s.filter(x => x.needed < 12)).toHaveLength(48)
   })
 
   it('stalled', () =>
@@ -46,7 +46,7 @@ describe('golden figures (sample data as of 2026-02-15)', () => {
   })
 
   it('card counts', () =>
-    expect(cardCounts(s, { search: '', processor: null })).toEqual({ all: 60, stalled: 11, expired: 6, expiring: 1, 'needs-decision': 43 }))
+    expect(cardCounts(s, { search: '', processor: null })).toEqual({ all: 60, stalled: 11, expired: 6, expiring: 1 }))
 
-  it('fully complete', () => expect(s.filter(x => x.done === 12)).toHaveLength(0))
+  it('fully complete', () => expect(s.filter(x => x.complete)).toHaveLength(0))
 })

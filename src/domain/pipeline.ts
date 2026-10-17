@@ -3,8 +3,8 @@ import type { AppSummary } from './rules'
 import { DOC_TYPES } from './types'
 import type { ChecklistData, ChecklistDocument, IsoDate } from './types'
 
-export type Card = 'all' | 'stalled' | 'expired' | 'expiring' | 'needs-decision'
-export const CARDS: Card[] = ['all', 'stalled', 'expired', 'expiring', 'needs-decision']
+export type Card = 'all' | 'stalled' | 'expired' | 'expiring'
+export const CARDS: Card[] = ['all', 'stalled', 'expired', 'expiring']
 
 export interface HomeFilter {
   card: Card
@@ -34,7 +34,6 @@ export function matchesCard(s: AppSummary, card: Card): boolean {
     case 'stalled': return s.stalled
     case 'expired': return s.expired > 0
     case 'expiring': return s.expiringSoon > 0
-    case 'needs-decision': return s.needsDecision > 0
   }
 }
 
@@ -88,12 +87,11 @@ export function processorsOf(data: ChecklistData): string[] {
 
 function attentionRank(d: ChecklistDocument, asOf: IsoDate): number {
   const group = statusGroup(d.status)
-  if (group === 'needs-decision') return 0
-  if (expiryBadge(d, asOf)) return 1
-  return { outstanding: 2, 'in-progress': 3, done: 4 }[group]
+  if (group !== 'not-needed' && expiryBadge(d, asOf)) return 0
+  return { outstanding: 1, 'in-progress': 2, done: 3, 'not-needed': 4 }[group]
 }
 
-/** Needs decision → expiry badge → outstanding → in progress → done; ties in DOC_TYPES order. */
+/** Expiry badge → outstanding → in progress → done → not needed; ties in DOC_TYPES order. */
 export function sortChecklistDocuments(docs: ChecklistDocument[], asOf: IsoDate): ChecklistDocument[] {
   return [...docs].sort((a, b) =>
     attentionRank(a, asOf) - attentionRank(b, asOf) || DOC_TYPES.indexOf(a.type) - DOC_TYPES.indexOf(b.type))

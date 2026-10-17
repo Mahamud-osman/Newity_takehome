@@ -118,7 +118,6 @@ h1, h2, h3 { margin: 0; font-weight: 650; letter-spacing: -0.01em; }
 .badge-icon { font-weight: 800; }
 .tone-expired { color: var(--expired-ink); background: var(--expired-tint); }
 .tone-soon { color: var(--soon-ink); background: var(--soon-tint); }
-.tone-decision { color: var(--decision-ink); background: var(--decision-tint); }
 .tone-progress { color: var(--progress-ink); background: var(--progress-tint); }
 .tone-done { color: var(--done-ink); background: var(--done-tint); }
 .tone-stalled { color: var(--stalled-ink); background: var(--stalled-tint); }
@@ -182,8 +181,6 @@ h1, h2, h3 { margin: 0; font-weight: 650; letter-spacing: -0.01em; }
 .folder-tab-expired .folder-tab-label { color: var(--expired-ink); }
 .folder-tab-expiring { --tab-mark: var(--soon-ink); }
 .folder-tab-expiring .folder-tab-label { color: var(--soon-ink); }
-.folder-tab-needs-decision { --tab-mark: var(--decision-ink); }
-.folder-tab-needs-decision .folder-tab-label { color: var(--decision-ink); }
 
 .folder-body {
   background: var(--sheet);
@@ -252,9 +249,6 @@ h1, h2, h3 { margin: 0; font-weight: 650; letter-spacing: -0.01em; }
 }
 .doc-table td, .doc-table tbody th { padding: var(--s2) var(--s3); border-bottom: 1px solid var(--rule); vertical-align: top; }
 .doc-name { text-align: left; font-weight: 600; padding-top: 14px !important; white-space: nowrap; }
-.is-undecided { background: #faf9fe; }
-.decision { display: flex; align-items: center; gap: var(--s2); white-space: nowrap; }
-.decision .select { width: 140px; }
 .status-select { min-width: 210px; font-weight: 550; }
 .status-pending, .status-expired { color: var(--expired-ink); }
 .status-received, .status-under-review { color: var(--progress-ink); }
@@ -296,3 +290,22 @@ h1, h2, h3 { margin: 0; font-weight: 650; letter-spacing: -0.01em; }
 }
 .empty-start h2 { font-size: var(--text-lg); margin-bottom: var(--s2); }
 .empty-start p { margin: 0; color: var(--ink-muted); }
+
+/* Needed checkbox and the hidden "not needed" documents */
+.doc-table .needed-cell { width: 64px; text-align: center; padding-top: 14px; }
+.needed-cell input, .not-needed-name input { width: 18px; height: 18px; accent-color: var(--accent); cursor: pointer; }
+.not-needed { border-top: 1px solid var(--rule-strong); }
+.not-needed summary {
+  min-height: 40px; display: flex; align-items: center; padding: 0 var(--s4);
+  font-size: var(--text-sm); font-weight: 600; color: var(--ink-muted); cursor: pointer;
+}
+.not-needed summary:hover { color: var(--ink); }
+.not-needed ul { list-style: none; margin: 0; padding: 0 var(--s4) var(--s3); }
+.not-needed-row { display: flex; flex-wrap: wrap; align-items: center; gap: var(--s3); padding: var(--s1) 0; font-size: var(--text-sm); }
+.not-needed-name { display: flex; align-items: center; gap: var(--s2); min-width: 260px; min-height: 32px; color: var(--ink-muted); cursor: pointer; }
+.not-needed-row .select { width: 260px; }
+.not-needed-note { color: var(--ink-muted); font-size: var(--text-xs); }
+.not-needed summary { list-style: none; gap: var(--s2); }
+.not-needed summary::-webkit-details-marker { display: none; }
+.not-needed summary::before { content: '▸'; font-size: 12px; }
+.not-needed[open] summary::before { content: '▾'; }

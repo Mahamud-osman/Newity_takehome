@@ -53,16 +53,33 @@ describe('reducer', () => {
     expect(doc(s, 'Insurance Verification').expirationDate).toBe('2026-06-01')
   })
 
-  it('markNotRequired puts the reason before existing notes', () => {
-    const s = reducer(stateWith({ type: 'Lease Agreement', status: 'Needs Decision', notes: 'Waiting on borrower' }),
-      { type: 'markNotRequired', appId: APP, docType: 'Lease Agreement', reason: 'Waived per SBA guidelines', today })
-    expect(doc(s, 'Lease Agreement')).toMatchObject({ status: 'Not Required', notes: 'Waived per SBA guidelines — Waiting on borrower' })
-    const t = reducer(stateWith({ type: 'Lease Agreement' }),
-      { type: 'markNotRequired', appId: APP, docType: 'Lease Agreement', reason: 'Other', today })
-    expect(doc(t, 'Lease Agreement').notes).toBe('Other')
+  it('unticking marks a document not needed and keeps its notes', () => {
+    const s = reducer(stateWith({ type: 'Lease Agreement', status: 'Pending', notes: 'Waiting on borrower' }),
+      { type: 'setNeeded', appId: APP, docType: 'Lease Agreement', needed: false, today })
+    expect(doc(s, 'Lease Agreement')).toMatchObject({ status: 'Not Required', notes: 'Waiting on borrower' })
+    expect(app(s).lastActivity).toBe('2026-02-15')
   })
 
-  it('addApplication creates 12 Needs Decision documents', () => {
+  it('re-ticking puts a document back on the checklist as Pending', () => {
+    const s = reducer(stateWith({ type: 'Lease Agreement', status: 'Not Required', notes: 'Not on imported checklist' }),
+      { type: 'setNeeded', appId: APP, docType: 'Lease Agreement', needed: true, today })
+    expect(doc(s, 'Lease Agreement').status).toBe('Pending')
+  })
+
+  it('setting a not-needed reason replaces an earlier reason instead of stacking', () => {
+    const base = stateWith({ type: 'Lease Agreement', status: 'Not Required', notes: 'Waiting on borrower' })
+    const reason = (s: PersistedState, r: string) =>
+      reducer(s, { type: 'setNotNeededReason', appId: APP, docType: 'Lease Agreement', reason: r, today })
+    const a = reason(base, 'Waived per SBA guidelines')
+    expect(doc(a, 'Lease Agreement').notes).toBe('Waived per SBA guidelines — Waiting on borrower')
+    const b = reason(a, 'Exempt - sole proprietorship')
+    expect(doc(b, 'Lease Agreement').notes).toBe('Exempt - sole proprietorship — Waiting on borrower')
+    expect(doc(reason(b, ''), 'Lease Agreement').notes).toBe('Waiting on borrower')
+    const imported = stateWith({ type: 'Debt Schedule', status: 'Not Required', notes: 'Not on imported checklist' })
+    expect(doc(reducer(imported, { type: 'setNotNeededReason', appId: APP, docType: 'Debt Schedule', reason: 'Other', today }), 'Debt Schedule').notes).toBe('Other')
+  })
+
+  it('addApplication creates 12 Pending documents', () => {
     const s = reducer(stateWith(), {
       type: 'addApplication', id: 'APP-2026-0002', today,
       values: { businessName: 'New', borrowerName: 'B', loanAmount: 5, applicationDate: '2026-02-01', processor: 'P' },
@@ -70,7 +87,7 @@ describe('reducer', () => {
     expect(s.data.applications[1]).toMatchObject({ id: 'APP-2026-0002', businessName: 'New', lastActivity: '2026-02-15' })
     const docs = s.data.documents.filter(d => d.applicationId === 'APP-2026-0002')
     expect(docs).toHaveLength(12)
-    expect(docs.every(d => d.status === 'Needs Decision')).toBe(true)
+    expect(docs.every(d => d.status === 'Pending')).toBe(true)
   })
 
   it('editApplication replaces details and updates last activity', () => {

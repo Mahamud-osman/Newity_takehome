@@ -1,5 +1,5 @@
 import type { ApplicationValues } from '../domain/applicationForm'
-import { autoExpirationDate } from '../domain/rules'
+import { autoExpirationDate, withNotNeededReason } from '../domain/rules'
 import { DOC_TYPES } from '../domain/types'
 import type { ChecklistData, ChecklistDocument, DocType, IsoDate, Status } from '../domain/types'
 
@@ -23,7 +23,10 @@ export type Action =
   | { type: 'setStatus'; appId: string; docType: DocType; status: Status; today: IsoDate }
   | { type: 'updateDocument'; appId: string; docType: DocType; today: IsoDate
       patch: { dateReceived?: IsoDate | null; expirationDate?: IsoDate | null; notes?: string } }
-  | { type: 'markNotRequired'; appId: string; docType: DocType; reason: string; today: IsoDate }
+  /** Tick (needed: true → Pending) or untick (needed: false → Not Required) a document on the checklist. */
+  | { type: 'setNeeded'; appId: string; docType: DocType; needed: boolean; today: IsoDate }
+  /** Why a document is not needed; '' removes the reason. */
+  | { type: 'setNotNeededReason'; appId: string; docType: DocType; reason: string; today: IsoDate }
   | { type: 'addApplication'; id: string; values: ApplicationValues; today: IsoDate }
   | { type: 'editApplication'; appId: string; values: ApplicationValues; today: IsoDate }
   | { type: 'deleteApplication'; appId: string }
@@ -86,16 +89,20 @@ export function reducer(state: PersistedState, action: Action): PersistedState {
       }))
     case 'updateDocument':
       return changeDocument(state, action.appId, action.docType, action.today, d => ({ ...d, ...action.patch }))
-    case 'markNotRequired':
+    case 'setNeeded':
       return changeDocument(state, action.appId, action.docType, action.today, d => ({
         ...d,
-        status: 'Not Required',
-        notes: d.notes ? `${action.reason} — ${d.notes}` : action.reason,
+        status: action.needed ? 'Pending' : 'Not Required',
+      }))
+    case 'setNotNeededReason':
+      return changeDocument(state, action.appId, action.docType, action.today, d => ({
+        ...d,
+        notes: withNotNeededReason(d.notes, action.reason),
       }))
     case 'addApplication': {
       const { id, values, today } = action
       const documents = DOC_TYPES.map((type): ChecklistDocument => ({
-        applicationId: id, type, status: 'Needs Decision', dateReceived: null, expirationDate: null, notes: '',
+        applicationId: id, type, status: 'Pending', dateReceived: null, expirationDate: null, notes: '',
       }))
       return {
         ...state,

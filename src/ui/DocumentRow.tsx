@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import { daysBetween, isIsoDate, todayIso } from '../domain/dates'
-import { expiryBadge } from '../domain/rules'
-import { NOT_REQUIRED_REASONS } from '../domain/settings'
+import { expiryBadge, splitNotNeededReason } from '../domain/rules'
+import { NOT_ON_IMPORT_NOTE, NOT_REQUIRED_REASONS } from '../domain/settings'
 import { STATUSES } from '../domain/types'
 import type { ChecklistDocument, IsoDate } from '../domain/types'
 import type { Action } from '../state/reducer'
@@ -14,7 +14,8 @@ interface Props {
   dispatch(a: Action): void
 }
 
-const TEAM_STATUSES = STATUSES.filter(s => s !== 'Needs Decision')
+/** Not Required is set with the Needed checkbox, so it isn't offered in the status dropdown. */
+const TEAM_STATUSES = STATUSES.filter(s => s !== 'Not Required')
 
 /** Saves on blur or Enter only: while a year is typed the field briefly reports dates like 0002-02-10. */
 function DateCell({ label, value, onCommit }: { label: string; value: IsoDate | null; onCommit(v: IsoDate | null): void }) {
@@ -72,34 +73,27 @@ export function DocumentRow({ doc, asOf, dispatch }: Props) {
   const expiresBeforeReceived = !!doc.dateReceived && !!doc.expirationDate && daysBetween(doc.dateReceived, doc.expirationDate) < 0
 
   return (
-    <tr className={doc.status === 'Needs Decision' ? 'is-undecided' : undefined}>
+    <tr>
+      <td className="needed-cell">
+        <input
+          type="checkbox"
+          checked
+          aria-label={`${doc.type} is needed for this loan (untick to hide)`}
+          title="Untick if this loan doesn't need it"
+          onChange={() => dispatch({ type: 'setNeeded', ...target, needed: false })}
+        />
+      </td>
       <th scope="row" className="doc-name">{doc.type}</th>
       <td>
-        {doc.status === 'Needs Decision' ? (
-          <div className="decision">
-            <span className="badge tone-decision"><Icon name="decision" size={12} />Needs decision</span>
-            <button className="btn" onClick={() => dispatch({ type: 'setStatus', ...target, status: 'Pending' })}>Request</button>
-            <CommitSelect
-              className="select"
-              aria-label={`Mark ${doc.type} not required`}
-              value=""
-              onCommit={reason => reason && dispatch({ type: 'markNotRequired', ...target, reason })}
-            >
-              <option value="">Not required…</option>
-              {NOT_REQUIRED_REASONS.map(r => <option key={r} value={r}>{r}</option>)}
-            </CommitSelect>
-          </div>
-        ) : (
-          <CommitSelect
-            className={`select status-select status-${doc.status.replace(/\s+/g, '-').toLowerCase()}`}
-            aria-label={`${doc.type} status`}
-            title={doc.status === 'Expired' ? 'Replacement requested' : undefined}
-            value={doc.status}
-            onCommit={status => dispatch({ type: 'setStatus', ...target, status: status as ChecklistDocument['status'] })}
-          >
-            {TEAM_STATUSES.map(s => <option key={s} value={s}>{s === 'Expired' ? 'Expired (replacement requested)' : s}</option>)}
-          </CommitSelect>
-        )}
+        <CommitSelect
+          className={`select status-select status-${doc.status.replace(/\s+/g, '-').toLowerCase()}`}
+          aria-label={`${doc.type} status`}
+          title={doc.status === 'Expired' ? 'Replacement requested' : undefined}
+          value={doc.status}
+          onCommit={status => dispatch({ type: 'setStatus', ...target, status: status as ChecklistDocument['status'] })}
+        >
+          {TEAM_STATUSES.map(s => <option key={s} value={s}>{s === 'Expired' ? 'Expired (replacement requested)' : s}</option>)}
+        </CommitSelect>
       </td>
       <td>
         <DateCell label={`${doc.type} received date`} value={doc.dateReceived}
@@ -124,5 +118,34 @@ export function DocumentRow({ doc, asOf, dispatch }: Props) {
         <NotesCell value={doc.notes} onCommit={notes => dispatch({ type: 'updateDocument', ...target, patch: { notes } })} />
       </td>
     </tr>
+  )
+}
+
+/** A document unticked from the checklist: tick to bring it back, optionally say why it isn't needed. */
+export function NotNeededRow({ doc, dispatch }: { doc: ChecklistDocument; dispatch(a: Action): void }) {
+  const target = { appId: doc.applicationId, docType: doc.type, today: todayIso() }
+  const { reason, rest } = splitNotNeededReason(doc.notes)
+  const reasons: string[] = reason === NOT_ON_IMPORT_NOTE ? [...NOT_REQUIRED_REASONS, NOT_ON_IMPORT_NOTE] : [...NOT_REQUIRED_REASONS]
+  return (
+    <li className="not-needed-row">
+      <label className="not-needed-name">
+        <input
+          type="checkbox"
+          checked={false}
+          onChange={() => dispatch({ type: 'setNeeded', ...target, needed: true })}
+        />
+        {doc.type}
+      </label>
+      <CommitSelect
+        className="select"
+        aria-label={`Why ${doc.type} isn't needed`}
+        value={reason}
+        onCommit={r => dispatch({ type: 'setNotNeededReason', ...target, reason: r })}
+      >
+        <option value="">No reason given</option>
+        {reasons.map(r => <option key={r} value={r}>{r}</option>)}
+      </CommitSelect>
+      {rest && <span className="not-needed-note">{rest}</span>}
+    </li>
   )
 }
