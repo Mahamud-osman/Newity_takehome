@@ -1,10 +1,11 @@
 import { useState } from 'react'
-import { daysBetween } from '../domain/dates'
+import { daysBetween, isIsoDate } from '../domain/dates'
 import { expiryBadge } from '../domain/rules'
 import { NOT_REQUIRED_REASONS } from '../domain/settings'
 import { STATUSES } from '../domain/types'
 import type { ChecklistDocument, IsoDate } from '../domain/types'
 import type { Action } from '../state/reducer'
+import { CommitSelect } from './CommitSelect'
 import { Icon } from './Icon'
 
 interface Props {
@@ -15,20 +16,28 @@ interface Props {
 
 const TEAM_STATUSES = STATUSES.filter(s => s !== 'Needs Decision')
 
+/** Saves on blur or Enter only: while a year is typed the field briefly reports dates like 0002-02-10. */
 function DateCell({ label, value, onCommit }: { label: string; value: IsoDate | null; onCommit(v: IsoDate | null): void }) {
+  const [draft, setDraft] = useState<string | null>(null)
   const [invalid, setInvalid] = useState(false)
+  const commit = (input: HTMLInputElement) => {
+    if (draft === null) return
+    if (input.validity.badInput || (draft !== '' && !isIsoDate(draft))) return setInvalid(true)
+    setInvalid(false)
+    setDraft(null)
+    const next = draft || null
+    if (next !== value) onCommit(next)
+  }
   return (
     <div className="date-cell">
       <input
         className={`input input-date${invalid ? ' input-invalid' : ''}`}
         type="date"
         aria-label={label}
-        value={value ?? ''}
-        onChange={e => {
-          if (e.target.validity.badInput) return setInvalid(true)
-          setInvalid(false)
-          onCommit(e.target.value || null)
-        }}
+        value={draft ?? value ?? ''}
+        onChange={e => setDraft(e.target.value)}
+        onBlur={e => commit(e.currentTarget)}
+        onKeyDown={e => e.key === 'Enter' && commit(e.currentTarget)}
       />
       {invalid && <span className="field-error">Enter a valid date</span>}
     </div>
@@ -69,26 +78,26 @@ export function DocumentRow({ doc, asOf, dispatch }: Props) {
           <div className="decision">
             <span className="badge tone-decision"><Icon name="decision" size={12} />Needs decision</span>
             <button className="btn" onClick={() => dispatch({ type: 'setStatus', ...target, status: 'Pending' })}>Request</button>
-            <select
+            <CommitSelect
               className="select"
               aria-label={`Mark ${doc.type} not required`}
               value=""
-              onChange={e => e.target.value && dispatch({ type: 'markNotRequired', ...target, reason: e.target.value })}
+              onCommit={reason => reason && dispatch({ type: 'markNotRequired', ...target, reason })}
             >
               <option value="">Not required…</option>
               {NOT_REQUIRED_REASONS.map(r => <option key={r} value={r}>{r}</option>)}
-            </select>
+            </CommitSelect>
           </div>
         ) : (
-          <select
+          <CommitSelect
             className={`select status-select status-${doc.status.replace(/\s+/g, '-').toLowerCase()}`}
             aria-label={`${doc.type} status`}
             title={doc.status === 'Expired' ? 'Replacement requested' : undefined}
             value={doc.status}
-            onChange={e => dispatch({ type: 'setStatus', ...target, status: e.target.value as ChecklistDocument['status'] })}
+            onCommit={status => dispatch({ type: 'setStatus', ...target, status: status as ChecklistDocument['status'] })}
           >
             {TEAM_STATUSES.map(s => <option key={s} value={s}>{s === 'Expired' ? 'Expired (replacement requested)' : s}</option>)}
-          </select>
+          </CommitSelect>
         )}
       </td>
       <td>

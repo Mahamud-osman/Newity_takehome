@@ -95,9 +95,9 @@ All rules are pure functions that take the "as of" date as an input.
 | **Needs decision** | Document type not listed for the application in the CSV. Not outstanding, not done. |
 | **Progress** | Done ÷ 12 (e.g. "4/12") |
 | **Expiry badge** | Only when the document has an expiration date and status is not Not Required. 🔴 **Expired** if the date is before "as of"; 🟠 **Expiring soon** if within the next 14 days; otherwise none. |
-| **Last activity** | Latest of: any document's received date, or any change made in the app to that application or its documents. Falls back to the application date. |
+| **Last activity** | Latest of: any document's received date, or any change made in the app to that application or its documents. Falls back to the application date. Never moves backwards (an edit made while viewing a past "as of" date doesn't reset it). |
 | **Stalled** | Application has ≥1 outstanding document **and** "as of" − last activity ≥ 21 days |
-| **Auto expiration date** | When a time-sensitive document gets a received date and has no expiration date, set it to received + 90 days (bank statements), + 1,095 days (business and personal tax returns), or + 365 days (insurance). Day counts match the sample data exactly. The user can edit it. |
+| **Auto expiration date** | When a time-sensitive document gets a received date and has no expiration date, set it to received + 90 days (bank statements), + 1,095 days (business and personal tax returns), or + 365 days (insurance). Day counts match the sample data exactly. The user can edit it. If a new received date replaces an old one (a fresh bank statement) and the expiration date was still the automatic value, it is recalculated; a manually entered expiration date is kept. |
 
 ### Status vs. expiry
 
@@ -194,7 +194,8 @@ Priya White · $90,000 · Janet Morrison · Opened 76 days ago · Last activity 
 - **Status** is a dropdown; changes save instantly with a brief "Saved ✓" confirmation.
 - **Needs decision** shows two buttons: **Request** (→ Pending) and **Not required** (→ Not Required, with a reason picked from the team's existing list: *Waived per SBA guidelines*, *Exempt – sole proprietorship*, *Not applicable for this loan type*, *Other*). The reason is placed at the start of the document's notes, keeping any existing note text after it.
 - **Setting a status of Received, Under Review, or Approved** on a document with no received date fills the received date with the "as of" date, and the expiration date via the auto-expiry rule.
-- **Received date, expiration date, and notes** are edited inline by clicking.
+- **Received date, expiration date, and notes** are edited inline by clicking, and saved when the user leaves the field or presses Enter (never mid-typing).
+- **Dropdowns** save immediately on a mouse choice; with the keyboard, the choice is saved on Enter or on leaving the field, so arrowing through options never saves by accident.
 - **Every change** updates the application's last activity.
 
 ### Application management

@@ -93,4 +93,22 @@ describe('reducer', () => {
     expect(reducer(base, { type: 'setAsOf', date: '' }).asOfOverride).toBeNull()
     expect(reducer(base, { type: 'markExported', at: '2026-10-17' }).lastExportedAt).toBe('2026-10-17')
   })
+
+  it('never moves last activity backwards when editing at a past as-of date', () => {
+    const base = deepFreeze(initialState(makeData([makeApp({ lastActivity: '2026-10-10' })], [makeDoc()])))
+    const s = reducer(base, { type: 'updateDocument', appId: APP, docType: 'Lease Agreement', patch: { notes: 'x' }, asOf: '2026-02-15' })
+    expect(app(s).lastActivity).toBe('2026-10-10')
+  })
+
+  it('recomputes an auto-filled expiration when a new received date replaces the old one', () => {
+    const s = reducer(stateWith({ type: 'Bank Statements (90 day)', status: 'Expired', dateReceived: '2025-07-18', expirationDate: '2025-10-16' }),
+      { type: 'updateDocument', appId: APP, docType: 'Bank Statements (90 day)', patch: { dateReceived: '2026-02-10' }, asOf })
+    expect(doc(s, 'Bank Statements (90 day)').expirationDate).toBe('2026-05-11')
+  })
+
+  it('keeps a manually set expiration when the received date changes', () => {
+    const s = reducer(stateWith({ type: 'Bank Statements (90 day)', dateReceived: '2025-07-18', expirationDate: '2025-12-01' }),
+      { type: 'updateDocument', appId: APP, docType: 'Bank Statements (90 day)', patch: { dateReceived: '2026-02-10' }, asOf })
+    expect(doc(s, 'Bank Statements (90 day)').expirationDate).toBe('2025-12-01')
+  })
 })

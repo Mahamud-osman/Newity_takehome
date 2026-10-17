@@ -30,8 +30,17 @@ export type Action =
 /** Statuses that mean the document is in hand, so a missing received date is filled in. */
 const RECEIVED_STATUSES: Status[] = ['Received', 'Under Review', 'Approved']
 
-function withAutoExpiration(doc: ChecklistDocument): ChecklistDocument {
-  if (doc.dateReceived && !doc.expirationDate) {
+/**
+ * Fills a missing expiration date from the received date. When a new received date replaces an old one
+ * (a fresh bank statement), an expiration that was still the auto value for the old date is recomputed;
+ * a manually entered expiration is kept.
+ */
+function withAutoExpiration(before: ChecklistDocument, doc: ChecklistDocument): ChecklistDocument {
+  if (!doc.dateReceived) return doc
+  const wasAuto = before.dateReceived !== null && before.expirationDate !== null &&
+    doc.expirationDate === before.expirationDate &&
+    autoExpirationDate(doc.type, before.dateReceived) === before.expirationDate
+  if (!doc.expirationDate || (wasAuto && doc.dateReceived !== before.dateReceived)) {
     const expirationDate = autoExpirationDate(doc.type, doc.dateReceived)
     if (expirationDate) return { ...doc, expirationDate }
   }
@@ -46,15 +55,20 @@ function changeDocument(state: PersistedState, appId: string, docType: DocType, 
     data: {
       ...state.data,
       documents: state.data.documents.map(d =>
-        d.applicationId === appId && d.type === docType ? withAutoExpiration(change(d)) : d),
+        d.applicationId === appId && d.type === docType ? withAutoExpiration(d, change(d)) : d),
     },
   }, appId, asOf)
 }
 
+/** Marks the application active as of `asOf`, never moving last activity backwards (e.g. edits made while viewing a past date). */
 function touch(state: PersistedState, appId: string, asOf: IsoDate): PersistedState {
   return {
     ...state,
-    data: { ...state.data, applications: state.data.applications.map(a => (a.id === appId ? { ...a, lastActivity: asOf } : a)) },
+    data: {
+      ...state.data,
+      applications: state.data.applications.map(a =>
+        a.id === appId && asOf > a.lastActivity ? { ...a, lastActivity: asOf } : a),
+    },
   }
 }
 

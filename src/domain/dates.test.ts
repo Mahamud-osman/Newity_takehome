@@ -32,4 +32,14 @@ describe('dates', () => {
     expect(isIsoDate('2026-02-30')).toBe(false)
     expect(isIsoDate('')).toBe(false)
   })
+
+  it('handles years below 100 without mapping them to the 1900s', () => {
+    expect(addDays('0002-02-10', 90)).toBe('0002-05-11')
+  })
+
+  it('rejects implausible years that a half-typed date input produces', () => {
+    expect(isIsoDate('0002-02-10')).toBe(false)
+    expect(isIsoDate('0202-02-10')).toBe(false)
+    expect(isIsoDate('1900-01-01')).toBe(true)
+  })
 })

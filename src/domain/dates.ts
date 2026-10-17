@@ -8,20 +8,31 @@ const MONTHS = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', '
 
 const pad = (n: number) => String(n).padStart(2, '0')
 
+/** Earliest year accepted as real input; a half-typed date field briefly reports years like 0002. */
+const MIN_YEAR = 1900
+
+// Date.UTC maps years 0–99 to 1900–1999, so set the year explicitly.
+function utcMs(year: number, monthIndex: number, day: number): number {
+  const d = new Date(0)
+  d.setUTCFullYear(year, monthIndex, day)
+  return d.getTime()
+}
+
 function toIso(year: number, month: number, day: number): IsoDate | null {
-  const d = new Date(Date.UTC(year, month - 1, day))
+  if (year < MIN_YEAR) return null
+  const d = new Date(utcMs(year, month - 1, day))
   if (d.getUTCFullYear() !== year || d.getUTCMonth() !== month - 1 || d.getUTCDate() !== day) return null
   return `${year}-${pad(month)}-${pad(day)}`
 }
 
 function toUtcMs(d: IsoDate): number {
   const [y, m, day] = d.split('-').map(Number)
-  return Date.UTC(y, m - 1, day)
+  return utcMs(y, m - 1, day)
 }
 
 function fromUtcMs(ms: number): IsoDate {
   const d = new Date(ms)
-  return `${d.getUTCFullYear()}-${pad(d.getUTCMonth() + 1)}-${pad(d.getUTCDate())}`
+  return `${String(d.getUTCFullYear()).padStart(4, '0')}-${pad(d.getUTCMonth() + 1)}-${pad(d.getUTCDate())}`
 }
 
 /** Parses 'M/D/YYYY' (leading zeros optional). Returns null for anything else or impossible dates. */
