@@ -51,7 +51,7 @@ All figures use an "as of" date of **Feb 15, 2026** (the end of the sample data'
 - **Single-page web app, browser only, no backend.** React + TypeScript + Vite. Papa Parse for CSV. Vitest for tests.
 - The sample CSV is bundled with the app and loads automatically on first open — no seeding step.
 - All data is saved in the browser (localStorage). Each browser holds its own copy.
-- Setup for a reviewer: `npm install && npm run dev` (Node 18+).
+- Setup for a reviewer: `npm install && npm run dev` (Node 20.19+ or 22.12+, required by current Vite).
 
 ### Code layout
 
@@ -73,7 +73,7 @@ Business rules live in `domain/` as pure functions so every decision in this spe
 - `id` (e.g. `APP-2026-1003`; generated for new applications by continuing the sequence; never editable)
 - business name, borrower name, loan amount, application date, assigned processor
 
-The processor is shown as a column. There is no per-processor view (all users share one pool).
+The processor is shown as a column and can be used as a filter on the home page. The pool stays shared: anyone can open and edit any application.
 
 **Document** — exactly **12 per application**, one per document type:
 - type, status, date received, expiration date, notes
@@ -97,7 +97,7 @@ All rules are pure functions that take the "as of" date as an input.
 | **Expiry badge** | Only when the document has an expiration date and status is not Not Required. 🔴 **Expired** if the date is before "as of"; 🟠 **Expiring soon** if within the next 14 days; otherwise none. |
 | **Last activity** | Latest of: any document's received date, or any change made in the app to that application or its documents. Falls back to the application date. |
 | **Stalled** | Application has ≥1 outstanding document **and** "as of" − last activity ≥ 21 days |
-| **Auto expiration date** | When a time-sensitive document gets a received date and has no expiration date, set it to received + 90 days (bank statements), + 3 years (business and personal tax returns), or + 1 year (insurance). The user can edit it. |
+| **Auto expiration date** | When a time-sensitive document gets a received date and has no expiration date, set it to received + 90 days (bank statements), + 1,095 days (business and personal tax returns), or + 365 days (insurance). Day counts match the sample data exactly. The user can edit it. |
 
 ### Status vs. expiry
 
@@ -112,7 +112,7 @@ A document can therefore show both, e.g. "Approved · 🔴 Expired 12 days ago" 
 ```
 STALLED_DAYS        = 21
 EXPIRING_SOON_DAYS  = 14
-EXPIRY_RULES        = { Bank Statements: 90 days, Business/Personal Tax Returns: 3 years, Insurance: 1 year }
+EXPIRY_DAYS         = { Bank Statements (90 day): 90, Business Tax Returns (3yr): 1095, Personal Tax Returns (3yr): 1095, Insurance Verification: 365 }
 ```
 
 Every threshold assumption lives in exactly one place.
@@ -128,7 +128,7 @@ Two screens plus a header. Navigation is "click a row" and "← Back".
 ### Header (always visible)
 
 ```
-SBA Document Checklist     As of: Oct 17, 2026 [change]     Import CSV · Export CSV · Reset sample data
+SBA Document Checklist     As of: Oct 17, 2026 [change]     Weekly summary · Import CSV · Export CSV · Reset sample data
                                                             Last exported: 6 days ago
 ```
 
@@ -153,6 +153,8 @@ SBA Document Checklist     As of: Oct 17, 2026 [change]     Import CSV · Export
 | ❓ Needs decision | ≥1 document with status Needs decision |
 
 **Search** by business name, borrower name, or application ID.
+
+**Processor filter:** a `Processor: [All ▾]` dropdown next to the search, listing every processor in the data. It combines with the cards and search: choosing a processor recounts the cards for that processor's applications only (e.g. Aisha Patel → Stalled 5), and a card click narrows further.
 
 **[+ New application]** button, top-right above the table.
 
@@ -197,12 +199,57 @@ Priya White · $90,000 · Janet Morrison · Opened 76 days ago · Last activity 
 
 ### Application management
 
-- **New application:** a form for business name, borrower name, loan amount, application date, processor. The ID is generated. Saving opens the new checklist with all 12 documents as Needs decision.
+- **New application:** a form for business name, borrower name, loan amount, application date, processor (all required). The ID is generated. Saving opens the new checklist with all 12 documents as Needs decision.
+- **Processor input:** a dropdown of the processors already in the data plus **Other…**, which reveals a text box for a new name. A dropdown prevents spelling variants ("Aisha Patel" / "aisha patel") from splitting the filter and the weekly summary.
 - **Duplicate warning:** if the business name matches an existing application: *"Metro Dental Group already has APP-2026-1001. Create anyway?"*
 - **Edit details:** the same form, pre-filled.
 - **Delete application:** behind a confirmation: *"Delete Hilltop Dental Care (APP-2026-1003) and its 12 documents? This can't be undone."*
 
-## 7. Data Flow & Saving
+### Weekly pipeline summary
+
+Replaces the team lead's manual Monday email. **[Weekly summary]** in the header opens a panel with ready-to-paste plain text and a **Copy** button. The text is a snapshot as of the "as of" date and always covers all applications (it ignores the home page filters).
+
+Example (sample data, as of Feb 15, 2026):
+
+```
+SBA Pipeline Summary — as of Feb 15, 2026
+
+PIPELINE
+  60 active applications · $15.62M total loan volume
+  57 waiting on documents · 0 fully complete
+
+NEEDS ATTENTION
+  Stalled (no documents in 21+ days): 11
+    APP-2026-1060 Harbor Fish Market — 67 days, 5 outstanding (Aisha Patel)
+    APP-2026-1056 FreshCo Grocery — 47 days, 1 outstanding (Aisha Patel)
+    ...
+  Expired documents: 6 (6 bank statements)
+  Expiring in the next 14 days: 1
+  Applications with undecided documents: 43
+
+BY PROCESSOR
+  Aisha Patel — 18 applications, 5 stalled
+  Janet Morrison — 18 applications, 2 stalled
+  Ricardo Fuentes — 24 applications, 4 stalled
+```
+
+- Stalled applications are listed in full, longest idle first.
+- Loan volume is shown in millions with two decimals.
+- Processors are listed alphabetically.
+
+## 7. UI & Usability
+
+The users are non-technical and will abandon anything harder than the spreadsheet. Visual design follows the **frontend-design** skill (a deliberate, consistent visual direction recorded as CSS variables in one tokens file); the filter cards, progress bars, and expiry badges follow the **dataviz** skill's color and stat-tile guidance.
+
+Usability rules, which apply to every screen:
+- Plain-language labels; no jargon or codes beyond the application ID.
+- Status and expiry are never shown by color alone — always with a text label or icon.
+- Text and badge colors meet WCAG AA contrast.
+- Click targets are at least 32 px tall; every control is reachable by keyboard.
+- The home table reads like a spreadsheet: dense rows, left-aligned text, right-aligned numbers.
+- Confirmations only for destructive actions (Delete, Reset, Import); everything else saves instantly.
+
+## 8. Data Flow & Saving
 
 ```
  CSV file ──parse──► normalize ──► App state ──save──► localStorage
@@ -230,7 +277,7 @@ Priya White · $90,000 · Janet Morrison · Opened 76 days ago · Last activity 
 - The override survives refresh (for demos) and is always shown in a banner with **Back to today**.
 
 ### Import CSV (replaces all data)
-1. User picks a file; it is parsed and validated (see §8).
+1. User picks a file; it is parsed and validated (see §9).
 2. Preview and confirm: *"Found 60 applications and 620 documents. This will **replace** your current data. [Export & replace] [Replace] [Cancel]"*
 3. Replace and save.
 
@@ -242,7 +289,7 @@ Priya White · $90,000 · Janet Morrison · Opened 76 days ago · Last activity 
 ### Reset sample data
 Confirm, then repeat the first-open steps.
 
-## 8. Error Handling
+## 9. Error Handling
 
 **Rule:** every message is plain language and says whether anything changed. No blank screens or raw technical errors.
 
@@ -279,14 +326,14 @@ A React error boundary shows *"Something went wrong. Your saved data is safe. [R
 - Very large files (team has 50–75 applications).
 - `.xlsx` import — README instructs users to save as CSV first.
 
-## 9. Testing
+## 10. Testing
 
 ### Automated (Vitest), written test-first
 
 **Rules (`domain/`)**
 - Stalled: 20 days idle → not stalled; 21 days → stalled; 30 days idle with 0 outstanding → not stalled.
 - Expiry badge: expired yesterday → 🔴; expires in 14 days → 🟠; in 15 days → none; no date → none; Not Required with a past date → none.
-- Auto expiration: bank +90 days; tax +3 years including a leap-year case; insurance +1 year; non-expiring types → no date.
+- Auto expiration: bank +90 days; tax +1,095 days, including a span over Feb 29 (received 1/1/2024 → 12/31/2026); insurance +365 days; non-expiring types → no date.
 - Outstanding / progress: Pending and Expired count; Needs decision does not; Not Required counts as done.
 - Last activity: latest received date; in-app change updates it; falls back to application date.
 
@@ -295,6 +342,10 @@ A React error boundary shows *"Something went wrong. Your saved data is safe. [R
 - Normalize: an application with 8 listed types becomes 12 documents, 4 Needs decision.
 - Import problems: missing column → blocked; `approved` → Approved; `Recieved` → skipped and reported; bad date → blank and reported.
 - Storage: corrupted data is not overwritten and is backed up.
+
+**Application form (`domain/`)**
+- Missing field, non-numeric or zero loan amount, or invalid date → field error.
+- Duplicate check is case- and whitespace-insensitive and ignores the application being edited.
 
 **State (`state/`)**
 - `setStatus(Received)` fills received and expiration dates and updates last activity.
@@ -311,6 +362,8 @@ A React error boundary shows *"Something went wrong. Your saved data is safe. [R
 | Documents with 🔴 expiry badge | 6 |
 | Documents with 🟠 expiry badge | 1 |
 | Bank statements past expiration, not marked Expired | 4 — APP-2026-1006, 1009, 1010, 1021 |
+| Stalled applications by processor | Aisha Patel 5 · Ricardo Fuentes 4 · Janet Morrison 2 |
+| Weekly summary | Contains the figures above, $15.62M, and the 11 stalled applications in idle order (1060 first at 67 days, 1020 last at 21 days) |
 
 ### Manual smoke test (README checklist)
 1. Fresh open loads the sample.
@@ -327,7 +380,7 @@ A React error boundary shows *"Something went wrong. Your saved data is safe. [R
 - **Browsers:** whatever the team actually uses (Chrome / Edge / Safari).
 - **Validate assumptions A1–A4** with the team.
 
-## 10. Assumptions & Tradeoffs
+## 11. Assumptions & Tradeoffs
 
 ### Assumptions
 Made without input from the ops team; each is a question to raise with them.
@@ -344,6 +397,7 @@ Made without input from the ops team; each is a question to raise with them.
 | A8 | The 12 document types are the complete list | Brief: "up to 12 different document types" |
 | A9 | CSV export is an acceptable exit ramp back to the spreadsheet | Same columns and date format; only additions are the Needs decision status value and a trailing `last_activity` column |
 | A10 | The team can save their spreadsheet as CSV | Standard in Excel and Google Sheets |
+| A11 | The weekly summary leadership wants is a snapshot of current pipeline health | Brief: "a weekly pipeline summary … compiled manually into an email every Monday" |
 
 ### Tradeoffs
 
@@ -361,14 +415,16 @@ Made without input from the ops team; each is a question to raise with them.
 | T10 | Delete only, no archive | Archiving funded/closed applications | Closed applications stay in the list until deleted |
 | T11 | Import replaces all data | Merging imports | Last import wins; one user's import can overwrite another's work |
 | T12 | Automated tests on rules, data, and state only | Screen and end-to-end tests | UI regressions are caught only by the manual smoke test |
+| T13 | Weekly summary as a snapshot with Copy | Week-over-week trends, or sending the email | No "stalled went from 14 to 11"; the team lead still pastes it into their email |
+| T14 | Processor chosen from a dropdown | Free text | One extra click ("Other…") to add a new processor |
 
-## 11. Not in This Design
+## 12. Not in This Design
 
 Considered during brainstorming and left out:
 
 - Email alerts (bank-statement expiry was the preferred first alert)
 - Leadership dashboard / charts
-- Copyable weekly (Monday) pipeline summary
+- Week-over-week trends in the weekly summary, and sending it by email
 - Shared storage / backend
 - Undo and edit history
 - Archiving applications
