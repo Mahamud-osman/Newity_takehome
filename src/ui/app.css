@@ -262,3 +262,21 @@ h1, h2, h3 { margin: 0; font-weight: 650; letter-spacing: -0.01em; }
 .date-cell { display: flex; flex-direction: column; gap: 2px; margin-bottom: var(--s1); }
 .input-date { width: 150px; }
 .notes-input { width: 100%; min-width: 200px; }
+
+/* Dialogs */
+.modal {
+  width: min(460px, calc(100vw - 32px));
+  padding: var(--s5);
+  border: 1px solid var(--rule-strong);
+  border-radius: var(--radius-tab);
+  background: var(--sheet);
+  color: var(--ink);
+}
+.modal-wide { width: min(720px, calc(100vw - 32px)); }
+.modal::backdrop { background: rgb(27 42 58 / 0.4); }
+.modal h2 { font-size: var(--text-lg); margin-bottom: var(--s3); }
+.modal p { margin: 0 0 var(--s3); }
+.modal-actions { display: flex; justify-content: flex-end; gap: var(--s2); margin-top: var(--s5); }
+.form { display: flex; flex-direction: column; gap: var(--s3); }
+.form-field { display: flex; flex-direction: column; gap: var(--s1); font-size: var(--text-sm); font-weight: 550; }
+.form-field .input, .form-field .select { width: 100%; font-weight: 400; }

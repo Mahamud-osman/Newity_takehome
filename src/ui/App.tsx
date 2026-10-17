@@ -1,8 +1,11 @@
 import { useState } from 'react'
 import { exportCsv, exportFilename } from '../data/csvExport'
+import { nextApplicationId } from '../domain/applicationForm'
 import { formatLongDate, todayIso } from '../domain/dates'
+import { ApplicationFormDialog } from './ApplicationFormDialog'
 import { downloadText } from './download'
 import { ChecklistPage } from './ChecklistPage'
+import { ConfirmDialog } from './ConfirmDialog'
 import { Header } from './Header'
 import { HomePage } from './HomePage'
 import { useChecklistStore } from './useChecklistStore'
@@ -10,6 +13,8 @@ import { useChecklistStore } from './useChecklistStore'
 export function App() {
   const { state, dispatch, asOf, storage, loadSample } = useChecklistStore()
   const [selectedAppId, setSelectedAppId] = useState<string | null>(null)
+  const [form, setForm] = useState<'new' | 'edit' | null>(null)
+  const [confirmDelete, setConfirmDelete] = useState(false)
 
   if (!state) {
     return (
@@ -61,13 +66,46 @@ export function App() {
             asOf={asOf}
             dispatch={dispatch}
             onBack={() => setSelectedAppId(null)}
-            onEdit={() => {}}
-            onDelete={() => {}}
+            onEdit={() => setForm('edit')}
+            onDelete={() => setConfirmDelete(true)}
           />
         ) : (
-          <HomePage data={state.data} asOf={asOf} onOpen={setSelectedAppId} onNew={() => {}} />
+          <HomePage data={state.data} asOf={asOf} onOpen={setSelectedAppId} onNew={() => setForm('new')} />
         )}
       </main>
+
+      {form && (
+        <ApplicationFormDialog
+          mode={form}
+          initial={form === 'edit' ? selected ?? undefined : undefined}
+          data={state.data}
+          onCancel={() => setForm(null)}
+          onSave={values => {
+            if (form === 'new') {
+              const id = nextApplicationId(state.data, todayIso())
+              dispatch({ type: 'addApplication', id, values, asOf })
+              setSelectedAppId(id)
+            } else if (selected) {
+              dispatch({ type: 'editApplication', appId: selected.id, values, asOf })
+            }
+            setForm(null)
+          }}
+        />
+      )}
+      {confirmDelete && selected && (
+        <ConfirmDialog
+          title="Delete application"
+          message={`Delete ${selected.businessName} (${selected.id}) and its 12 documents? This can't be undone.`}
+          confirmLabel="Delete application"
+          danger
+          onCancel={() => setConfirmDelete(false)}
+          onConfirm={() => {
+            dispatch({ type: 'deleteApplication', appId: selected.id })
+            setConfirmDelete(false)
+            setSelectedAppId(null)
+          }}
+        />
+      )}
     </>
   )
 }
