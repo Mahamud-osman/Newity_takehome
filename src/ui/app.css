@@ -280,3 +280,13 @@ h1, h2, h3 { margin: 0; font-weight: 650; letter-spacing: -0.01em; }
 .form { display: flex; flex-direction: column; gap: var(--s3); }
 .form-field { display: flex; flex-direction: column; gap: var(--s1); font-size: var(--text-sm); font-weight: 550; }
 .form-field .input, .form-field .select { width: 100%; font-weight: 400; }
+.issue-list {
+  max-height: 200px; overflow-y: auto; margin: 0 0 var(--s3); padding: var(--s2) var(--s2) var(--s2) var(--s5);
+  border: 1px solid var(--rule); border-radius: var(--radius-sm); font-size: var(--text-xs);
+}
+.summary-text {
+  width: 100%; padding: var(--s3); border: 1px solid var(--rule-strong); border-radius: var(--radius-sm);
+  font: inherit; font-size: var(--text-sm); line-height: 1.5; color: var(--ink); background: var(--paper); resize: vertical;
+  white-space: pre;
+}
+.copy-note { margin-right: auto; align-self: center; font-size: var(--text-sm); color: var(--done-ink); }
